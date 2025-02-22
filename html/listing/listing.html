@@ -6,6 +6,9 @@
     <title>listing</title>
 </head>
 <body>
+    <p>discription list <a href="#dl">click me</a></p>
+    <p>lists level2 <a href="#ll2">click me</a></p>
+    <p>nesting list <a href="#nl">click me</a></p>
     <ul>
         <li>brownie</li>
         <li>cake</li>
@@ -18,6 +21,9 @@
         <li>ice-cream</li>
         <li>chocobar</li>
         <li>cold-coffee</li>
+        <ul>
+            <li>hi</li>
+        </ul>
     </ul>
     <center>square style</center>
     <ul style="list-style-type: square">
@@ -36,6 +42,7 @@
         <li>aroplane</li>
         <li>bus</li>
         <li>ship</li>
+       
     </ul>
 
     <h1>basic order list</h1>
@@ -43,6 +50,93 @@
         <li>kohli</li>
         <li>rohit</li>
         <li>bumrah</li>
+    </ol>
+    <ol type="a">
+        <li>kohli</li>
+        <li>rohit</li>
+        <li>bumrah</li>
+    </ol>
+    <ol type="A">
+        <li>kohli</li>
+        <li>rohit</li>
+        <li>bumrah</li>
+    </ol>
+    <ol type="I">
+        <li>kohli</li>
+        <li>rohit</li>
+        <li>bumrah</li>
+    </ol>
+    <h1 id="dl">discription list</h1>
+    <dl>
+        <dt>coffee</dt>
+        <dd>black hot drink</dd>
+    </dl>
+    <dl>
+        <dt>SGML</dt>
+        <dd>The standard gneralized markup language</dd>
+    </dl>
+    <h1 id="ll2">lists level2</h1>
+    <ol>
+        <li>delhi</li>
+        <ul>
+            <li>newDelhi</li>
+        </ul>
+        <li>haryana</li>
+        <ul>
+            <li>chandigarh</li>
+        </ul>
+    </ol>
+    
+    <ul>
+        <li>cakes</li>
+        <ul style="list-style-type: disc;">
+            <li><a href="">plain sponge</a></li>
+            <li><a href="">plain sponge</a></li>
+            <li><a href="">plain sponge</a></li>
+        </ul>
+    </ul>
+
+    <h1 id="nl">nesting lists</h1>
+    <ol type="i">
+        <li>item 1</li>
+        <ul>
+            <li>sub item 1</li>
+            <li>sub item 2</li>
+            <ol type="a">
+                <li>sub item1</li>
+                <li>sub item2</li>
+            </ol>
+        </ul>
+        <li>item 2</li>
+        <ol type="1">
+            <li>sub item 1</li>
+            <ul type="square">
+                <li>sub item 1</li>
+                <li>sub item 2</li>
+            </ul>
+            <li>sub item 2</li>
+        </ol>
+        <li>item 3</li>
+    </ol>
+    <ul>
+        <li>Fruit</li>
+        <ul>
+            <li>Banana</li>
+            <li>Apples</li>
+            <ul type="square">
+                <li>Green</li>
+                <li>red</li>
+            </ul>
+            <li>pears</li>
+        </ul>
+        <li>Vegetables</li>
+        <li>meat</li>
+    </ul>
+    <h3>List of students</h3>
+    <ol type="10" start="10">
+        <li style="color: red;">john</li>
+        <li style="color: green;">harris</li>
+        <li style="color: blue;">plunket</li>
     </ol>
 </body>
 </html>

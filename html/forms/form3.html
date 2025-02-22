@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form 3</title>
+</head>
+<body>
+    <form action="http://naistam.com" method="post">
+        <table border="2px">
+            <tr>
+                <td align="center" colspan="2">Pizza shop 2.0</td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="name"/></td>
+            </tr>
+            <tr>
+                <td>pizza Topping</td>
+                <td>
+                    <input type="radio" name="topping" value="supreme"/>supreme
+                    <br/>
+                    <input type="radio" name="topping" value="vegetarian"/>vegetarian
+                    <br/>
+                    <input type="radio" name="topping" value="hawaiian"/>hawaiian
+                </td>
+            </tr>
+            <tr>
+                <td>Option Extras</td>
+                <td>
+                    <input type="checkbox" name="sauce" value="Extra cheese"/>Extra chees
+                    
+                    <input type="checkbox" name="sauce" value="Gluten free base"/>Gluten free base
+                </td>
+            </tr>
+            <tr>
+                <td>Pizza Sauce</td>
+                <td>
+                    <select name="sauce">
+                        <option disabled selected value="">plese select sauce</option>
+                        <option>tomato</option>
+                        <option>cheese</option>
+                        <option>chilli</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" valign="'Topping">Delivery instrctions: 
+                    <br/>
+                    <textarea name="address" style="width: 98%;"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button>send my order</button>
+                </td>
+            </tr>
+            <tr></tr>
+        </table>
+    </form>
+</body>
+</html>

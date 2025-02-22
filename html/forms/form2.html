@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form2</title>
+</head>
+<body>
+    
+    <form action="http://naistam.com" method="post">
+        <h3>Your basic info</h3>
+        <p>name:</p>
+        <input type="text" name="name"/>
+        <br/>
+        <p>Email:</p>
+        <input type="email" name="email"/>
+        <br/>
+        <p>Password:</p>
+        <input type="password" name="password"/>
+        <br/>
+        <p>Age</p>
+        <input type="radio" value="under 16" name="age"/>under 16
+        <br/>
+        <input type="radio" value="16 or older" name="age"/>16 or older
+        <br/>
+        <h3>Your Profile</h3>
+        <p>Biography: </p>
+        <textarea name="bio"></textarea>
+        <br/>
+        <p>Courses:</p>
+        <select name="course">
+            <option selected value="" disabled>please select the course</option>
+            <option>mca</option>
+            <option>mba</option>
+        </select>
+        <p>Interst:</p>
+        <input type="checkbox" name="interst" value="software"/>software
+        <input type="checkbox" name="interst" value="business"/>business
+        <br/>
+        <button>submit</button>
+    </form>
+</body>
+</html>

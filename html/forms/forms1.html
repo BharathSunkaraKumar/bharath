@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<!-- query params -->
+    <form>
+        username: <input type="text"/>
+        <br/>
+        password: <input type="password"/>
+        </form>
+        <br/>
+        <button type="submit">submit</button>
+    </form>
+    <hr/>
+    <form action="http://naistam.com" method="post">
+        First name: <input type="text" name="fName"/>
+        <br/>
+        Last name: <input type="text" name="lName"/>
+        <br/>
+        E-mail: <input type="email" name="email"/>
+        <br/>
+        <input type="radio" name="g" value="male"/>male
+        <input type="radio"/ name="f" value="female">female
+        <button type="submit">submit</button><button type="reset">reset</button>
+    </form>
+    <hr/>
+    <form action="http://naistam.com" method="post">
+        <ul>
+            <li>name: <input type="text" name="name"/></li>
+            <li>email: <input type="email" name="email" required/></li>
+            <li>password: <input type="password" name="password"/></li>
+        </ul>
+
+        <ul>
+            <li>Please check all the emotions that apply to you:</li>
+            <ul style="list-style-type: disc;">
+                <li><input type="checkbox" name="emotions" value="angry">angry</li>
+                <li><input type="checkbox" name="emotions" value="sad">sad</li>
+                <li><input type="checkbox" name="emotions" value="happy">happy</li>
+                <li><input type="checkbox" name="emotions" value="ambivalent">ambivalent</li>
+            </ul>
+        </ul>
+
+        <ul>
+            <li>how satisfied were you with our service</li>
+            <ul style="list-style-type: disc;">
+                <li><input type="radio" name="service" value="very satisfied">very satisfied</li>
+                <li><input type="radio" name="service" value="satisfied">satisfied</li>
+                <li><input type="radio" name="service" value="didn't care">didn't care</li>
+                <li><input type="radio" name="service" value="very dissatisfied">very dissatisfied</li>
+            </ul>
+        </ul>
+        <ul>
+            <li>Further comments: <textarea style="resize: none;" name="comment"></textarea></li>
+
+        </ul>
+        <ul>
+            <li>bio photo: <input type="file" name="photo"/></li>
+            <li>location visited: 
+                <select name="location">
+                    <option selected value="" disabled>please select the location</option>
+                    <option>tirupati</option>
+                    <option>chenai</option>
+                    <option>bangalor</option>
+                    <option>hydrabad</option>
+                </select>
+            </li>
+        </ul>
+        <ul>
+            <li><button>submit</button></li>
+        </ul>
+    </form>
+</html>

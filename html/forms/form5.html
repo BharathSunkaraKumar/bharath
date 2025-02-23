@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>novell services login</title>
+    <style>
+    </style>
+</head>
+<body>
+    <table cellpadding="5px" cellspacing="10px">
+        <form action="http://naistam.com" method="post">
+            <tr>
+                <td align="center" colspan="2">
+                    <h3>Novell Services Login</h3>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Username:
+                    <br/>
+                    Password:
+                    <br/>
+                    city of:
+                    <br/>
+                    employment:
+                    <br/>
+                    web server:
+                </td>
+                <td>
+                    <input type="text" name="username"/>
+                    <br/>
+                    <input type="password" name="password"/>
+                    <br/>
+                    <input type="tex" name="city"/>
+                    <br/>
+                    <input type="text" name="employment"/>
+                    <br/>
+                    <select name="web server">
+                        <option value="" selected disabled>-Choose a server-</option>
+                        <option>aws</option>
+                        <option>google clouds</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    please specify your role:
+                </td>
+                <td>
+                    <input type="radio" value="admin" name="role"/>admin
+                    <br/>
+                    <input type="radio" value="engineer" name="role"/>engineer
+                    <br/>
+                    <input type="radio" value="manager" name="role"/>manager
+                    <br/>
+                    <input type="radio" value="guest" name="role"/>guest
+                    <br/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    single sign-on to the following:
+                </td>
+                <td>
+                    <input type="checkbox" value="mail" name="sign"/>mail
+                    <br/>
+                    <input type="checkbox" value="payroll" name="sign"/>payroll
+                    <br/>
+                    <input type="checkbox" value="self-service" name="sign"/>self-service
+                    <br/>
+                </td>
+            </tr>
+            <tr align="center">
+                <td><button>login</button></td>
+                <td><button type="reset">reset</button></td>
+            </tr>
+        </form>
+    </table>
+</body>
+</html>

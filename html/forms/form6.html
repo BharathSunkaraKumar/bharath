@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td{
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <form action="http://naistam.com" method="post">
+
+            <tr>
+                <td colspan="3" >
+                    <h3>Simple Event Registration</h3>
+                    <p>Fill out the form to register to our event</p>
+                    <hr/>
+                </td>
+            </tr>
+            
+            <tr>
+                <td><strong>Name</strong></td>
+                <td>
+                    <input style="width: 60px;" type="text" name="fname"/>
+                    
+                    
+                    <input style="width: 60px;" type="text" name="lname"/><br/>
+                    first Name
+                    last Name
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>Title</strong></td>
+                <td>
+                    <input type="text" name="title"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>Company</strong></td>
+                <td>
+                    <input type="text" name="company"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>E-mail</strong></td>
+                <td>
+                    <input type="email" name="email" placeholder="ex:myname@example.com"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>Phone Number</strong></td>
+                <td>
+                    <input style="width: 30%;" type="number" name="area code"/> -
+                    <input style="width: 30%;" type="numer" name="phonenumber"/>
+                    <br/>
+                    Area code
+                    phone Number
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>Are you an existing customer?</strong>
+                    <br/>
+                    <input type="radio" name="customer" value="yes"/>yes
+                    <input type="radio" name="customer" value="no"/>no
+                </td>
+            </tr>
+
+            <tr>
+                <td >
+                    <button>REgister</button>
+                </td>
+            </tr>
+        </form>
+    </table>
+</body>
+</html>

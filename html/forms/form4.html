@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form 4</title>
+</head>
+<body>
+    <table border="2px">
+        <form action="http://naistam.com" method="post">
+            <tr align="center" style="background-color: aquamarine;">
+                <td>Name</td>
+                <td>Value</td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="text"/></td>
+            </tr>
+            <tr>
+                <td>Sex</td>
+                <td>
+                    <input type="radio" name="gender" value="Male"/>Male
+                    <br/>
+                    <input type="radio" name="gender" value="Female"/>Female
+                </td>
+            </tr>
+            <tr>
+                <td>Eye color</td>
+                <td>
+                    <select name="eye color">
+                        <option disabled value="" selected>please select the eye color</option>
+                        <option>green</option>
+                        <option>black</option>
+                        <option>blue</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>check all that apply</td>
+                <td>
+                    <input type="checkbox" value="over 6 feet tall" name="hw"/>over 6 feet tall
+                    <br/>
+                    <input type="checkbox" value="over 200 pounds" name="hw"/>over 200 pounds
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"> 
+                    Describe your athletic ability:
+                    <br/>
+                    <textarea style="width: 98%;" name="athletic ability"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" colspan="2">
+                    <button type="submit">Enter my info</button>
+                </td>
+            </tr>
+        </form>
+    </table>
+</body>
+</html>

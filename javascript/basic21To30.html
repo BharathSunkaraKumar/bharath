@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basic21To30</title>
+</head>
+<body>
+    <h1>basics on javaScript</h1>
+    <script>
+        //21.Write a script to swap two numbers;
+        // var a = 10;
+        // var b = 20;
+        // console.log("a: "+a+" b: "+ b)
+
+        //22.Write a script to swap two numbers without using 3rd variable (please use *,%,/ not + and -)
+        // var a = 10;
+        // var b = 20;
+        
+        // console.log(a*b)
+
+        //23.Write a program to print the reminder of a division
+        // var a = 55;
+        // var b = 49;
+        // console.log(a%b)
+
+        //24.Write a program to print the simple interest rate of given P T R values
+
+        // var principalAmount = 100000;
+        // var time = 2;
+        // var rate = 2
+
+        // var si = principalAmount*time*rate/100
+        // console.log(si)
+
+        //25.Write a program to print the max of given two numbers using ternary operator
+
+        // var a = 20;
+        // var b = 10;
+        // var c = (a>b) ? a : b ;
+        // console.log(c)
+
+        //26.Write a program to print the max of given three numbers using ternary operator
+
+        // var a = 60;
+        // var b= 50;
+        // var c = 70;
+        // var max = (a>b && a>c) ? a : (b>c) ? b : c
+        // console.log(max)
+
+        //27.Find the area of a square for given length of a side
+
+        // var s = 10
+        // var x = 10**2
+        // console.log(x)
+
+        //28.Find the area of a rectangle for given length and breadth
+
+            // var l = 50;
+            // var w = 10;
+            // var a = 50*10;
+            // console.log(a)
+
+        //29.Find the area of a triangle for given base and height
+
+            // var b = 50;
+            // var h = 50;
+            // var a = b*h/2;
+            // console.log(a)
+
+        //30.Check a given number is even or not using ternary operator
+
+        // var num = 10;
+
+        //console.log(10%3)
+
+        // var even = (num % 2 == 0) ?  ('even number') : (" is not an even number");
+
+        // console.log(num +" "+even)
+
+        //31.Check a given number is odd or not using ternary operator
+
+        // var num = 3;
+        // var odd = (num % 2 != 0) ? "odd number" : "not a odd number";
+        // console.log(num +" is "+odd)
+
+        //Check a given number is positive or not using ternary operator
+
+        // var num = 0;
+        // var positiveNumber = (num>=0) ? ` ${num} is positive number` : `${num} not a positive number`
+
+        // console.log(positiveNumber)
+
+        //unary +, -, !, ++, --
+        //false, 0, null, nan, "", undefined ="falsey values"
+        //binary
+            //1.arithmeti ops
+                //  +,-,*,/,%
+            //2.assignment
+                //=,+=,-=,*=,/=,%=
+            //3.relational
+                //==,>,<,>=,<=,!=,===,!=
+        //ternary
+            //?.
+        //logical
+            //&& ||
+
+        // var a = "100";
+        // var c = +a
+        // console.log(c)
+        // var b =100;
+        // // //b-=a //b=100-"100"
+        // // b+=a //b=100+"100"
+
+        // console.log(c-b)
+
+        //Check a given number is multiple of 4 or not using ternary operator
+
+        // var num = 20;
+        // var x = (num % 4 == 0) ? "given number is multiple by 4" : "given num is not multiple by 4";
+        // console.log(x)
+
+        //36.Print the (a+b)^2 for given a and b values
+
+        // var a = 5;
+        // var b= 3;
+        // var c = a*a + b*b + 2*a*b;
+        // console.log(c)
+
+        //37.Print the (a+b)^3 for given a and b values
+
+        //var x = "100";
+        
+
+        // var a = 2;
+        // //console.log(a**3)
+        // var b= 3;
+        // var c = a**3 + b**3 + 3*a*a*b + 3*a*b*b;
+        // console.log(c)
+        // // var c = a**3
+        // // console.log(c)
+
+        //Print the (a+b+c)^2 for given a,b and c values
+
+        // var a = 2;
+        // var b = 3;
+        // var c = 4;
+        // var x = a*a + b*b + c*c + 2*a*b + 2*a*c + 2*b*c
+        // console.log(x)
+
+        //Ramesh’s basic salary is input through the keyboard. His dearness allowance is 40% of basic salary, and house rent allowance is 20% of basic salary. Write a program to calculate his gross salary.
+
+        // var salary = +prompt('enter your salary: ');
+        // var allowance = 40/100*salary;
+        // var houseRent = 20/100*salary;
+        // console.log(allowance)
+        // console.log(houseRent)
+        // var grossSalary=salary+allowance+houseRent;
+        // console.log("grossSalary :"+grossSalary)
+
+        //The distance between two cities (in km.) is input through the keyboard. Write a program to convert and print this distance in meters, feet, inches and centimeters.
+
+        var distance = +prompt('Enter distance between two cities in km: ');
+
+        var meters = distance * 1000
+        var feets = distance * 3280.84
+        var inches = distance * 39370.1
+        var centimeters = distance * 100000
+
+        console.log(`
+        meters: ${meters}
+        feets: ${feets}
+        inches: ${inches}
+        centimeters: ${centimeters}
+        `)
+
+
+    </script>
+</body>
+</html>

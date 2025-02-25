@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript51To65</title>
+</head>
+<body>
+    <h1>JavaScript Basics</h1>
+    <script>
+        //50.If a five-digit number is input through the keyboard, write a program to print a new number by adding one to each of its digits. For example if the number that is input is 12391 then the output should be displayed as 23402.
+
+        // var num = parseInt(prompt("enter number: "));
+        // console.log(num)
+        // var n1 = Math.floor(num/10000)
+        // var n2 = Math.floor((num%10000) / 1000)
+        // var n3 = Math.floor((num%1000) / 100)
+        // var n4 = Math.floor((num%100) / 10 )
+        // var n5 = num%10
+
+        // console.log(n1)
+        // console.log(n2)
+        // console.log(n3)
+        // console.log(n4)
+        // console.log(n5)
+
+        // n1 = (n1 + 1) %10;
+        // n2 = (n2 + 1) %10;
+        // n3 = (n3 + 1) %10;
+        // n4 = (n4 + 1) %10;
+        // n5 = (n5 + 1) %10;
+        // console.log(n1)
+        // console.log(n2)
+        // console.log(n3)
+        // console.log(n4)
+        // console.log(n5)
+        // var newNum = n1 * 10000 + n2 * 1000 + n3 * 100 + n4 * 10 + n5
+
+        // console.log(newNum)
+
+        //52.Write a program that converts Centigrade to Fahrenheit. Expected Output : Input a temperature (in Centigrade): 45 113.000000 degrees Fahrenheit.
+
+        // var temperature = parseInt(prompt("enter temperature: "));
+        // var f = (temperature*9/5) + 32
+        // console.log(f)
+
+        //53.Write a JavaScript program that calculates the volume of a sphere. Expected Output : Input the radius of the sphere : 2.56 The volume of the sphere is 70.276237.
+
+        // var rOfs = 2.56;
+        // var vOfs = (4/3) * (22/7) * (rOfs**3);
+        // console.log(vOfs)
+
+        //54.Write a JavaScript program that prints the perimeter of a rectangle to take its height and width as input. Expected Output : Input the height of the Rectangle : 5 Input the width of the Rectangle : 7 Perimeter of the Rectangle is : 24.000000
+
+        // var hOftheRectanlge = 5;
+        // var wOftheRectanlge = 7;
+
+        // var perimeterOfTheRectangel = 2 * (hOftheRectanlge+wOftheRectanlge)
+
+        // console.log(perimeterOfTheRectangel)
+
+        //55.Write a JavaScript program that converts kilometers per hour to miles per hour. Expected Output : Input kilometers per hour: 15 9.320568 miles per hour
+
+        // var kilometersPerHour = 15.9;
+
+        // var milesPerHour = kilometersPerHour * 0.621371;
+
+        // console.log(milesPerHour)
+
+
+        //58Write a JavaScript program that takes hours and minutes as input, and calculates the total number of minutes. Expected Output : Input hours: 5 Input minutes: 37 Total: 337 minutes.
+
+        // var hours = 5;
+        // var minutes = 37;
+
+        // var totalNumberOfMinutes = (hours*60)+ minutes;
+        // console.log(totalNumberOfMinutes)
+
+        //57.Write a program in JavaScript that takes minutes as input, and display the total number of hours and minutes. Expected Output : Input minutes: 546 9 Hours, 6 Minutes
+
+        // var minutes = 546;
+
+        // var hours = Math.floor(minutes/60);
+        // var minute = minutes - (hours*60) 
+        // console.log(hours)
+        // console.log(minute)
+
+        //58.Write a program in JavaScript that reads a forename, surname and year of birth and display the names and the year one after another sequentially. Expected Output : Input your firstname: Tom Input your lastname: Davis Input your year of birth: 1982 Tom Davis 1982
+
+        // var lastLastName = prompt(`Bharath Enter your last name:`);
+
+        // var yOfB = parseInt(promptb(`${lastLastName} Enter your year of birth: `));
+
+        // console.log(`Bharath ${lastLastName} ${yOfB}`)
+
+        //59.Write a program in JavaScript to calculate the sum of three numbers with getting input in one line separated by a comma. Expected Output : Input three numbers separated by comma : 5,10,15 The sum of three numbers : 30
+
+        // var num = prompt("input 3 numbs separated by comma: ")
+        // console.log(num)
+
+        // var num1 = num.indexOf(",")
+        // var num2 = num.indexOf(",", num1 + 1)
+        // console.log(num1)
+        // console.log(num2)
+
+        // var n1 = parseInt(num.substring(0,num1))
+        // var n2 = parseInt(num.substring(num1 + 1, num2))
+        // var n3 = parseInt(num.substring(num2 + 1))
+
+        // console.log(n1)
+        // console.log(n2)
+        // console.log(n3)
+
+        // var sum = n1+n2+n3
+        // console.log(sum)
+
+        //Write a JavaScript program to perform addition, subtraction, multiplication and division of two numbers Expected Output : Input any two numbers separated by comma : 10,5 The sum of the given numbers : 15 The difference of the given numbers : 5 The product of the given numbers : 50 The quotient of the given numbers : 2.000000
+
+        // var num = prompt("input 2 numbs separated by comma: ")
+        // console.log(num)
+
+        // var num1 = num.indexOf(",")
+        // var num2 = num.indexOf(",", num1 + 1)
+        // console.log(num1)
+        // console.log(num2)
+
+        // var n1 = parseInt(num.substring(0,num1))
+        // var n2 = parseInt(num.substring(num1 + 1))
+       
+
+        // console.log(n1)
+        // console.log(n2)
+        
+        // var sum = n1+n2;
+        // var diff = n1-n2;
+        // var product = n1*n2;
+        // var quo = n1/n2;
+
+        // console.log(sum)
+        // console.log(diff)
+        // console.log(product)
+        // console.log(quo)
+
+        //61.Write a JavaScript program to find the third angle of a triangle if two angles are given. Expected Output : Input two angles of triangle separated by comma : 50,70 Third angle of the triangle : 60
+
+        // var num = prompt("Input two angles of triangle separated by comma : ");
+
+        // var num1 = num.indexOf(",");
+        // var num2 = num.indexOf(",", num1 + 1)
+
+        // var n1 = parseInt(num.substring(0, num1))
+        // var n2 = parseInt(num.substring(num1 + 1))
+        // console.log(n1)
+        // console.log(n2)
+
+        // var thirdAngleOfATriangle = 180-n1-n2
+        // console.log(thirdAngleOfATriangle)
+
+        //62.Write a script to display the maximum number in given two numbers using operators 
+        //63.Write a script to display the maximum number in given three numbers using operators
+
+        // var a = 110;
+        // var b = 550;
+        // var c = 80;
+        // var d = (a>b && a>c) ? a : (b>c && b>a) ? b : c;
+        // console.log(d)
+
+        //64.Write a script to display the given two strings in ascending order using operators
+
+        var a = "zebra";
+        var b = "tiger";
+
+        var c = (a>b) ? a : b;
+        console.log(c)
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

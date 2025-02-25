@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basic41To50</title>
+</head>
+<body>
+    <h1>javaScript basics</h1>
+    <script>
+        //41.If the marks obtained by a student in five different subjects are input through the keyboard, find out the aggregate marks and percentage marks obtained by the student. Assume that the maximum marks that can be obtained by a student in each subject is 100.
+
+        // var telugu = +prompt('Enter telugu marks: ');
+        // var hindi = +prompt('Enter hindi marks: ');
+        // var english = +prompt('Enter english marks: ');
+        // var mathematics = +prompt('Enter mathematics marks: ');
+        // var science = +prompt('Enter science marks: ');
+
+        // var totalMarks = telugu+hindi+english+mathematics+english+science;
+
+        // console.log(`Total marks of all subjects: ${totalMarks}`)
+
+        // var averageMarks = totalMarks/5
+        // console.log(`AverageMarks: ${averageMarks}`)
+
+        //42.Temperature of a city in Fahrenheit degrees is input through the keyboard. Write a program to convert this temperature into Centigrade degrees.
+
+        // var fahrenheit = +prompt('Enter fahrenheit: ');
+        // var centigrade = (fahrenheit-32) * 5/9
+        // console.log(`centigrade: ${centigrade}`)
+
+        //43.The length & breadth of a rectangle and radius of a circle are input through the keyboard. Write a program to calculate the area & perimeter of the rectangle, and the area & circumference of the circle.
+
+        // var length = +prompt("Enter length: ");
+        // var breadth = +prompt("Enter breadth: ");
+        // var radius = +prompt("Enter radius: ");
+        
+        // var area = length*breadth;
+        // var perimeter = (2*length) + (2*breadth)
+
+        // console.log("area " + area)
+        // console.log("perimeter " + perimeter)
+
+        // // var cercumference = +prompt("enter circumference: ");
+        // var a = 22/7 * radius*radius
+        // console.log("a: "+a)
+        // var c = 2*22/7*radius
+        // console.log("cercumference: "+c)
+
+        //44. Two numbers are input through the keyboard into two locations C and D. Write a program to interchange the contents of C and D.
+
+        // var c = +prompt('Enter number only: ');  //10
+        // var d = +prompt("enter number only: ");  //20
+
+        // var c
+        // c += d // 10+20 = 30
+        // console.log(c)
+        // var d = c-d // 30-20 = 10
+        // var c = c-d // 30-10 = 20
+
+        // console.log("before-c: " + c)
+        // console.log("before-d: " + d)
+
+        // console.log("after-c: " + c)
+        // console.log("after-d: " + d)
+
+        //45.If a five-digit number is input through the keyboard, write a program to calculate the sum of its digits. (Hint: Use the modulus operator ‘%’)
+
+        // var num = +prompt("enter five-digit number: ")
+        // var sum = 0
+
+        // sum+=num%10
+        // console.log(sum)
+        // num = parseInt(num/10)
+        // console.log(num)
+
+        // sum+=num%10
+        // console.log(sum)
+        // num = parseInt(num/10)
+        // console.log(num)
+
+        // sum+=num%10
+        // console.log(sum)
+        // num =parseInt(num/10)
+        // console.log(num)
+
+        // sum+=num%10
+        // console.log(sum)
+        // num = parseInt(num/10)
+        // console.log(num)
+
+        // sum+=num%10
+
+        // console.log(sum)
+
+        //46.If a five-digit number is input through the keyboard, write a program to reverse the number.
+
+        // var num = parseInt(prompt("enter 5-digits numer:"));
+        
+        // var d1 = num%10; //5
+        // num = (num-d1) /10
+
+        // console.log(d1)
+        // console.log(num) //1234
+
+        // var d2 = num%10; //4
+        // num = (num-d2)/10
+
+        // console.log(d2)
+        // console.log(num) //123
+
+        // var d3 = num%10; //3
+        // num = (num-d3)/10
+
+        // console.log(d3)
+        // console.log(num) //12
+
+        // var d4 = num%10 // 2
+        // num = (num-d4)/10;
+
+        // console.log(d4)
+        // console.log(num) //1
+
+        // var d5 = num%10 //1
+        // console.log(d5)
+
+        // var revers = d1*10000 + d2*1000 + d3*100 + d4*10 + d5*1;
+        // console.log(revers)
+
+        //47.If a four-digit number is input through the keyboard, write a program to obtain the sum of the first and last digit of this number.
+
+        // var num = parseInt(prompt("enter 4-digit number: "));
+
+        // var d4 = num%10
+        // var num = (num-d4) /10
+        // var d3 = num%10
+        // var num = (num-d3) /10
+        // var d2 = num%10
+        // var num = (num-d2) /10
+        // var d1 = num%10
+        // var num = (num-d1) /10
+        // console.log(d4) 
+        // console.log(d1)
+
+        // var sumOfD1D4 = d1+d4
+        // console.log(sumOfD1D4)
+
+        //48.In a town, the percentage of men is 52. The percentage of total literacy is 48. If total percentage of literate men is 35 of the total population, write a program to find the total number 48 Let Us C of illiterate men and women if the population of the town is 80,000.
+
+        // var totalMen = 52
+        // var totalLiteracy = 48
+        // var totalLiteracyMen = 35
+        // var totalPopulation = 80000
+
+        // var percentageOfIlliteracy = 100-totalLiteracy
+        // console.log(percentageOfIlliteracy)
+
+        // var TotalIlliterateMenAndWomen = percentageOfIlliteracy/100*totalPopulation
+
+        // console.log(TotalIlliterateMenAndWomen)
+
+        // var totalNumberOfIlliterateMen = totalLiteracyMen/100*TotalIlliterateMenAndWomen
+        // console.log(totalNumberOfIlliterateMen)
+
+        // var totalNumOFilliterateWomen = TotalIlliterateMenAndWomen - totalNumberOfIlliterateMen
+
+        // console.log(totalNumOFilliterateWomen)
+
+        //49.A cashier has currency notes of denominations 10, 50 and 100. If the amount to be withdrawn is input through the keyboard in hundreds, find the total number of currency notes of each denomination the cashier will have to give to the withdrawer.
+
+        // var amount = parseInt(prompt("Enter amount hundreds only: "));
+
+        // var denominationTen = amount/10
+        // var denominationFifty = amount/50
+        // var denominationHundred = amount/100
+
+        // console.log(`10 X ${denominationTen}'s`)
+        // console.log(`Amount ${amount}`)
+
+        // console.log(`50 X ${denominationFifty}'s`)
+        // console.log(`Amount ${amount}`)
+
+        // console.log(`100 X ${denominationHundred}'s`)
+        // console.log(`Amount ${amount}`)
+
+
+        //50.If the total selling price of 15 items and the total profit earned on them is input through the keyboard, write a program to find the cost price of one item.
+
+        // var price = 3000;
+        // var Profit = parseInt(prompt("Enter profit: "));
+        // var totalCostPrice = price - Profit
+        // var costPriceOfOneItem = totalCostPrice/15;
+        // console.log(costPriceOfOneItem)
+        
+
+
+
+
+
+        
+        
+
+        
+
+
+
+
+    </script>
+</body>
+</html>

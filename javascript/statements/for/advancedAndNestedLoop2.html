@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>advaced nested loops</title>
+</head>
+<body>
+    <h1>advaced nested loops</h1>
+    <script>
+        for(var i=1; i<=5; i++){
+
+            for(var k=0; k<=5-i; k++){
+                document.write("&nbsp")
+            }
+            
+            for(var j=1; j<=i; j++) {
+                document.write(i)
+            }
+            document.write("<br/>")
+        }
+        //
+        document.write("<br/>")
+        for(var i=1; i<=5; i++){
+
+            for(var k=0; k<=5-i; k++){
+                document.write("&nbsp")
+            }
+            
+            for(var j=1; j<=i; j++) {
+                document.write(j)
+            }
+            document.write("<br/>")
+        }
+        document.write("<br/>")
+        //Floyd's Triangle
+        var num = 1
+        for(var i=1; i<=5; i++){
+
+            for(var k=0; k<=5-i; k++){
+                document.write("&nbsp")
+            }
+            
+            for(var j=1; j<i+1; j++) {
+                document.write(num++)
+            }
+            
+            document.write("<br/>")
+        }
+        document.write("<br/>")
+       // *
+        for(var i=0; i<=5; i++) {
+            
+            for(var k=0; k<=5-i; k++) {
+                document.write("&nbsp;")
+                document.write("&nbsp")
+                
+            }
+            
+            for(var j=0; j<i; j++) {
+                document.write("*")
+                document.write("&nbsp")
+                document.write("&nbsp")
+                document.write("&nbsp")
+            }
+            document.write("<br/>")
+        }
+        document.write("<br/>")
+        //Pascal’s
+        var x = 1
+        for(var i=0; i<=6; i++) {
+            var r = ""
+            for(var k=0; k<=5-i; k++) {
+                
+                document.write("&nbsp")
+                document.write("&nbsp")
+                
+            }
+            
+            for(var j=0; j<=i; j++) {
+            
+                if(j>0){
+                    x = x * (i-j+1)/j
+                  
+                }
+                r+= x
+                
+                document.write("&nbsp;")
+                
+            }
+            
+            document.write(r)
+            
+            document.write("<br/>")
+        }
+        document.write("<br/>")
+        //
+    
+        for(var i=0; i<10; i++) {
+
+            for(var k=0; k<=11+i; k++) {
+                document.write("&nbsp;")
+                document.write("&nbsp;")
+                document.write("&nbsp;")
+                
+            }
+
+            for(var j=1; j<10-i; j++) {
+                document.write(j)
+                //document.write("*")
+                document.write("&nbsp;")
+                
+            }
+            for( l=9-i-1; l>0; l--) {
+                    document.write(l)
+                    document.write("&nbsp;")
+                }
+            var r = ''
+            
+            document.write("<br/>")
+        }
+        
+
+    </script>
+</body>
+</html>

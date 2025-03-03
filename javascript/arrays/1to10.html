@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrays_1to10</title>
+</head>
+<body>
+    <h1>arrays_1to10</h1>
+    <script>
+        //1.write a script to print all array values in the console.
+        // var ar = [1,2,3,4,5];
+        // console.log(ar)
+
+        //2.For the Given array: [23,34,54,0,4,7] print all the Array values using a for loop. Expected output: 23 34 54 0 4 7
+        // var ar = [23,34,54,0,4,7];
+        // for(var i=0; i<=ar.length-1; i++) {
+        //     console.log(ar[i])
+        // }
+
+        //3.print all numbers in an array except the first element.
+        // var ar = [1,2,3,4,5];
+        // for(var i=0; i<=ar.length-1; i++) {
+        //     if(ar[i] != ar[0]) {
+        //         console.log(ar[i])
+        //     }
+        // }
+
+        //4.Print all elements in an array except the last element Expected output: 23 34 54 0 4
+        // var ar = [23,34,54,0,4,7];
+        // for(var i=0; i<=ar.length-2; i++) {
+            
+        //         console.log(ar[i])
+
+        // }
+
+        //5.Print all the numbers from last index to first index Expected output: 7 4 0 54 34 23
+        // var ar = [23,34,54,0,4,7];
+        // for(var i=ar.length-1; i>=0; i--) {
+        //     console.log(ar[i])
+        // }
+
+        //6.Print all the numbers from last index to first index except the first element Expected output: 4 0 54 34 23
+        // var ar = [23,34,54,0,4,7];
+        // for(var i=ar.length-2; i>=0; i--) {
+        //     console.log(ar[i])
+        // }
+
+        //7.Print all the numbers from last index to first index except the last element Expected output: 7 4 0 54 34
+        // var ar = [23,34,54,0,4,7];
+        // for(var i=ar.length-1; i>=1; i--) {
+        //     console.log(ar[i])
+        // }
+
+        //8.Print only the last 4 elements of an array. Expected output: 54 0 4 7
+        // var ar = [23,34,54,0,4,7];
+        // for(var i=0; i<=ar.length-1; i++) {
+        //     if(i > 1){
+        //         console.log(ar[i])
+        //     }
+        //     //console.log(i)
+        // }
+
+        //9.For the Given array: [23,34,54,10,4,7] print the minimum number in an Array. Expected output: 4
+        // var ar = [23,3,54,2,4,7];
+        // var minimum = ar[0]
+        // var r = 0
+        // for(var i=0; i<=ar.length-1; i++) {  
+        //      //console.log(minimum)
+        //     if(ar[i] < minimum) { 
+        //         minimum = ar[i]
+        //         //console.log(ar[i])
+        //     }
+        //    // console.log(minimum)
+        // }
+        // console.log(minimum)
+        //10.For the Given array: [23,34,54,10,4,7] print the Maximum number in an array. Expected output: 54
+        var ar = [154,3,54,2,99,7];
+        var max = ar[0]
+        var r = 0
+        for(var i=0; i<=ar.length-1; i++) {  
+             
+            if(ar[i] > max) { 
+                max = ar[i]
+            }
+    
+        }
+        console.log(max)
+    </script>
+</body>
+</html>

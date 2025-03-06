@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>32 to 40</title>
+</head>
+<body>
+    <h1>javascript arrys</h1>
+    <script>
+        //32.Increment 5% for all the salaries in a given array
+        // var ar = [10000,15000,20000,25000];
+        // for(var i=0; i<=ar.length-1; i++) {
+        //     var per = 5
+        //     var increment = ar[i]*1.05
+        //     console.log(increment)
+        // }
+
+        //33.For every basic salary present in the array, add 40% HRA, 92% DA, 10% Tax and display the final output
+        // var ar = [10000,15000,20000,25000];
+        // for(var i=0; i<=ar.length-1; i++) {
+        //     var hra = ar[i] * 0.40;
+        //     var da = ar[i] * 0.92;
+        //     var tax = ar[i] * 0.10
+        //     console.log(`${ar[i]} = hra: ${hra}, da: ${da}, tax: ${tax}`)
+        // }
+
+        //34.For every salary, deduct 10% tax for salaries less than 50000 and deduct 12% tax for salaries more than 50000
+        // var ar = [10000,75000,20000,25000,50500];
+        // for(var i=0; i<=ar.length-1; i++) {
+        //     var tax
+        //     if(ar[i]<=50000) {
+        //         tax = ar[i] * 0.10
+        //         console.log(`${ar[i]} = tax 10%: ${tax}`)
+        //     }else {
+        //         tax = ar[i] * 0.12
+        //         console.log(`${ar[i]} = tax 12%: ${tax}`)
+        //     }
+            
+        // }
+
+        //35.Print only those odd numbers in a given array which are divisible by 3.
+
+        // var ar = [1,2,3,4,5,6,7,8,9];
+        // for(var i=0; i<=ar.length-1; i++) {
+        //     if(ar[i] %2 != 0 ) {
+        //         if(ar[i] % 3 ==0){
+        //             console.log(ar[i])
+        //         }
+        //     }
+        // }
+
+        //36.Insert first 10 odd numbers in an empty array(for and while).
+
+        
+        // var br = [];
+        // for(var i=0; i<=10; i++) {
+        //     if(i %2 != 0 ) {
+        //         br.push(i)
+        //     }
+        // }
+        //console.log(br)
+
+        //37.Print the elements present in the second half of the array.
+
+        // var ar = [1,2,3,4,5,6,7,8,9,10];
+        // // var l = parseInt(ar.length/2)
+        // // var br = ar.slice(4,-1)
+        // // console.log(br)
+        // // console.log(l)
+        // var br = [];
+        // var a = Math.floor(ar.length/2)
+        // console.log(a)
+
+        // var b = ar[ar.length-1]
+        // console.log("b::"+b)
+
+        // for(var i=1; i<=Math.floor(ar.length/2); i++) {  //5
+        //     br.unshift(ar[ar.length-i])  // 
+        // }
+        // console.log(br)
+
+        //38.Print the greatest of all 2-digit numbers present in an array.
+
+    //     var ar = [10,20,45,99,100,18,45];
+    //     var td = [];
+    //     for(var i=0; i<=ar.length-1; i++) {
+    //         if(ar[i]>=0 && ar[i]<=99){
+    //             td.push(ar[i])
+    //         }
+    //     }
+    //     var maxNum = td[0]  // 10
+    //    // [10,20,45,99,18,45]
+    //     for(var i=1; i<=td.length-1; i++) { //5 //1 2 3 4 5
+    //         if(td[i] > maxNum) { // 20 > 10 t 20>45 t  99>45 t 18>99 f 45>99 f
+    //             maxNum = td[i]  // 20 45 99
+    //         }
+    //     }
+
+    //     console.log(maxNum) //99
+    //     // console.log(td)
+    //     // console.log(maxNum)
+
+    //39.Write a program to remove elements from an array which are not in the ascending order Ex: Original array: [12,34,11,56,37,98,23,67,109,45] Output : [12,34,56,98,109]
+
+    // var ar = [12,34,11,56,37,98,23,67,109,45];
+    // var br = [ar[0]]
+    // for(var i=0; i<=ar.length-1; i++) {
+    //     var x = ar[i+1]
+        
+    //     if(ar[i]>x) {
+    //         br.push(ar[i])
+    //     }
+
+    // }
+    // console.log(br)
+
+    //40.Write a program to sort the array based on the number of occurrences of elements Ex: original array: [1,2,5,6,2,1,6,1,2,6,2,1,2]; After the logic: [5,6,6,6,1,1,1,1,2,2,2,2,2]; //5 occurred one time,6 three times,1 occurred 4 times, 2 occurred 5 times
+
+    var ar = [1,2,5,6,2,1,6,1,2,6,2,1,2];
+    // var br = ar.sort((a,b) => {
+    //     return a-b
+    // })
+    
+    for(var i=0; i<=ar.length-1; i++) {
+
+        var c = 1;
+
+        for(var j=i+1; j<=ar.length-1; j++){
+           if(ar[i] == ar[j]) {
+                c++
+                ar.splice(j,1)
+                j--
+                //console.log(j)
+           }
+        }
+        ar[i] = `${ar[i]}, occurrences: ${c}`     
+    }
+    
+    console.log(ar)
+    </script>
+</body>
+</html>

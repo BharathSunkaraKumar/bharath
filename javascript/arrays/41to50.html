@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>41to50</title>
+</head>
+<body>
+    <h1>array in javascript</h1>
+    <script>
+        //41.Write script to merge array as the values of ar in the first and values of br next
+        //b)Write script to merge array as the values of ar in the first and values of br next
+        //Expected output: [19,12,23,4,15,26,37,18,79,10];
+        //Expected output: [26,37,18,79,10,19,12,23,4,15];
+
+        // var ar = [19,12,23,4,15];
+        // var br = [26,37,18,79,10];
+        // var cr = br.concat(ar)
+        // console.log(cr)
+
+        //42.var ar = [1,2,3,7,8,9];
+        //var br = [4,5,6];
+        //Expected output: [1,2,3,4,5,6,7,8,9];
+        // var ar = [1,2,3,7,8,9];
+        // var br = [4,5,6];
+        // var cr = ar.concat(br).sort()
+        // console.log(cr)
+
+        //43.insert An Element Desired or Specific Position In An Array
+
+        // var ar = [1,2,3,7,8,9];
+        // ar.splice(1,0,"sbk")
+        // console.log(ar)
+
+        //44.Remove Duplicates Items In An Array
+
+        // var ar = ["bike", "car", "house", "car", "guns", "rv", "guns"]
+        // var br = ar.filter((value, index, array) => {
+        //     return array.indexOf(value) === index
+        // })
+        // console.log(br)
+
+        //46.Check String Is Palindrome Or Not Using For Loop
+
+        // var ar = "tattarrattat"
+        // console.log(ar)
+        // var br = ar.split('').reverse().join("")
+        // if(ar == br) {
+        //     console.log(`${ar} is palindrome`)
+        // }else{
+        //     console.log(`${ar} is not palindrome`)
+
+        // }
+
+        //47.Convert All Input String Simultaneously Into Asterisk ( * )
+
+        // var a = "bharth the sbk"
+        // var b = a.replace(a,"*")
+        // console.log(b)
+
+        //**//**recursion**\\**\\
+
+        // function doSomething(n) {
+        //     if(n === 0) {
+        //         console.log("TASK COMPLETED!")
+        //         return
+        //     }
+        //     console.log("I'm doing something.")
+        //     doSomething(n - 1)
+        //     }
+        // doSomething(3)
+
+        // function findFactorial(num) {
+        //     let factorial = 1
+        //     for (let i = num; i > 0; i--) {
+        //         factorial *= i  //1*5=5 5*4=20 20*3=60 60*2=120 120*1=120
+        //     }
+        //     return factorial
+        //     }
+
+        // var f = findFactorial(5) // 120
+        // console.log(f)
+
+        // function findFactorial(n) {
+        //     if(n===0) {
+        //         return 1
+        //     }
+        //     var factorial = n * findFactorial(n-1)  // 5*4 20 
+        //     return factorial // 20
+        // }
+        //console.log(findFactorial(5))
+
+        // var ar= ((n) => {
+        //     if(n.length > 0) {
+        //         console.log(n.shift())
+        //         ar(n)
+        //     }
+        // })
+       // ar([1,2,3,4,5])
+
+       //49.Print all negative elements in an array.
+
+    //    var ar = [1,-1,3,-1,-6,-7,18,1]
+    //    const negitiveElement = ((a) => {
+    //         // return a.length >0
+    //         // console.log(a.lenght)
+    //         if(a.length > 0) {
+    //             var e = a.shift()
+    //             if(e<0) {
+    //                 console.log(e)
+    //             }
+    //             negitiveElement(a)
+    //         }
+    //    })
+    //    negitiveElement(ar)
+
+    //50.Sum of all array elements. – using recursion.
+
+    var ar = [1,2,3,4,5]
+    const sum = ((e) => {
+        if(e.length ===0) {
+            return 0
+        }else{
+            return e.shift() + sum(e)
+        }
+    })
+    console.log(sum(ar))
+
+    
+    </script>
+</body>
+</html>

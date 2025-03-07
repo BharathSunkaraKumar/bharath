@@ -122,22 +122,59 @@
     //     return a-b
     // })
     
-    for(var i=0; i<=ar.length-1; i++) {
+    // for(var i=0; i<=ar.length-1; i++) {
 
-        var c = 1;
+    //     var c = 1;
 
-        for(var j=i+1; j<=ar.length-1; j++){
-           if(ar[i] == ar[j]) {
-                c++
-                ar.splice(j,1)
-                j--
-                //console.log(j)
-           }
-        }
-        ar[i] = `${ar[i]}, occurrences: ${c}`     
-    }
+    //     for(var j=i+1; j<=ar.length-1; j++){
+    //        if(ar[i] == ar[j]) {
+    //             c++
+    //             ar.splice(j,1)
+    //             j--
+    //             //console.log(j)
+    //        }
+    //     }
+    //     ar[i] = `${ar[i]}, occurrences: ${c}`     
+    // }
     
-    console.log(ar)
+    // console.log(ar)
+
+    var ar = [1,2,5,6,2,1,6,1,2,6,2,1,2];
+    var br = []; // 1256
+    var occurred = []; // 4513
+    for(var i=0; i<=ar.length-1; i++) {
+        var found = false;
+        for( j=0; j<=br.length; j++) {
+            if(ar[i] == br[j]) {
+                occurred[j]++;
+                found = true;
+                break
+            }
+        }
+        if(!found) {
+            br.push(ar[i]);
+            occurred.push(1)
+        }
+    }
+    var sortAr = ar.slice().sort((a,b) => {
+        // console.log("a::"+a) //2
+        //     console.log("b::"+b) //1
+            var fA =0; // 1
+            var fB =0; //
+            for(var i=0; i<=br.length-1; i++) { // 0<4t 1<4t
+                if(br[i] == a) fA =  occurred[i] // 1==2f 
+                if(br[i] == b) fB =  occurred[i] // 1==1t 
+            }
+            if(fA == fB) {
+                return a -b
+            }
+            return fA - fB
+            
+    })
+    console.log(br)
+    console.log(occurred)
+    console.log(sortAr)
+
     </script>
 </body>
 </html>

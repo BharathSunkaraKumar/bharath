@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>51to60</title>
+</head>
+<body>
+    <h1>javascript arrsys</h1>
+    <script>
+        //51.Find a maximum and minimum element in an array. – using recursion.
+
+        // var ar = [1,2,3,4,5];
+        // const findminmax = ((a, i=0, min = Infinity, max = -Infinity) => {
+
+        //     if(i === ar.length) { //0 1 2 3 4 5
+        //         return {min, max} // 15
+        //     }
+
+        //     min = Math.min(min, a[i]) //1 1 1 1 1
+        //     console.log("min::"+min)
+        //     max = Math.max(max, a[i]) //1 2 3 4 5
+        //     console.log("max::"+max)
+
+        //     return findminmax(a, i+1, min, max) //1 1 1 212 313 414 515
+
+        // })
+
+        // const result = findminmax(ar)
+        // console.log("minimum", result.min)
+        // console.log("maximum", result.max)
+
+        //52.Get the second largest element in an array.
+
+        // var secondMax = function (){ 
+        //     var arr = [20, 120, 111, 215, 54, 78]; // use int arrays
+        //     var max = Math.max.apply(null, arr); // get the max of the array
+        //     arr.splice(arr.indexOf(max), 1); // remove max from the array
+        //     return Math.max.apply(null, arr); // get the 2nd max
+        // };
+        // console.log(secondMax())
+            
+        // var sMax = function () {
+        //     var arr = [1,2,3,4,5]
+        //     var max = Math.max.apply(null, arr)
+        //     arr.splice(arr.indexOf(max) , 1)
+        //     console.log(arr)
+        //     console.log(max)
+        //     return Math.max.apply(null, arr)
+        // }
+        // console.log(sMax())
+
+        //53.Count the total number of even and odd elements in an array.
+
+        // var ar = [1,2,3,4,5,6,7,8,9,10,11,-1,-2,-6];
+        // var evenCount = 0;
+        // var oddCount = 0;
+        // var negCount = 0;
+
+        // for(var i=0; i<=ar.length-1; i++) {
+        //     if( ar[i]>=1 && ar[i] % 2 == 0 ) {
+        //         evenCount++
+        //     }else if(ar[i]>=1 && ar[i]%2 !==0){
+        //         oddCount++
+        //     }else{
+        //         if(ar[i] < 0) {
+        //             negCount++
+        //         }
+        //     }
+        // }
+        // console.log("evenCount::"+ evenCount)
+        // console.log("oddCount::"+ oddCount)
+        // console.log("negCount::"+ negCount)
+
+        //58.Count frequency of each element in an array.
+
+        // var ar = [1,1,2,3,3,3,5];
+
+        // for(var i=0; i<=ar.length-1; i++) {
+        //     var c = 1;
+        //     for(var j=i+1; j<=ar.length-1; j++) {
+        //         if(ar[i] == ar[j]) {
+        //             c++
+        //             ar.splice(j,1)
+        //             j--
+        //         }
+        //     }
+        //     ar[i] = `${ar[i]}, frequency: ${c}`
+        // }
+        // console.log(ar)
+
+        //59.Print all unique elements in the array.
+
+        // var ar = [1,2,3,4,5,6,7,7,6,5,4,3,2,1];
+        // var br = ar.filter((e,i,a) => {
+        //     console.log(i)
+        //     return ar.indexOf(e) == i
+        // })
+        // console.log(br)
+
+        //61.Delete all duplicate elements from an array.
+    
+        var ar = [1,2,3,4,5,6,7,7,6,5,4,3,2,1];
+        // var br = ar.filter((e, pos) => {
+        //     return ar.indexOf(e) == pos
+        // })
+        // console.log(br)
+
+        for(var i=0; i<=ar.length-1; i++) {
+            for(var j=i+1; j<=ar.length-1; j++) {
+                if(ar[i] == ar[j]) {
+                    ar.splice(j, 1)
+                    j--
+                }
+            }
+            
+        }
+        console.log(ar)
+
+    </script>
+</body>
+</html>

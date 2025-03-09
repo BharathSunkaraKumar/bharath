@@ -64,6 +64,21 @@
         // }
         // console.log(ear)
         // console.log(oar)
+
+        //68.Right rotate an array.
+
+    
+        var nums = [1,2,3,4,5,6,7]
+        var k = 3
+        const rotate = ((nums, k) => {
+            for(var i=0; i<k; i++) {
+                nums.unshift(nums.pop())
+                //console.log(`step ${i+1}:: ${nums}`)
+                //return nums
+            }
+            return nums
+        })
+        console.log(rotate(nums, k))
     </script>
 </body>
 </html>

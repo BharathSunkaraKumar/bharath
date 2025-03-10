@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objectsExample</title>
+</head>
+<body>
+    <h1>objects examples</h1>
+    <script>
+        // var mobile = {
+        //     ram:'6gb', // key: value
+        //     processor: "sd855",
+        //     model: "k20pro",
+        //     color: 'flamered',
+        //     storage: "120gb",
+        //     screenSize: "6.1 inch amoled display",
+        //     battery: "4100mah battery",
+        // }
+        // console.log(mobile.model)
+        // console.log(mobile.color)
+        // console.log(mobile.screenSize)
+        // var a = 'battery'
+        // console.log(mobile["storage"])
+        // console.log(mobile[a])
+
+        // var obj = {
+        //     a: 123,
+        //     b: 456,
+        //     c: "tirupati",
+        // }
+        // var a = 'c'
+        // console.log(obj.a)
+        // console.log(obj[a])//if we give the "a" in square brackets 
+        // // it will consider the a is variable
+        // console.log(obj["a"])//it will consider "a" is property in the objects
+
+        // var mobile = {
+        //     ram:'6gb', // key : value
+        //     processor: "sd855",
+        //     model: "k20pro",
+        //     color: 'flamered',
+        //     storage: "120gb",
+        //     screenSize: "6.1 inch amoled display",
+        //     battery: "4100mah battery",
+        // }
+
+        // for(var i in mobile) {
+        //     console.log(`${i}: ${mobile[i]}`)
+        // }
+
+        // var person = {
+        //     bs: 34000,
+        //     hra: 23000,
+        //     da: 98000,
+        //     ta: 23000
+        // }
+        // var totalSalary = 0
+        // for(var i in person) {
+        //     totalSalary += person[i]
+        // }
+        // console.log(totalSalary)
+
+        var persons = [
+            {
+                name: "kohli",
+                exp: 15,
+            },
+            {
+                name: "rohit",
+                exp: 18,
+            },
+            {
+                name: "pandya",
+                exp: 18,
+            },
+            {
+                name: "jadeja",
+                exp: 15,
+            },
+
+        ]
+        var te = 0
+        for(var i=0; i<=persons.length-1; i++) {
+            te+=persons[i].exp
+        }
+        console.log(te)
+
+
+    </script>
+</body>
+</html>

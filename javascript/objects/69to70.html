@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objects 69to70</title>
+</head>
+<body>
+    <h1>objects in javascript</h1>
+    <script>
+        // 69.Print the firstname.
+        // Print the lastname.
+        // Print the fullname("Harry Potter").
+        // If the age is less than 18, then print "false". If the age is more than 18, then print "true".
+        // var person = {
+        //     "firstName" : "Harry",
+        //     "lastName" : "Potter",
+        //     "age": 30,
+        //     "gender": "male",
+        //     "skill" : "ReactJS",
+        //     "expertise": "Beginner"
+        // };
+        // var a = "firstName"
+        // console.log(person.firstName)
+        // console.log(person[a])
+        // console.log(person["firstName"])
+        // console.log(person.lastName)
+        // console.log(`${person.firstName} ${person.lastName}`)
+        // var t = true
+        // var f = false
+        // var age18 = person.age > 18 ? t : f
+        // console.log(age18)
+
+        //70.
+        var marks = {
+            "maths" : 34,
+            "english" : 56,
+            "science": 32,
+            "hindi" : 75,
+            "social science": 65
+        };
+
+        //70.1 Print the marks of all the subjects.
+        //70.2 Print the names of all the subjects from the given object.
+        //70.3 Count the number of subjects from the given object.
+        //70.4 Print the percentage of the marks of the student.
+        //70.5 Print only those subjects where the student scored more than 35.
+        //70.6 Print the pass/fail status of the subjects provided 35 is the pass mark.
+        //70.7 Print only the passed subjects. 
+        //70.8 Count the number of passed subjects.
+        //70.9 Print only the failed subjects.
+        //70.10 Count the number of failed subjects.
+        //70.11 Print the least scored subject.
+        //70.12 Print the highest scored subject.
+        //70.13 Check whether the student has passed in all the subjects or not.  
+        //70.14 Take the subject name from the student through prompt box and print the subject marks and pass/fail status.       
+
+
+        var subCount = 0 
+        var percentage = 0
+        var totalMarks = 0
+        var passSubCount = 0
+        var failSubCount = 0
+        var leastScoredSub = Infinity
+        var highestScoredSub = -Infinity
+        var input = prompt("Enter subject name: ")
+        for(var m in marks) {
+            console.log(`${m} ${marks[m]}`)
+            subCount ++
+            totalMarks += marks[m]
+            if(marks[m] >= 35) {
+                console.log(`scored ${marks[m]} more than 35 subject name: ${m} PASS`)
+                console.log(`${m} PASS`)
+                passSubCount++
+            }else{
+                console.log(`scored ${marks[m]} more than 35 subject name: ${m} FAIL`)
+                console.log(`${m} FAILL`)
+                failSubCount++
+            }
+
+            //34 56 32 75 65
+            if(marks[m] < leastScoredSub) {  // 34 < infinity t 56<34f 32<34t 75<32f 65<32f
+                leastScoredSub = marks[m] // 34 32*
+            }
+
+            if(marks[m] > highestScoredSub) {  // 34 < infinity t 56<34f 32<34t 75<32f 65<32f
+                highestScoredSub = marks[m] // 34 32*
+            }
+            if(marks[m] > 35) {
+                console.log("student passed in all subjects")
+            }else{
+                console.log("student no passed in all subjects")
+            }
+
+            if(input) {
+                if(input == m){
+                    if(marks[m] > 35) {
+                        console.log(`>> subject marks: ${marks[m]} PAss <<`)
+                    }else{
+                        console.log(`>> subject marks: ${marks[m]} FAIL <<`)
+                    }
+                }
+            }
+
+        }
+        percentage = parseInt(totalMarks / 500 * 100)
+        console.log("total subjects: "+ subCount)
+        console.log("total marks: "+ totalMarks)
+        console.log("percentage: "+ percentage + "%")
+        console.log("passed subjects: "+ passSubCount)
+        console.log("failed subjects: "+ failSubCount)
+        console.log("leastScoredSub::" + leastScoredSub)
+        console.log("highestScoredSub::" + highestScoredSub)
+    </script>
+</body>
+</html>

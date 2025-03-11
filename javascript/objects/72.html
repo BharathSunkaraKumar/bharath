@@ -60,9 +60,106 @@
             ];
 
             //72.1 Print all the firstnames.
-            for(var s in softwares) {
-                 
+            //72.2 Print all the full names.
+            //72.3 Print only those names whose age is more than 25.
+            //72.4 Print all female names.
+            //72.5 Print only those names whose salary is more than 30000 and increase their salaries by 15%.
+            //72.6 Using prompt, print only those names whose city is "hyd".
+            //72.7 Print the total salary of all the people.
+            //72.8 Print all the female names.
+            //72.9 Print all the fullnames in the alphabetical order.
+            //72.10 Print all the fullnames in the increasing order of their age.
+            //72.11 Print all the fullnames in the reverse alphabetical order.
+            //72.12 Print all the fullnames in the decreasing order of their salaries.
+            //72.13 Print all the cities in which the people live. There should not be any duplicate cities.
+            //72.15 Print all the male names whose age is greater than 25.
+            //72.14 Print all names that starts with "p" and the firstname should be in UPPERCASE. e.g. PRAVEEN gubbala.
+
+            //var loc = prompt("Enter your city hyd: ")
+            //console.log(loc)
+            var sum = 0
+            // var r = people.sort((a,b) => {
+            //     return a.firstname < b.firstname ? -1 : 1
+            // })
+            // console.log(r)
+            // for(var j=0; j<=r.length-1; j++) {
+            //     //console.log(r[j])
+            //     console.log(r[j].firstname +" "+ r[j].lastname)
+            // }
+
+            // var r = people.sort((a,b) => {
+            //     return a.firstname > b.firstname ? -1 : 1
+            // })
+            // console.log(r)
+            // for(var j=0; j<=r.length-1; j++) {
+            //     //console.log(r[j])
+            //     console.log(r[j].firstname +" "+ r[j].lastname)
+            // }
+            // var r = people.sort((a,b) => {
+            //     return b.salary - a.salary
+            // })
+            // console.log(r)
+            // for(var j=0; j<=r.length-1; j++) {
+            //     //console.log(r[j])
+            //     console.log(r[j].salary)
+            // }
+
+            // var r = people.sort((a,b) => {
+            //     return a.age - b.age 
+            // })
+            // console.log(r)
+            // for(var j=0; j<=r.length-1; j++) {
+            //     //console.log(r[j])
+            //     console.log(r[j].firstname +" "+ r[j].lastname+" age: "+r[j].age)
+            // }
+            var currentCity = people[0].city 
+            //console.log(currentCity)
+            for(var i=0; i<=people.length-1; i++) {
+                //console.log(people[i].firstname +" "+ people[i].lastname)
+                // if(people[i].age > 25) {
+                //     console.log(people[i].firstname +" "+ people[i].lastname)
+                // }
+                // if(people[i].gender == "female") {
+                //     console.log(people[i].firstname +" "+ people[i].lastname)
+                // }
+                // if(people[i].salary >= 30000) {
+                //     console.log("before salary "+people[i].salary+" "+people[i].firstname +" "+ people[i].lastname )
+                //     var per = people[i].salary * 0.15
+                //     // console.log(per)
+                //     var hike = people[i].salary+per
+                //     // console.log(hike)
+                //     console.log("aftr 15% hike salary "+hike+" "+people[i].firstname +" "+ people[i].lastname )
+                // }
+                // if(loc=="hyd" && people[i].city=="hyd") {
+                //     console.log(people[i].firstname +" "+ people[i].lastname)
+                // }
+                // if(people[i].salary){
+                //     sum += people[i].salary
+                // }
+                // if(people[i].gender == 'female'){
+                //     console.log(`${people[i].firstname} ${people[i].lastname}`)
+                // }
+                // if(people[i].city){
+                //     if(currentCity == people[i].city){
+                        
+                //     }else if(currentCity != people[i].city) {
+                //         console.log(`${people[i].firstname} ${people[i].lastname} ${people[i].city}`)
+                //         //currentCity = people[i].city
+                //     }
+                    
+                // }
+                // if(people[i].age > 25 && people[i].gender == "male") {
+                //     console.log(`${people[i].firstname} ${people[i].lastname}`)
+                // }
+
+                if(people[i].firstname && people[i].firstname[0]=="p") {
+                    var fName = `${people[i].firstname}`.toUpperCase()
+                    var lName = `${people[i].lastname}`
+                    console.log(` ${fName} ${lName}`)
+                }
+                
             }
+            //console.log(sum)
     </script>
 </body>
 </html>

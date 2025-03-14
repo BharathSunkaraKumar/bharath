@@ -69,10 +69,67 @@
         // }
         // console.log("after::"+br.join(''))
         
-        //94.A Trim leading white space characters from a given string.
+        //94. A Trim leading white space characters from a given string.
+        //95. Trim trailing white space characters from a given string.
+        //96. Trim both leading and trailing white space characters from a given string.
 
-        var s = "foo love bar very much"
+        // var s = "  foo love bar very much  "
+        // console.log(s.trimStart().trimEnd())
 
+        //97.Remove all extra blank spaces from the given string.
+        // var s = "this is bharath kumar"
+        // var s1 = s.replace(/\s+/g,"").trim()
+        // console.log(s1)
+
+        //98. A String is Palindrome or Not
+        // var s = "kayak"
+        // var reverseString = s.split('').reverse().join('')
+        // if(s == reverseString) {
+        //     console.log(s+"given string is a palindrome")
+        // }else{
+        //     console.log(s+"given string is not a palindrome")
+        // }
+
+        //99.A String Is an Anagram or Not
+
+        // var s1 = "elbow ";
+        // var s2 = "below ";
+        // if(s1.length != s2.length) {
+        //     console.log("given strings are not an anagram because length is not match")
+        // }
+        // s1 = s1.split("").sort().join('').toLowerCase()
+        // console.log(s1)
+        // s2 = s2.split("").sort().join('').toLowerCase()
+        // console.log(s2)
+        // if(s1 == s2) {
+        //     console.log("given strings are an anagram")
+        // }else{
+        //     console.log("given strings are not an anagram")
+        // }
+
+        //100. Find the length of a string.
+        //101. Copy one string to another string.
+        //102. Concatenate two strings.
+        //103. Compare two strings.
+
+        // 0:  exact match
+        // -1:  string_a < string_b
+        // 1:  string_a > string_b
+
+        // var s = "bharath"
+        // var b = s
+        // var s1 = "kumar"
+        // var s2 = "bharath"
+        // console.log(s.length)
+        // console.log(b)
+        // console.log(s.concat(" ",s1))
+        // console.log(s.localeCompare(s2))
+
+        //104. Convert lowercase string to uppercase.
+        //105.Convert uppercase string to lowercase.
+
+        var s = "bharath"
+        console.log(s.toUpperCase().toLowerCase())
     </script>
 </body>
 </html>

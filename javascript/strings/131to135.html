@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>131to135</title>
+</head>
+<body>
+    <h1>javascript bascis</h1>
+    <script>
+        //131.Check whether a given number is a valid credit card number. Example:
+        // Example:
+        // Input-> '7463836483647454'; Output-> 'valid'
+        // Input-> '74638364836474548'; Output-> 'invalid'...(must be 16 digits)
+        // Input-> '7463836w4836o745'; Output-> 'invalid'...(must contain only numbers)
+
+        // var s = '7463836483647454'
+        // const creditCardNum = ((n) => {
+        //     //var ar = n.split('')
+        //     if(n.length > 16) {
+        //         return 'must be 16 digits'
+        //     }
+        //     for(var i=0; i<=n.length-1; i++) {
+        //         if(n[i].charCodeAt() >= 47 && n[i].charCodeAt() <= 57) {
+        //             // console.log(s[i])
+        //         }else{
+        //             return "must contain only numbers"
+        //         }
+        //     }
+        //     for(var i=0; i<=n.length-1; i++) {
+        //         if(n[i].charCodeAt() >= 47 && n[i].charCodeAt() <= 57) {
+        //             return "valid"
+        //         }
+        //     }
+        // })
+        // console.log(creditCardNum(s))
+
+        //132.Write a program to add hyphens (-) in between a given credit card number.
+        // Example:
+        // Input-> '6484638463487486'; Output-> '6484-6384-6348-7486'
+
+        // var s = '6484638463487486'
+        // var ar = s.split('')
+        // var br
+        // for(var i = 4; i<=ar.length-1; i+=5) {
+        //     //console.log(ar[i])
+        //      ar.splice(i, 0, '-')
+        // }
+        // br = ar.join('')
+        // console.log(br)
+
+        //133.Sort a given string
+        //Example: ‘praveen’=>’aeenprv’
+
+        // var s = ' praveen';
+        // var s1 = s.split('').sort().join('')
+        // console.log(s1)
+
+        //134.Eliminate Duplicate characters in given string
+        //Example: ‘praveengubbala’ => ‘pravengubl’
+
+        //var s = 'praveengubbala'
+        //  for(var chr of s) {
+        //     console.log(chr)
+        //  }
+        //  const dup = ((s) => {
+        //     var duplicates = ''
+        //     for(var chr of s) {
+        //         if(duplicates.includes(chr) == false) {
+        //             duplicates += chr
+        //         }
+        //     }
+        //     return duplicates
+        //  })
+         //console.log(dup(s))
+        // var ar = s.split('')
+        // var duplicates = ar.filter((e, i, a) => {
+        //     //return e
+        //     return a.indexOf(e) === i
+        // }).join('')
+        // console.log(duplicates)
+
+        //135.Write a program to print only numbers out of a given string
+        //Example: let us take pr34s2v9q4
+        //The output should be 3,4,2,9,4
+        // var s = 'pr34s2v9q4'
+        // for(var i=0; i<=s.length-1; i++) {
+        //     if(s[i].charCodeAt() >47 && s[i].charCodeAt() < 57) {
+        //         console.log(s[i])
+        //     }
+        // }
+    </script>
+</body>
+</html>

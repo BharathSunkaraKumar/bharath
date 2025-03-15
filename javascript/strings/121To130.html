@@ -50,9 +50,72 @@
 
         //126.Write a program to take a 16-digit credit card number and replace the first 12 characters with ‘X’. Example:Input->‘9765143265387960’; Output->‘XXXXXXXXXXXX7960’
 
-        var a = '9765143265387960'
-        var ar = a.split('')
-        
+        // var a = '9765143265387960'
+        // const card = ((num )=> {
+        //     return 'X'.repeat(12).concat(num.slice(-4))
+        // })
+        // console.log(card(a))
+
+        //127. Write a program to take a string and replace all vowels with ‘8’. Example: Input->‘This is awesome’; Output->‘Th8s 8s 8w8s8m8’
+
+        // var str = 'This is awesome'
+        // var ar = str.split('')
+        // for(var i=0; i<=str.length-1; i++) {
+        //     if(ar[i] == 'a' || ar[i] == 'e' || ar[i] == 'i' || ar[i] == 'o' || ar[i] == 'u') {
+        //         ar[i] = 8
+        //     }
+        // }
+        // var str2 = ar.join('')
+        // console.log(str2)
+
+        //128.Write a program to hide the middle six digits of a phone number. Example: Input-> '9876543210'; Output-> '98XXXXXX10'
+
+        // var str = '9876543210'
+        // var a = str.slice(0,2)
+        // var b = str.slice(-2)
+        // console.log(a)
+        // console.log(b)
+        // var c = 'XXXXXX'
+        // var r = a.concat(c,b)
+        // console.log(r)
+
+        //129.Append the calling code of India(+91) to a given phone number. Example: Input-> '9876543210'; Output-> '+919876543210'
+
+        // var s = '9876543210'
+        // var ind = '+91'
+        // console.log(ind.concat(s))
+
+        //Check whether a given number is a valid phone number.
+        // Example:Input-> '7654893274'; Output-> 'valid'
+        // Input-> '785487438754'; Output-> 'invalid'.........(must be 10 digits)
+        // Input-> '7854s54839'; Output-> 'invalid'.............(must NOT contain letters)
+
+        var a = '7854s54839'
+        const validPhoneNum = ((s) => {
+            var ar = s.split('')
+            
+            if(s.length > 10) {
+                return 'must be 10 digits'
+            }
+
+            for(var i=0; i<=ar.length-1; i++) {
+                
+                if(ar[i].charCodeAt() >=48 && ar[i].charCodeAt() <=57) {
+                    //
+                }else{
+                    return 'must NOT contain letters'
+                }
+            }
+
+            for(var i=0; i<=ar.length-1; i++) {
+                
+                if(ar[i].charCodeAt() >=48 && ar[i].charCodeAt() <=57) {
+                    return "valid"
+                }
+            }
+
+        })
+        console.log(validPhoneNum(a))
     </script>
 </body>
 </html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21to30</title>
+</head>
+<body>
+    <h1>javascript basics</h1>
+    <script>
+        //21.Cube of any number using the function.
+
+        // const cube = ((n) => {
+        //     return n**3
+        // })
+        // console.log(cube(3))
+
+        //23. Maximum and minimum between two numbers using functions.
+
+        // const maxMin = ((a, b) => {
+        //     if(a>b) {
+        //         return a
+        //     }else{
+        //         return b
+        //     }
+        // })
+        // var restult = maxMin(10, 20)
+        // console.log(restult)
+
+        //24. Check whether a number is even or odd using functions.
+
+        // const isEvenOdd = ((n) => {
+        //     if(n%2 ==0) {
+        //         return `${n} is even number`
+        //     }else{
+        //         return `${n} is odd number`
+        //     }
+        // })
+        // console.log(isEvenOdd(9))
+
+        //25.Check whether a number is prime, Armstrong or perfect number using functions.
+        
+
+
+        const isPrime = ((n) => {
+            if(n<=1) {
+                return false
+            }
+
+            for(var i=2; i<=n/2; i++) {
+                if(n%i == 0) {
+                    return false
+                }
+                
+            }
+            return true
+            
+        })
+
+        const amstrong = ((n) => {
+            var ar = n.toString().split('')
+            var l = ar.length
+            var x = 0
+            for(var i=0; i<=ar.length-1; i++) {
+                //console.log(ar[i])
+                x+=ar[i]**l
+                // console.log(x)
+            }
+            
+            if(x==n) {
+                console.log(`${x} is a amstrong number 😊`)
+            }else{
+                console.log(`${x} is not a amstrong number`)
+            }
+
+            
+        })
+
+        // const perfect = ((n) => {
+        //     var sum = 0
+        //     for(var i=1; i <=n/2; i++) { // 1<=3 t 1<=2t 2<=3t 3<=3
+        //         if(n%i ==0 ) { // 6%1 == 0t 6%2
+        //             sum+= i // 1+2+3
+        //         }
+        //     }
+        //     return sum === n
+        // })
+
+        const find = ((n) => {
+            
+           
+            if(isPrime(n)) {
+                console.log(`${n} is a prime number`)
+            }else{
+                console.log(`${n} is not a prime number`)
+            }
+        
+            
+
+            amstrong(n)
+            // if(perfect(n)) {
+            //     console.log(`${n} is perfect number`)
+            // }else{
+            //     console.log(`${n} is not a perfect number`)
+            // }
+           
+        })
+        var n = 153;
+        find(n)
+    </script>
+</body>
+</html>

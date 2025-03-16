@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11to20</title>
+</head>
+<body>
+    <h1>javascript basics in functions</h1>
+    <script>
+        //11. Write a function which can display the greatest of the three numbers passed in arguments.
+
+        // const greatestof3Num = ((a, b, c) => {
+        //     if(a>=b && a>=c) {
+        //         return a
+        //     }else if(b>=a && b>=c) {
+        //         return b
+        //     }else{
+        //         return c
+        //     }
+        // })
+        // var result = greatestof3Num(35,33,32)
+        // console.log(result)
+
+        //12. Write a function which can display the given arguments in ascending order
+
+        // const ascendingOrder = ((a, b, c) => {
+        //     // var ar = [...a]
+        //     // return ar.sort((a,b) => a-b)
+
+        //     if(a<b && a<c) {
+        //         if(b<c){
+        //             return `${a} ${b} ${c}`
+        //         }else{
+        //             return `${a} ${c} ${b}`
+        //         }
+                
+        //     }else if(b<c && b<a){
+        //         if(c<a) {
+        //             return `${b} ${c} ${a}`
+        //         }else{
+        //             return `${b} ${a} ${c}`
+        //         }
+        //     }else if(c<a && c<b){
+        //         if(a<b) {
+        //             return `${c} ${a} ${b}`
+        //         }else{
+        //             return `${c} ${b} ${a}`
+        //         }
+        //     }
+        // })
+        // var result = ascendingOrder(162,170,163)
+        // console.log(result)
+
+        //13. Write a function which can display the factorial of a number
+
+        
+        // const factorial = ((n) => {
+        //     var f = 1
+        //     for(var i=2; i<=n; i++) {
+        //         f *= i
+        //         console.log(f)
+        //     }
+        // })
+        // factorial(4)
+
+        //17. Write a function which can check a given number is armstrong number or not
+
+        const armstrong = ((n) => {
+            var ar = n.toString().split('')
+            var l = ar.length
+            //console.log(ar)
+            var x = 0
+            for(var i = 0; i<=ar.length-1; i++) {
+                //console.log(ar[i]**l)
+                x += ar[i]**l
+            }
+            //console.log(x)
+            if(x == n) {
+                return `${n} is a amstrong number 😊`
+            }else{
+                return `${n} is not a amstrong number`
+            }
+            
+        })
+        var restult = armstrong(153)
+        console.log(restult)
+
+        //20.Write a function that returns an array of all even numbers between 1 and 20.
+
+        // var br = []
+        // const even = ((n) => {
+            
+        //     for(var i=1; i<=n; i++) {
+        //         if(i%2 == 0) {
+        //             console.log(i)
+        //             br.push(i)
+        //         }
+        //     }
+        //    // console.log(br)
+        // })
+        // var result = even(20)
+        // console.log(br)
+        
+    </script>
+</body>
+</html>

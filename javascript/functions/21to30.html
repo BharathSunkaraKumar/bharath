@@ -42,39 +42,39 @@
         
 
 
-        const isPrime = ((n) => {
-            if(n<=1) {
-                return false
-            }
+        // const isPrime = ((n) => {
+        //     if(n<=1) {
+        //         return false
+        //     }
 
-            for(var i=2; i<=n/2; i++) {
-                if(n%i == 0) {
-                    return false
-                }
+        //     for(var i=2; i<=n/2; i++) {
+        //         if(n%i == 0) {
+        //             return false
+        //         }
                 
-            }
-            return true
+        //     }
+        //     return true
             
-        })
+        // })
 
-        const amstrong = ((n) => {
-            var ar = n.toString().split('')
-            var l = ar.length
-            var x = 0
-            for(var i=0; i<=ar.length-1; i++) {
-                //console.log(ar[i])
-                x+=ar[i]**l
-                // console.log(x)
-            }
+        // const amstrong = ((n) => {
+        //     var ar = n.toString().split('')
+        //     var l = ar.length
+        //     var x = 0
+        //     for(var i=0; i<=ar.length-1; i++) {
+        //         //console.log(ar[i])
+        //         x+=ar[i]**l
+        //         // console.log(x)
+        //     }
             
-            if(x==n) {
-                console.log(`${x} is a amstrong number 😊`)
-            }else{
-                console.log(`${x} is not a amstrong number`)
-            }
+        //     if(x==n) {
+        //         console.log(`${x} is a amstrong number 😊`)
+        //     }else{
+        //         console.log(`${x} is not a amstrong number`)
+        //     }
 
             
-        })
+        // })
 
         // const perfect = ((n) => {
         //     var sum = 0
@@ -86,27 +86,150 @@
         //     return sum === n
         // })
 
-        const find = ((n) => {
+        // const find = ((n) => {
             
            
-            if(isPrime(n)) {
-                console.log(`${n} is a prime number`)
-            }else{
-                console.log(`${n} is not a prime number`)
-            }
+        //     if(isPrime(n)) {
+        //         console.log(`${n} is a prime number`)
+        //     }else{
+        //         console.log(`${n} is not a prime number`)
+        //     }
         
             
 
-            amstrong(n)
-            // if(perfect(n)) {
-            //     console.log(`${n} is perfect number`)
-            // }else{
-            //     console.log(`${n} is not a perfect number`)
-            // }
+        //     amstrong(n)
+
+        //     if(perfect(n)) {
+        //         console.log(`${n} is perfect number`)
+        //     }else{
+        //         console.log(`${n} is not a perfect number`)
+        //     }
            
-        })
-        var n = 153;
-        find(n)
+        // })
+        // var n = 6;
+        // find(n)
+
+        //26.Find all prime numbers between the given interval using functions.
+
+        // const prime = ((n) => {
+            
+        //     if(n<2) return false;
+
+        //     for(var i=2; i<n; i++) {
+        //         if(n%i ==0) {
+        //              return false
+        //         }
+        //     }
+        //     return true
+        // })
+        
+        // //console.log(result)
+        // for(var  i=0; i<50; i++) {
+        //     if(prime(i)) {
+        //         console.log(i)
+        //     }
+        // }
+
+        //27.Print all strong numbers between the given interval using functions.
+
+       
+    //     const factorial = ((n) => {
+    //         var f = 1
+    //         for(var i=2; i<=n; i++){
+    //             f *= i
+    //             // console.log(f)
+    //         }
+    //         return f
+    //     })
+        
+    //    const isStrong = ((n) => { //1
+    //        var sum = 0;
+    //        var temp = n;
+    //        while(temp>0) {
+    //             var digit = temp % 10;
+    //             sum+=factorial(digit)
+    //             temp = Math.floor(temp/10)
+    //        }
+    //        return sum === n
+    //    })
+
+    //    const strong = ((start, end) => { 
+    //         for(var i=start; i<=end; i++) {
+    //             if(isStrong(i)) {//1
+    //                 console.log(i)
+    //             }
+    //         }
+    //    })
+
+    //    strong(1, 500)
+
+
+   // 28.Armstrong numbers between the given interval using functions.
+        
+//    var a = 123
+//    var lt = a%10
+//    var ml = Math.floor((a/10)%10)
+//    var ft = Math.floor((a /100))
+//    console.log(lt)
+//    console.log(ml)
+//    console.log(ft)
+
+    // const armstrong = ((n) => {
+    //     var ar = n.toString().split('')
+    //     var l = ar.length;
+    //     var sum = 0;
+    //     for(var i=0; i<=ar.length-1; i++) {
+    //         sum +=ar[i]**l
+    //     }
+    //     return n === sum
+    // })
+
+
+
+    // for(var i=1; i<=2000; i++) {
+    //     if(armstrong(i)) {
+    //         console.log(`${i} is armstrong number`)
+    //     }
+    // }
+
+    //29.Print all perfect numbers between the given interval using functions.
+
+
+    // const perfect = ((n) => {
+    //     var sum = 0
+    //     for(var i=0; i<=n/2; i++) {
+    //         if(n%i==0) {
+    //             sum += i
+    //         }
+    //     }
+    //     return sum === n
+    // })
+    // for(var i=1; i<=50; i++) {
+    //     if(perfect(i)) {
+    //         console.log(`${i} is a perfect number`)
+    //     }
+    // }
+
+    //30.Find the power of any number using recursion.
+
+    function power(base, exponent) {
+        if (exponent == 0)
+            return 1;
+        else
+            return base * power(base, exponent - 1); // 2*4 =8 2*2=4 2*1=2
+            //power(2,1) 2*1 = 2
+            //power(2,2) 2*2 = 4
+            //power(2,3) 2*4 = 8`
+     }
+
+    console.log(power(2, 3)); // Output: 8 2x2 = 4x2  = 8
+    console.log(power(5, 0)); // Output: 1
+    console.log(power(3, 4)); // Output: 81
+
+
+
+
+        
     </script>
 </body>
 </html>

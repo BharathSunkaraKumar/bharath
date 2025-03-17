@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>31to40</title>
+</head>
+<body>
+    <h1>javascript basics</h1>
+    <script>
+        //31.Print all natural numbers between 1 to n using recursion.
+
+        // const natural = ((n) => {
+           
+        //    if(n==0){
+        //         return 1
+        //    }else{
+        //         natural(n-1)
+        //    }
+        //    console.log(n)
+        // })
+        // natural(10)
+
+        //32.Print all even or odd numbers in a given range using recursion.
+
+        // const evenOdd = ((s, e, isEven) => {
+            
+        //     if(s > e) {
+        //         return 1
+        //     }
+
+        //     if((s % 2 == 0 && isEven) || (s % 2 !==0 && !isEven)) {
+        //         console.log(s)
+        //     }
+            
+        //     evenOdd(s+1, e, isEven)
+            
+        // })
+        // console.log("even number")
+        // evenOdd(1, 10, true)
+
+        // console.log("odd number")
+        // evenOdd(1, 10, false)
+
+        //33.Sum of all natural numbers between 1 to n using recursion.
+
+        // const sum = ((n) => {
+        //     if(n==0) {
+        //         return 0
+        //     }else{
+                
+        //        return n + sum(n-1) 
+        //        // 5 + sum(4)
+        //        // 4 + sum(3)
+        //        // 3 + sum(2)
+        //        // 2 + sum(1)
+        //        // 0 + sum(0)
+        //        // sum(1) = 1+0 = 1
+        //        // sum(2) = 2+1 = 3
+        //        // sum(3) = 3+3 = 6
+        //        // sum(4) = 4+6 = 10
+        //        // sum(5) = 5+10 = 15
+        //     }
+            
+        // })
+        // console.log(sum(5))
+
+        // const sumEvenOdd = ((n, isEven) => {
+        //     if(n<=0) {
+        //         return 0
+        //     }
+        //     if((n%2 ==0 && isEven) || (n%2 !== 0 && !isEven)) {
+        //         return n + sumEvenOdd(n-1, isEven)
+
+        //     }
+        //     return sumEvenOdd(n-1, isEven)
+        // })
+        // console.log("evevn number")
+        // console.log("odd number")
+        // //sumEvenOdd
+        // console.log(sumEvenOdd(10, true))
+       // console.log(sumEvenOdd(10, false))
+
+       //35.Find reverse of any number using recursion.
+
+    //    var a = 15;
+    //    var b 
+    //    var sum = 0
+    //    while(a>0) {  // 158 > 0 t 1>0t
+
+    //     b= a%10;  // 15%10 5 1
+    //     console.log('b::'+b)
+
+    //     sum = sum * 10+b // 5 51
+    //     console.log("sum::" + sum) 
+
+    //     a = parseInt(a/10) //1 0
+    //     console.log("a::"+ a)  
+    //    }
+    //    console.log(sum)
+
+
+    const flipInt = ((n, rev=0) => {
+        
+        if(n===0) {
+            return rev
+        }else{
+            return flipInt(Math.floor(n/10), rev * 10+(n%10))
+        }
+        
+    })
+    console.log(flipInt(153))
+
+    //i will be back
+
+    </script>
+</body>
+</html>

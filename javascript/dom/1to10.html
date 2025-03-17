@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1to10</title>
+</head>
+<body>
+    <h1 id="d1">hello World</h1>
+
+    <script>
+        //1.Given an h1 element:
+        //a.Print the text inside the h1 element in the console.
+
+        var h = document.getElementById('d1')
+        console.log(h.textContent)
+
+        //b.Print the data type of the text inside the h1.
+        var t = typeof(h.textContent)
+        console.log(t)
+        
+        //c.Print the text inside the h1 in uppercase in the console.
+        var ut = h.textContent.toUpperCase()
+        var s = document.querySelector("h1")
+        s.textContent = ut
+
+       //d.Change the text of the h1 to "Welcome to Edupoly".
+       s.innerHTML = 'welcome to tirupati'
+
+    </script>
+</body>
+</html>

@@ -6,26 +6,66 @@
     <title>1to10</title>
 </head>
 <body>
-    <h1 id="d1">hello World</h1>
-
+    <!-- <h1 id="d1">hello World</h1>
+    <h1 class="a">hello</h1>
+    <h1 class="a">bharath</h1>
+    <p class="b">coding</p>
+    <ul>
+        <li>apple</li>
+        <li>mango</li>
+        <li>orange</li>
+    </ul> -->
+    <h1>hello</h1>
+    <p>bharath</p>
+    <p>coding</p>
+    <p>something</p>
+    
     <script>
         //1.Given an h1 element:
         //a.Print the text inside the h1 element in the console.
 
-        var h = document.getElementById('d1')
-        console.log(h.textContent)
+        // var h = document.getElementById('d1')
+        // console.log(h.textContent)
 
         //b.Print the data type of the text inside the h1.
-        var t = typeof(h.textContent)
-        console.log(t)
+        // var t = typeof(h.textContent)
+        // console.log(t)
         
         //c.Print the text inside the h1 in uppercase in the console.
-        var ut = h.textContent.toUpperCase()
-        var s = document.querySelector("h1")
-        s.textContent = ut
+        // var ut = h.textContent.toUpperCase()
+        // var s = document.querySelector("h1")
+        // s.textContent = ut
 
        //d.Change the text of the h1 to "Welcome to Edupoly".
-       s.innerHTML = 'welcome to tirupati'
+       //s.innerHTML = 'welcome to tirupati'
+
+       //2.Print the texts inside the h1 and h2 elements in the console.
+
+        // var a = document.getElementsByClassName('a')
+        // console.log(a[0].innerHTML)
+        // console.log(a[1].innerHTML)
+        
+        //3.Store the texts of each li element in an array.
+
+        //var li = document.querySelectorAll('li')
+        //console.log(li)
+        // var ar = []
+        // li.forEach((e) => {
+        //     //console.log(e.innerHTML)
+        //     ar.push(e.innerHTML)
+        // })
+
+        // console.log(ar)
+        
+        //4.Print the text inside the first paragraph element in the console.
+
+        var p = document.querySelector('p')
+        console.log(p.innerHTML)
+    
+        
+        
+
+
 
     </script>
 </body>

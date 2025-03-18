@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>generate list</title>
+</head>
+<body>
+    <ul id="list">
+        
+    </ul>
+    <ol id="list2">
+        
+    </ol>
+    <script>
+        //  var students = [
+        //     {
+        //     name:'jaya',
+        //     gender:'female',
+        //     place:'gachibowli',
+        //     },
+        //     {
+        //     name:'dasu',
+        //     gender:'male',
+        //     place:'kphb'
+        //     },
+        //     {
+        //     name:'swati',
+        //     gender:'female',
+        //     place:'pune'
+        //     },
+        //     {
+        //     name:'pallavi',
+        //     gender:'female',
+        //     place:'assam'
+        //     },
+        //     {
+        //     name:'kiran',
+        //     gender:'male',
+        //     place:'kondapur'
+        //     },
+        //     {
+        //     name:'thirumala',
+        //     gender:'male',
+        //     place:'madhapur'
+        //     },
+        //     {
+        //     name:'priya',
+        //     gender:'female',
+        //     place:'hitech'
+        //     },
+        // ]
+        // console.log(students)
+
+        // var ul = document.getElementById('list')
+        // students.forEach((e,i) => {
+        //     var li = document.createElement('li')
+        //     var ul2 = document.createElement('ul')
+        //     var li2 = document.createElement('li')
+        //     var li3 = document.createElement('li')
+
+        //     li.innerHTML = e.name
+        //     ul.appendChild(li)
+
+        //     li2.innerHTML=e.gender
+        //     ul2.appendChild(li2)
+
+        //     li3.innerHTML = e.place
+        //     ul2.appendChild(li3)
+
+        //     ul.appendChild(ul2)
+        //     console.log(e.gender)
+
+        //     if(e.gender == 'female') {
+        //         li.style.backgroundColor = 'pink'
+        //         ul2.style.backgroundColor = 'pink'
+        //     }else{
+        //         li.style.backgroundColor = 'lightblue'
+        //         ul2.style.backgroundColor = 'lightblue'
+        //     }
+            
+        // })
+        // document.body.appendChild(ul)
+        // document.body.appendChild(ul)
+
+
+        var students = [		
+            {
+                "firstname": "praveen",
+                "age": 36,
+                "subjects":['angular','nodejs','reactjs','java']
+            }, 
+            {
+                "firstname": "srikanth",
+                "age": 32,
+                "subjects":['react','mongodb']
+            }, 
+            {
+                "firstname": "pradeep",
+                "age": 21,
+                "subjects":['express','mongoose','python']
+            }
+        ]
+
+        //console.log(students)
+
+        var ol = document.getElementById("list2")
+        
+        //console.log(ol)
+        students.forEach((e,i) => {
+            
+            var li = document.createElement('li')
+            li.innerHTML = e.firstname
+            ol.appendChild(li)
+            
+            var ol1 = document.createElement('ol')
+
+            e.subjects.forEach((s) => {
+                var li2 = document.createElement('li')
+                li2.innerHTML = s
+                ol1.appendChild(li2)
+                console.log(ol1)
+            })
+
+            ol.appendChild(ol1)
+           // console.log(e.subjects[i])
+        })
+        document.body.appendChild(ol)
+
+    </script>
+</body>
+</html>

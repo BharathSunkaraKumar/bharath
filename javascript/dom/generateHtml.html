@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>generate html</title>
+</head>
+<body>
+    <script>
+
+        // var h1 = document.createElement("h1")
+        // h1.innerHTML = 'this is bharath kumar'
+        // h1.style.color = 'red'
+        // document.body.appendChild(h1)
+        // console.log(h1)
+
+        // var ul = document.createElement('ul')
+        // var ar = ['kohli', 'rohit', 'hardik', 'bumrah', 'shreyas', 'gill']
+
+        // var ul2 = document.createElement('ul')
+        
+        // ar.forEach((e,i) => {
+        //     var li = document.createElement('li')
+        //     li.innerHTML = e
+        //     ul.appendChild(li)
+        //     var li2 = document.createElement('li')
+        //     li2.innerHTML = i+11
+        //     ul2.appendChild(li2)
+        // })
+        
+        // document.body.appendChild(ul)
+        // document.body.appendChild(ul2)
+
+
+        var table = document.createElement('table')
+        table.style.border='2px solid'
+
+        var ar = [
+            {
+                name: "bharath",
+                age: 25,
+                gender: 'male',
+                salary: '15000',
+                city: 'tirupati'
+            },
+            {
+                name: "kohli",
+                age: 36,
+                gender: 'male',
+                salary: '50000',
+                city: 'delhi'
+            },
+            {
+                name: "rohit",
+                age: 37,
+                gender: 'male',
+                salary: '40000',
+                city: 'mumbai'
+            },
+            {
+                name: "steve jobs",
+                age: 65,
+                gender: 'male',
+                salary: '85000',
+                city: 'usa'
+            },
+            {
+                name: "praveen gubbala",
+                age: 38,
+                gender: 'male',
+                salary: '75000',
+                city: 'hydrabad'
+            },
+        ]
+
+        //console.log(ar)
+        var propName = []
+        ar.forEach((e,i) => {
+            Object.keys(e).forEach((prop) => {
+                if(propName.indexOf(prop)<0) {
+                    propName.push(prop)
+                }
+            })
+        })
+        propName.forEach((e) => {
+            var thd = document.createElement('td')
+            var th = document.createElement('th')
+            thd.innerHTML = e
+            th.appendChild(thd)
+            table.appendChild(th)
+            th.style.border = '2px solid'
+        })
+
+        ar.forEach((e,i) => {
+            
+            var tr = document.createElement('tr')
+            tr.style.border = '2px solid'
+            var tdname = document.createElement('td')
+            tdname.style.border = '2px solid'
+            var tdage = document.createElement('td')
+            tdage.style.border = '2px solid'
+            var tdGen = document.createElement('td')
+            tdGen.style.border = '2px solid'
+            var tdsal = document.createElement('td')
+            tdsal.style.border = '2px solid'
+            var tdcity = document.createElement('td')
+            tdcity.style.border = '2px solid'
+
+            tdname.innerHTML = e.name
+            tr.appendChild(tdname)
+
+            tdage.innerHTML = e.age
+            tr.appendChild(tdage)
+
+            tdGen.innerHTML = e.gender
+            tr.appendChild(tdGen)
+
+            tdsal.innerHTML = e.salary
+            tr.appendChild(tdsal)
+
+            tdcity.innerHTML = e.city
+            tr.appendChild(tdcity)
+            table.appendChild(tr)
+           
+        })
+        
+        document.body.appendChild(table)
+
+
+        var ar = ['https://images.unsplash.com/photo-1726137570713-2458b137684f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D','https://plus.unsplash.com/premium_photo-1734656325511-be5d5ca931fb?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D','https://images.unsplash.com/photo-1725980457213-e718a2b7bb5a?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D']
+        
+        // console.log(img)
+
+        ar.forEach((e) => {
+            var img = document.createElement('img')
+            img.src = e
+            img.style.width = '190px'
+            //img.style.boxSizing = 'border-box'
+            console.log(img)
+            document.body.appendChild(img)
+        })
+
+    </script>
+</body>
+</html>

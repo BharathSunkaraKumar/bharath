@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>generate UI</title>
+</head>
+<body>
+    <table border="2px solid" id="table1"></table>
+    <table border="2px solid" id="table2"></table>
+    <script>
+         var people = [
+            {
+            "firstname": "praveen",
+            "lastname": "gubbala",
+            "age": 36,
+            "gender": "male",
+            "city": "hyd",
+            "salary": 10000
+            },
+            {
+            "firstname": "srikanth",
+            "lastname": "gubbala",
+            "age": 32,
+            "gender": "male",
+            "city": "bengaluru",
+            "salary": 20000
+            },
+            {
+            "firstname": "pradeep",
+            "lastname": "reddy",
+            "age": 21,
+            "gender": "male",
+            "city": "hyd",
+            "salary": 30000
+            },
+            {
+            "firstname": "mounika",
+            "lastname": "mudiraj",
+            "age": 20,
+            "gender": "female",
+            "city": "nalgonda",
+            "salary": 30000
+            },
+            {
+            "firstname": "nikhil",
+            "lastname": "m",
+            "age": 22,
+            "gender": "male",
+            "city": "guntur",
+            "salary": 2000
+            },
+            {
+            "firstname": "riya",
+            "lastname": "bhadouria",
+            "age": 14,
+            "gender": "female",
+            "city": "indore",
+            "salary": 40000
+            }
+        ];
+
+        console.log(people)
+
+        var propNameMale = []
+        var propNameFemale = []
+
+        people.forEach((e, i) => {
+            Object.keys(e).forEach((prop) => {
+                if(propNameMale.indexOf(prop) < 0){
+                    propNameMale.push(prop)
+                }
+            })
+        })
+        people.forEach((e, i) => {
+            Object.keys(e).forEach((prop) => {
+                if(propNameFemale.indexOf(prop) < 0){
+                    propNameFemale.push(prop)
+                }
+            })
+        })
+        //console.log(propName)
+
+        var table = document.getElementById('table1')
+        var table2 = document.getElementById('table2')
+       // console.log(table2)
+       
+        var thr1 = document.createElement('tr')
+        var thr2 = document.createElement('tr')
+
+        propNameMale.forEach((e) => {
+            var th = document.createElement('th')
+            th.innerHTML = e
+            thr1.appendChild(th)
+        })
+        table1.appendChild(thr1)
+
+        propNameFemale.forEach((e) => {
+            var th = document.createElement('th')
+            th.innerHTML = e
+            thr2.appendChild(th)
+        })
+        table2.appendChild(thr2)
+
+        people.forEach((e,i) => {
+           // console.log(e)
+           if(e.gender == 'male'  && e.age>25) {
+                var tr = document.createElement('tr')
+                var tdfn = document.createElement('td')
+                var tdln = document.createElement('td')
+                var tda= document.createElement('td')
+                var tdg = document.createElement('td')
+                var tdc = document.createElement('td')
+                var tds = document.createElement('td')
+
+                tdfn.innerHTML = e.firstname
+                tdln.innerHTML = e.lastname
+                tda.innerHTML = e.age
+                tdg.innerHTML = e.gender
+                tdc.innerHTML = e.city
+                tds.innerHTML = e.salary
+                
+                tr.appendChild(tdfn)
+                tr.appendChild(tdln)
+                tr.appendChild(tda)
+                tr.appendChild(tdg)
+                tr.appendChild(tdc)
+                tr.appendChild(tds)
+                table1.appendChild(tr)
+           }else{
+                if(e.gender == 'female' && e.salary> 20000) {
+                    var tr = document.createElement('tr')
+                    var tdfn = document.createElement('td')
+                    var tdln = document.createElement('td')
+                    var tda= document.createElement('td')
+                    var tdg = document.createElement('td')
+                    var tdc = document.createElement('td')
+                    var tds = document.createElement('td')
+
+                    tdfn.innerHTML = e.firstname
+                    tdln.innerHTML = e.lastname
+                    tda.innerHTML = e.age
+                    tdg.innerHTML = e.gender
+                    tdc.innerHTML = e.city
+                    tds.innerHTML = e.salary
+                    
+                    tr.appendChild(tdfn)
+                    tr.appendChild(tdln)
+                    tr.appendChild(tda)
+                    tr.appendChild(tdg)
+                    tr.appendChild(tdc)
+                    tr.appendChild(tds)
+                    table2.appendChild(tr)
+                }
+            }
+        })
+    </script>
+</body>
+</html>

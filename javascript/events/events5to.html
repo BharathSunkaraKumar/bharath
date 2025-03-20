@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events in javascript</title>
+</head>
+<body>
+    <h1 style="color: tomato; text-align: center;">Toggle button to show true/false</h1>
+    <div style="display: flex; justify-content: center; align-items: center;">
+        <button onclick="btn()" style="margin: 5px; background-color: orange;">Toggle</button>
+        <p id="tf">false</p>
+    </div>
+    <div style="display: flex; justify-content: center;">
+        <button style="padding: 10px; width: 50px;"  onclick="onOffBtn(event)">on</button>
+    </div>
+    <div  style="border: 3px solid black; padding: 10px; margin: 10px; width: 50%;">
+        <p id="ptf">i'm noting</p>
+    </div>
+    <button onclick="ToggleBtn()">true/false</button>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+        <div>
+            <h3>Like and Dislike Button</h3>
+        </div>
+        <div>
+            <button onclick="lBtn(event)" style="background-color: mediumseagreen; margin: 10px; border-radius: 5px; border: none; width: 70px; height: 30px; color: white;">Like</button> </button><spam id="like">0</spam>
+        </div>
+        <div>
+            <button onclick="dBtn(event)" style="background-color:tomato; margin: 10px; border: none; width: 70px; height: 30px; border-radius: 5px; color: white;">Dislike </button><spam id="dislike">0</spam>
+        </div>
+    </div>
+    <script>
+        var p = document.getElementById('tf')
+        const btn = (() => {
+            if(p.innerHTML == 'false') {
+                p.innerHTML = 'true'
+            }else{
+                p.innerHTML = 'false'
+            }
+        })
+        const onOffBtn = (e) => {
+            console.log(e.target.innerHTML)
+            if(e.target.innerHTML=='on') {
+                e.target.innerHTML = 'off'
+            }else{
+                e.target.innerHTML = 'on'
+            }
+        }
+        var ptf = document.getElementById('ptf')
+        const ToggleBtn = (()=> {
+            //console.log(ptf)
+            if(ptf.innerHTML == "i'm noting" ) {
+                ptf.innerHTML = 'true'
+            }else{
+                if(ptf.innerHTML == 'true') {
+                    ptf.innerHTML = 'false'
+                }else{
+                    ptf.innerHTML = 'true'
+                }
+            }
+        })
+
+        var lspn = document.getElementById('like')
+        var dspn = document.getElementById('dislike')
+        // console.log(lspn)
+        // console.log(dspn)
+
+        const lBtn = ((e) => {
+            console.log('like')
+            var count 
+            lspn.innerHTML++
+        })
+
+        const dBtn = ((e) => {
+            console.log('dislike')
+            dspn.innerHTML++
+        })
+    </script>
+</body>
+</html>

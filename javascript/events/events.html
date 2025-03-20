@@ -4,14 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>events</title>
+    <style>
+        #colorBox{
+            border: 5px solid black;
+            height: 100px;
+            width: 200px;
+        }
+        #colorBox2{
+            border: 3px solid black;
+            height: 100px;
+            width: 200px;
+        }
+        #btn{
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            width: 100px;
+            border: none;
+            background-color: white;
+            color: black;
+            box-shadow: 2px 2px 5px black;
+        }
+    </style>
 </head>
 <body>
-    <button onclick="abc()">add text</button>
+    <button onclick="abc(event)">add text</button>
+    <div id="colorBox"></div>
+    <div>
+        <button onclick="red()">red</button>
+        <button onclick="blue()">blue</button>
+        <button onclick="green()">green</button>
+        <button onclick="reset()">reset</button>
+    </div>
+    <button id="btn" onclick="btnColor(event)">white</button>
+    <div id="colorBox2" onclick="rotateClr()"></div>
     <script>
-        const abc = (() => {
+        const abc = ((e) => {
             var h = document.createElement('h1')
             h.innerHTML = 'welcome to the different world'
             document.body.appendChild(h)
+            console.log(e.target.innerHTML)
+        })
+
+        var box = document.getElementById('colorBox')
+
+        const red = (() => {
+            box.style.backgroundColor = 'red'
+        })
+        const blue = (() => {
+            box.style.backgroundColor = 'blue'
+        })
+        const green = (() => {
+            box.style.backgroundColor = 'green'
+        })
+        const reset = (() => {
+            box.style.backgroundColor = 'white'
+        })
+        var btn = document.getElementById('btn')
+        const btnColor = ((e) => {
+           if(btn.style.backgroundColor=='green') {
+                 btn.style.backgroundColor = 'white'
+                  btn.style.color = 'black'
+                   btn.innerHTML = 'white'
+           }else{
+                 btn.style.backgroundColor = 'green'
+                 btn.style.color = 'white'
+                  btn.innerHTML = 'green'
+           }
+        })
+        var colorBox2 = document.getElementById('colorBox2')
+
+        const rotateClr = (() => {
+            //console.log('hi')
+            var letters = '0123456789ABCDEF'
+            var color = '#'
+            for(var i=0; i<6; i++) {
+                color+=letters[Math.floor(Math.random()*16)]
+                //color+=letters[Math.floor(Math.random()*16)]
+            }
+            
+            colorBox2.style.backgroundColor = color
+            console.log(color)
         })
     </script>
 </body>

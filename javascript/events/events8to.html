@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events in javascript</title>
+</head>
+<body>
+    <div  style="display: flex; align-items: center; flex-direction: column;">
+        <div  id="box" style="border: 1px solid black; height: 100px; width: 100px; background-color: white; margin: 10px;">
+
+        </div>
+        <button onclick="onOffToggle()" style="background-color: yellow; ">Toggle</button>
+        <!-- <div>
+            <button onclick="onBtn()" id="on" style="background-color: yellow;">on</button>
+            <button onclick="offBtn()" id="off" style="background-color: yellow;">off</button>
+        </div> -->
+    </div>
+
+    <script>
+         var box = document.getElementById('box')
+        // var on = document.getElementById('on')
+        // var off = document.getElementById('off')
+        // const onBtn = ((e) => {
+        //     if(box.style.backgroundColor=='white') {
+        //         box.style.backgroundColor = 'yellow'
+        //         on.style.backgroundColor='red'
+        //         on.style.color='white'
+        //         off.style.backgroundColor='white'
+        //         off.style.color='black'
+        //     }
+        // })
+
+        // const offBtn = (() => {
+        //     if(box.style.backgroundColor=='yellow') {
+        //         box.style.backgroundColor = 'white'
+        //         on.style.backgroundColor = 'white'
+        //         on.style.color = 'black'
+        //         off.style.backgroundColor='red'
+        //         off.style.color='white'
+        //     }
+        // })
+
+        const onOffToggle = (() => {
+            if(box.style.backgroundColor == 'white') {
+                box.style.backgroundColor = 'yellow'
+            }else{
+                box.style.backgroundColor = 'white'
+            }
+        })
+    </script>
+</body>
+</html>

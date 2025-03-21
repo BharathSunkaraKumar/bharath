@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events in javascript</title>
+    <style>
+        .imgs1 img{
+            width: 100px;
+            height: 90px;
+        }
+        .img2 img{
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="imgs1" style="display: flex;  justify-content: center; ;">
+        <div>
+            <img onmouseover="chg1(event)" src="./flight1.avif" />
+        </div>
+        <div>
+            <img onmouseover="chg2(event)" src="./flight2.avif" />
+        </div>
+        <div>
+            <img onmouseover="chg3(event)" src="./flight3.avif" />
+        </div>
+    </div>
+    <div class="img2" style="display: flex;
+            justify-content: center;">
+        <img id="mainIMg" src="./flight2.avif"/>
+    </div>
+    <div>
+        <span onclick="rate1()" id="star1">&#9734</span>
+        <span onclick="rate2()" id="star2">&#9734</span>
+        <span onclick="rate3()" id="star3">&#9734</span>
+        <span onclick="rate4()" id="star4">&#9734</span>
+        <span onclick="rate5()" id="star5">&#9734</span>
+    </div>
+    <script>
+        var img = document.getElementById('mainIMg')
+        
+        const chg1 = ((e) => {
+            img.src = e.target.src
+        })
+        const chg2 = ((e) => {
+            img.src = e.target.src
+        })
+        const chg3 = ((e) => {
+            img.src = e.target.src
+        })
+
+        var r1 = document.getElementById("star1")
+        var r2 = document.getElementById("star2")
+        var r3 = document.getElementById("star3")
+        var r4 = document.getElementById("star4")
+        var r5 = document.getElementById("star5")
+        const rate1 = (() => {
+            r1.innerHTML = '&#9733'    
+            r2.innerHTML = '&#9734'    
+            r3.innerHTML = '&#9734'    
+            r4.innerHTML = '&#9734'    
+            r5.innerHTML = '&#9734'    
+        })
+        const rate2 = (() => {
+            r1.innerHTML = '&#9733'    
+            r2.innerHTML = '&#9733'    
+            r3.innerHTML = '&#9734'    
+            r4.innerHTML = '&#9734'    
+            r5.innerHTML = '&#9734'     
+        })
+        const rate3 = (() => {
+            r1.innerHTML = '&#9733'    
+            r2.innerHTML = '&#9733'    
+            r3.innerHTML = '&#9733' 
+            r4.innerHTML = '&#9734'    
+            r5.innerHTML = '&#9734'    
+        })
+        const rate4 = (() => {
+            r1.innerHTML = '&#9733'    
+            r2.innerHTML = '&#9733'    
+            r3.innerHTML = '&#9733'    
+            r4.innerHTML = '&#9733'    
+            r5.innerHTML = '&#9734'    
+        })
+        const rate5 = (() => {
+            r5.innerHTML = '&#9733'
+            r1.innerHTML = '&#9733'    
+            r2.innerHTML = '&#9733'    
+            r3.innerHTML = '&#9733'    
+            r4.innerHTML = '&#9733'     
+        })
+    </script>
+</body>
+</html>

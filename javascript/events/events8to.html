@@ -17,6 +17,11 @@
         </div> -->
     </div>
 
+    <div style="display: flex; align-items: center; flex-direction: column;">
+        <img style="height: 250px;" id="light" src="./lightoff.jpg"/>
+        <button id="btnclr" onclick="lightBTn(event)">on</button>
+    </div>
+
     <script>
          var box = document.getElementById('box')
         // var on = document.getElementById('on')
@@ -47,6 +52,21 @@
             }else{
                 box.style.backgroundColor = 'white'
             }
+        })
+
+        var light = document.getElementById('light')
+        var btnclr = document.getElementById('btnclr')
+        
+        const lightBTn = ((e) => {
+            btnclr.style.backgroundColor = 'yellow'
+            if(light.src == 'http://127.0.0.1:5500/javascript/events/lightoff.jpg') {
+                light.src = './light.jpg'
+                e.target.innerHTML = 'off'
+            }else{
+                light.src = './lightoff.jpg'
+                e.target.innerHTML = 'on'
+            }
+           //.log()
         })
     </script>
 </body>

@@ -13,6 +13,13 @@
             width: 300px;
             height: 200px;
         }
+        .stars{
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            flex-wrap: nowrap;
+            
+        }
     </style>
 </head>
 <body>
@@ -31,15 +38,24 @@
             justify-content: center;">
         <img id="mainIMg" src="./flight2.avif"/>
     </div>
-    <div>
+    <div class="stars">
         <span onclick="rate1()" id="star1">&#9734</span>
         <span onclick="rate2()" id="star2">&#9734</span>
         <span onclick="rate3()" id="star3">&#9734</span>
         <span onclick="rate4()" id="star4">&#9734</span>
         <span onclick="rate5()" id="star5">&#9734</span>
     </div>
+    <div style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
+        <div>
+            <h3>Rating</h3>
+        </div>
+        <div>
+            <h3 id="dipRating"></h3>
+        </div>
+    </div>
     <script>
         var img = document.getElementById('mainIMg')
+        var dipRating = document.getElementById('dipRating')
         
         const chg1 = ((e) => {
             img.src = e.target.src
@@ -62,13 +78,15 @@
             r3.innerHTML = '&#9734'    
             r4.innerHTML = '&#9734'    
             r5.innerHTML = '&#9734'    
+            dipRating.innerHTML = "1/5"
         })
         const rate2 = (() => {
             r1.innerHTML = '&#9733'    
             r2.innerHTML = '&#9733'    
             r3.innerHTML = '&#9734'    
             r4.innerHTML = '&#9734'    
-            r5.innerHTML = '&#9734'     
+            r5.innerHTML = '&#9734' 
+            dipRating.innerHTML = "2/5"    
         })
         const rate3 = (() => {
             r1.innerHTML = '&#9733'    
@@ -76,20 +94,23 @@
             r3.innerHTML = '&#9733' 
             r4.innerHTML = '&#9734'    
             r5.innerHTML = '&#9734'    
+            dipRating.innerHTML = "3/5"
         })
         const rate4 = (() => {
             r1.innerHTML = '&#9733'    
             r2.innerHTML = '&#9733'    
             r3.innerHTML = '&#9733'    
             r4.innerHTML = '&#9733'    
-            r5.innerHTML = '&#9734'    
+            r5.innerHTML = '&#9734'   
+            dipRating.innerHTML = "4/5" 
         })
         const rate5 = (() => {
             r5.innerHTML = '&#9733'
             r1.innerHTML = '&#9733'    
             r2.innerHTML = '&#9733'    
             r3.innerHTML = '&#9733'    
-            r4.innerHTML = '&#9733'     
+            r4.innerHTML = '&#9733' 
+            dipRating.innerHTML = "5/5"    
         })
     </script>
 </body>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript events</title>
+</head>
+<body>
+    <div style="display: flex; flex-direction: column; align-items: center; color: dodgerblue;">
+        <div>
+            <h1>Show images using URL</h1>
+        </div>
+        <div>
+            <h3>Enter image RUL</h3>
+        </div>
+        <div>
+            <input type="url" name="img" onchange="imgurl(event)"/>
+        </div>
+        <div>
+            <button onclick="addBtn(event)">add image</button>
+        </div>
+        <div id="imgD">
+        </div>
+    </div>
+    
+    
+    <script>
+        //https://images.unsplash.com/vector-1742508307933-e49c2def9e40?q=80&w=670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+
+        var imgD = document.getElementById('imgD')
+        var imgURL = []
+        const addBtn = ((e) => {
+            // console.log(imgURL)
+            
+
+            //console.log(imgURL)
+            imgURL.forEach((im) => {
+                
+                var img = document.createElement('img')
+                img.src = im
+                img.style.width = "100px"
+                img.style.height = "100px"
+                imgD.appendChild(img)
+
+                console.log(im)
+
+            })
+            imgURL = []
+        })
+
+        const imgurl = ((e) => {
+            //console.log(e.target.value)
+            imgURL.push(e.target.value)
+        })
+    </script>
+    
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image carousel</title>
+    <style>
+        button{
+            background-color: dodgerblue;
+            color: white;
+            border: none;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+        <div>
+            <h1>Image Carousel</h1>
+        </div>
+        <div >
+            <img id="img"/>
+        </div>
+        <div >
+            <button onclick="prev()">Prev</button>
+            <button onclick="nxt()">Next</button>
+        </div>
+    </div>
+    <script>
+        imgar = ['https://images.unsplash.com/photo-1508020963102-c6c723be5764?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c2t5fGVufDB8fDB8fHww', 'https://plus.unsplash.com/premium_photo-1664304423623-4f9d5ed90b4f?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8c2t5fGVufDB8fDB8fHww', 'https://images.unsplash.com/photo-1436891620584-47fd0e565afb?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHNreXxlbnwwfHwwfHx8MA%3D%3D',"https://images.unsplash.com/photo-1548266652-99cf27701ced?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c2t5fGVufDB8fDB8fHww"]
+
+        var inc = 0
+        var img = document.getElementById('img')
+        img.src = imgar[0]
+        img.style.height = '200px'
+        img.style.width = '100px'
+        
+        const prev = (() => {
+            inc--
+            if(inc < 0) {
+                inc = imgar.length-1
+            }
+            img.src = imgar[inc]
+        })
+        const nxt = (() => {
+            inc++
+            if(inc >= imgar.length) {
+                inc = 0
+            }
+            img.src = imgar[inc]
+        })
+
+        
+    </script>
+</body>
+</html>

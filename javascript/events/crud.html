@@ -52,8 +52,11 @@
             image URL: <input type="url" id="url" />
         </div>
         <div>
-            <button onclick="addBtn(event)">Add Contact</button>
+            <button id="addBtn" onclick="addBtn(event)">Add Contact</button>
         </div>
+    </div>
+    <div>
+        <button id="udcon" onclick="updateContact(event)">update contact</button>
     </div>
     <div id="cards">
     </div>
@@ -61,6 +64,14 @@
         var contacts = [
             
         ]
+
+        var n = document.getElementById('name')
+        var num = document.getElementById('number')
+        var em = document.getElementById('email')
+        var url = document.getElementById('url')
+        var udcontact = document.getElementById('udcon')
+        udcontact.style.display = 'none'
+        var addbtn = document.getElementById('addBtn')
 
         var cards = document.getElementById('cards')
         const addBtn = ((e) => {
@@ -70,21 +81,37 @@
                 email: '',
                 img: ''
             }
-            contact.name = document.getElementById('name').value
-            contact.number = document.getElementById('number').value
-            contact.email = document.getElementById('email').value
-            contact.url = document.getElementById('url').value
+            contact.name = n.value
+            contact.number = num.value
+            contact.email = em.value
+            contact.url = url.value
             contacts.push(contact)
             console.log(contacts)
-            genUI()
-            contact.name = document.getElementById('name').value = ''
-            contact.number = document.getElementById('number').value = ''
-            contact.email = document.getElementById('email').value = ''
-            contact.url = document.getElementById('url').value = ''
+            genUI(contacts)
+            n.value = ''
+            num.value = ''
+            em.value = ''
+            url.value = ''
         })
-        const genUI = (() => {
-            contacts.forEach((item, i, items) => {
-                console.log(item)
+
+        var currentInx
+        const updateContact = ((e) => {
+            console.log('hi')
+            var udcontacts = {
+                'name': n.value,
+                'email': em.value,
+                'number': num.value,
+                'url': url.value
+            }
+            contacts[currentInx] = udcontacts
+            genUI(contacts)
+            udcontact.style.display = 'none'
+            addbtn.style.display = 'inline-block'
+        })
+
+        const genUI = ((arr) => {
+            cards.innerHTML = ''
+            arr.forEach((item, i) => {
                 var img = document.createElement('img')
                 img.src = item.url
                 var name = document.createElement('h3')
@@ -98,33 +125,41 @@
 
                 var delbtn = document.createElement('button')
                 delbtn.innerHTML = 'delete'
-                delbtn.onclick = ((event, item) => {
-                    console.log(items)
+                delbtn.onclick = (() => {
+                    arr.splice(i, 1)
+                    genUI(arr)
+                    console.log(arr)
                 })
                 var edtbtn = document.createElement('button')
                 edtbtn.innerHTML = 'edit'
                 edtbtn.onclick  = (() => {
                     console.log('edit')
-
+                    currentInx = i
+                    udcontact.style.display = 'inline-block'
+                    addbtn.style.display = 'none'
+                    n.value = item.name
+                    console.log(item.number)
+                    
+                    num.value = item.number
+                    console.log("num.value::"+num.value)
+                    em.value = item.email
+                    url.value = item.url
                 })
 
                 var btndiv = document.createElement('div')
                 btndiv.appendChild(delbtn)
                 btndiv.appendChild(edtbtn)
-                console.log(btndiv)
 
-                console.log(img)
                 card.appendChild(img)
                 card.appendChild(name)
                 card.appendChild(email)
                 card.appendChild(num)
                 card.appendChild(btndiv)
                 cards.appendChild(card)
-                console.log(card)
 
                 
             })
-            contacts = []
+            //contacts = []
         })
     </script>
 </body>

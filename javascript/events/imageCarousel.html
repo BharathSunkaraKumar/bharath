@@ -34,13 +34,15 @@
         img.src = imgar[0]
         img.style.height = '200px'
         img.style.width = '100px'
-        
+        console.log(imgar.length)
         const prev = (() => {
             inc--
+            console.log(inc)
             if(inc < 0) {
                 inc = imgar.length-1
             }
             img.src = imgar[inc]
+            console.log(inc)
         })
         const nxt = (() => {
             inc++

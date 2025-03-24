@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crud</title>
+    <style>
+        *{
+            color: dodgerblue;
+            padding: 2px;
+            margin: 2px;
+        }
+        .details{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid;
+            text-align: center;
+        }
+        img{
+            width: 50px;
+            border-radius: 50%;
+            height: 50px;
+            
+        }
+        .card{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .cards{
+            display: grid;
+            grid-template-columns: auto auto auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="details">
+        <div>
+            <h1>Add Contact Cards With CRUD Operrations</h1>
+        </div>
+        <div>
+            Name: <input type="text" id="name" />
+        </div>
+        <div>
+            number: <input type="number" id="number" />
+        </div>
+        <div>
+            email: <input type="email" id="email" />
+        </div>
+        <div>
+            image URL: <input type="url" id="url" />
+        </div>
+        <div>
+            <button onclick="addBtn(event)">Add Contact</button>
+        </div>
+    </div>
+    <div id="cards">
+    </div>
+    <script>
+        var contacts = [
+            
+        ]
+
+        var cards = document.getElementById('cards')
+        const addBtn = ((e) => {
+            var contact = {
+                name: '',
+                number: '',
+                email: '',
+                img: ''
+            }
+            contact.name = document.getElementById('name').value
+            contact.number = document.getElementById('number').value
+            contact.email = document.getElementById('email').value
+            contact.url = document.getElementById('url').value
+            contacts.push(contact)
+            console.log(contacts)
+            genUI()
+            contact.name = document.getElementById('name').value = ''
+            contact.number = document.getElementById('number').value = ''
+            contact.email = document.getElementById('email').value = ''
+            contact.url = document.getElementById('url').value = ''
+        })
+        const genUI = (() => {
+            contacts.forEach((item, i, items) => {
+                console.log(item)
+                var img = document.createElement('img')
+                img.src = item.url
+                var name = document.createElement('h3')
+                name.innerHTML = item.name
+                var email = document.createElement('p')
+                email.innerHTML = item.email
+                var num = document.createElement('p')
+                num.innerHTML = item.number
+                var card = document.createElement('div')
+                card.classList.add('card')
+
+                var delbtn = document.createElement('button')
+                delbtn.innerHTML = 'delete'
+                delbtn.onclick = ((event, item) => {
+                    console.log(items)
+                })
+                var edtbtn = document.createElement('button')
+                edtbtn.innerHTML = 'edit'
+                edtbtn.onclick  = (() => {
+                    console.log('edit')
+
+                })
+
+                var btndiv = document.createElement('div')
+                btndiv.appendChild(delbtn)
+                btndiv.appendChild(edtbtn)
+                console.log(btndiv)
+
+                console.log(img)
+                card.appendChild(img)
+                card.appendChild(name)
+                card.appendChild(email)
+                card.appendChild(num)
+                card.appendChild(btndiv)
+                cards.appendChild(card)
+                console.log(card)
+
+                
+            })
+            contacts = []
+        })
+    </script>
+</body>
+</html>

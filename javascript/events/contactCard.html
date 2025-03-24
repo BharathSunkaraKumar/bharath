@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact card</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        input{
+            margin: 5px;
+        }
+        img{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        #card{
+            /* background-color: dodgerblue; */
+            display: flex;
+            flex-direction: column;
+            
+            justify-content: center;
+            align-items: center;
+            /* border: 3px solid blue; */
+            margin: 3px;
+            padding: 3px;
+        }
+        .btn>button{
+            background-color: aqua;
+            width: 50px;
+            border-radius: 5px;
+            border: none;
+            margin: 5px;
+        }
+        .btn>button:hover{
+            background-color: tomato;
+        }
+        #cards{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            justify-content: space-around;
+
+        }
+    </style>
+</head>
+<body>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+        <div>
+            <h1>Add Contact Cards</h1>
+        </div>
+        <div style="padding: 10px; margin: 10px; border: 1px solid; text-align: center;">
+            <form >
+                <div>
+                    <div>
+                        Name: <input id="name"  onkeyup="fName(event)"  type="text" name="name">
+                        <!-- -->
+                    </div>
+                    <div>
+                        Number: <input id="number" onkeyup="num(event)" type="number" name="number">
+                    </div>
+                    <div>
+                        Email: <input id="email" onkeyup="eml(event)" type="email" name="email">
+                    </div>
+                    <div>
+                        Url: <input id="url" onkeyup="profile(event)" type="url" name="url">
+                    </div>
+                    <div>
+                        <button onclick="addbtb(event)">Add Contact</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="cards">
+        
+        
+    </div>
+    <script>
+        var details = 
+        {
+            name: '',
+            number: '',
+            email: '',
+            url: ''
+        }
+        
+        const fName = ((e) => {
+            console.log(e.target.value)
+            details.name = e.target.value
+        })
+        const num = ((e) => {
+            console.log(e.target.value)
+            details.number = e.target.value
+        })
+        const eml = ((e) => {
+            console.log(e.target.value)
+            details.email = e.target.value
+        })
+        const profile = ((e) => {
+            console.log(e.target.value)
+            details.url = e.target.value
+        })
+        var cards = document.getElementById('cards')
+        
+
+        const addbtb = ((e) => {
+            e.preventDefault()
+            var card = document.createElement('div')
+            card.classList.add('card')
+            card.style.border = '3px solid blue'
+            card.style.backgroundColor = 'dodgerblue'
+            var pro = document.createElement('img')
+            pro.src = details.url
+            pro.style.borderRadius = '50%'
+            pro.style.width = '50px'
+            pro.style.height = '50px'
+
+            var fullName = document.createElement('h3')
+            fullName.innerHTML = `Name: ${details.name}`
+
+            var pno = document.createElement('p')
+            pno.innerHTML = `Number: ${details.number}`
+
+            var emid = document.createElement('small')
+            emid.innerHTML = `Email: ${details.email}`
+            emid.style.wordSpacing = "-5px"
+
+            var btnDiv = document.createElement('div')
+            btnDiv.classList.add('btn')
+            
+            var editBtn = document.createElement('button')
+            editBtn.textContent = "edit"
+            editBtn.onclick = editbtn(event)
+            
+
+            var delBtn = document.createElement('button')
+            delBtn.textContent = "X"
+
+            btnDiv.appendChild(editBtn)
+            btnDiv.appendChild(delBtn)
+
+
+
+            card.appendChild(pro)
+            card.appendChild(fullName)
+            card.appendChild(pno)
+            card.appendChild(emid)
+            card.appendChild(btnDiv)
+            console.log(card)
+
+            cards.appendChild(card)
+
+            var n = document.getElementById('name').value = ''
+            var nub = document.getElementById('number').value = ''
+            var em = document.getElementById('email').value = ''
+            var u = document.getElementById('url').value = ''
+
+        })
+        const editbtn = ((e) => {
+            console.log(e)
+        })
+    </script>
+</body>
+</html>

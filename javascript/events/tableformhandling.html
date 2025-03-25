@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table form validation</title>
+    <style>
+        .btn{
+            width: 100%;
+        }
+        button{
+            position: relative;
+            left: 140px;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <table border="1px solid">
+        <tr>
+            <td>Firstname</td>
+            <td>
+                <input type="fname" id="fname" name="fname"/><br/>
+                <span style="color: red;" id="mustfname">please enter first name</span>
+            </td>
+        </tr>
+        <tr>
+            <td>lastname</td>
+            <td>
+                <input type="lname" id="lname" name="lname"/><br/>
+                <span style="color: red;" id="mustlname">please enter last name</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Date of Birth</td>
+            <td>
+                <input type="date" id="dob" name="dob"/><br/>
+                <span style="color: red;" id="mustdob">please select your dob</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>
+                <input type="radio" id="gender" name="gender" value="male"/>:Male
+                <input type="radio" id="gender" name="gender" value="female"/>:Female
+                <input type="radio" id="gender" name="gender" value="others"/>:Others
+                <br/>
+                <span style="color: red;" id="mustgender">please select your gender</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Technologies</td>
+            <td>
+                <input type="checkbox" id="tech" name="tech" value="html"/>html
+                <input type="checkbox" id="tech" name="tech" value="css"/>css
+                <input type="checkbox" id="tech" name="tech" value="javascript"/>javascript
+                <input type="checkbox" id="tech" name="tech" value="react"/>react
+            </td>
+        </tr>
+        <tr>
+            <td>country</td>
+            <td>
+                <select id="country">
+                    <option value="'" selected disabled>select a country</option>
+                    <option value="india">india</option>
+                    <option value="usa">usa</option>
+                    <option value="london">london</option>
+                    <option value="england">england</option>
+                    <option value="newsland">newsland</option>
+                    <option value="california">california</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>comments</td>
+            <td>
+                <textarea name="comment" id="comment"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="btn">
+                <button onclick="save()">Save</button>
+            </td>
+        </tr>
+    </table>
+    <script>
+        var fname = document.getElementById('fname')
+        var lname = document.getElementById('lname')
+        var dob = document.getElementById('dob')
+        var genders = document.querySelectorAll('#gender')
+        var techs = document.querySelectorAll('#tech')
+        var countrys = document.getElementById('country')
+        var comment = document.getElementById('comment')
+        var d = document.createElement('div')
+        var mustfname = document.getElementById('mustfname')
+        var mustlname = document.getElementById('mustlname')
+        var mustgender = document.getElementById('mustgender')
+        var mustdob = document.getElementById('mustdob')
+
+        var details = []
+        var gv 
+        var t = []
+        const save = (() => {
+            
+            
+            
+            var g = genders.forEach((gender) => {
+                if(gender.checked) {
+                    //console.log(gender.value)
+                    gv = gender.value
+                }
+            })
+
+            
+            techs.forEach((tech) => {
+                if(tech.checked) {
+                    //console.log(tech.value)
+                    t.push(tech.value)
+                }
+            })
+            if(countrys) {
+                
+            }
+            if(fname.value || lname.value || dob || gv) {
+                
+                fname.value ? mustfname.remove() : mustfname
+                lname.value ? mustlname.remove() : mustlname
+                gv ? mustgender.remove() : mustgender
+                dob.value ? mustdob.remove() : mustdob
+            }
+            if(fname.value && lname.value && dob.value && gv){
+                genUI()
+            }else{
+                alert('please fill the required fields')
+            }
+            
+        })
+
+        const genUI = (() => {
+            // details = ['']
+            var detail = {
+                fName: fname.value ,
+                lName: lname.value,
+                doB: dob.value,
+                genDer:  gv,
+                techNologies: t,
+                counTry: countrys.options[countrys.selectedIndex].value,
+                commEnts: comment.value
+            }
+            // detail.fName = 
+            // detail.lName = 
+            // detail.doB = 
+            // detail.commEnts = 
+            // detail.counTry = 
+            // detail.genDer =
+            details.push(detail)
+            
+            d.innerHTML = JSON.stringify(details)
+            document.body.appendChild(d)
+        })
+    </script>
+</body>
+</html>

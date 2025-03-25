@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>enable the text box</title>
+</head>
+<body>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+        <input type="text" name="textbox" id="textbox" disabled/>
+        <br/>
+        <button onclick="btn()">Enable the text box</button>
+    </div>
+    <script>
+        var textbox = document.getElementById('textbox')
+        const btn = (() => {
+            textbox.disabled = false
+        })
+    </script>
+</body>
+</html>

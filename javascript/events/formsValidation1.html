@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation 1</title>
+</head>
+<body>
+    <div style="display: flex; flex-direction: column; align-items: center; padding: 10px; margin: 10px;">
+        <div>
+            <label>first name</label>
+            <input type="text" id="fname" name="fname"/>
+            <h3 id="madatory">**The above field is madatory</h3>
+        </div>
+        <div>
+            <label>last name</label>
+            <input type="text" id="lname" name="lname"/>
+        </div>
+        <div>
+            <label>middle name</label>
+            <input type="text" id="mname" name="mname"/>
+        </div>
+        <div>
+            <button onclick="updateBtn()">update</button>
+        </div>
+    </div>
+    <script>
+        var fname = document.getElementById('fname')
+        var madatory = document.getElementById('madatory')
+        const updateBtn = (() => {
+            // if(fname)
+            console.log(fname.value)
+            if(fname.value) {
+                madatory.remove()
+            }
+        })
+    </script>
+</body>
+</html>

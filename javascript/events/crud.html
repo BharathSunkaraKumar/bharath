@@ -56,6 +56,12 @@
         </div>
     </div>
     <div>
+        <input id="search" onkeyup="filt(event)" name="search" type="text" placeholder="search"/>
+    </div>
+    <div>
+        <button id="sort" onclick="sortList(event)">A-Z</button>
+    </div>
+    <div>
         <button id="udcon" onclick="updateContact(event)">update contact</button>
     </div>
     <div id="cards">
@@ -66,12 +72,14 @@
         ]
 
         var n = document.getElementById('name')
-        var num = document.getElementById('number')
+        var numb = document.getElementById('number')
         var em = document.getElementById('email')
         var url = document.getElementById('url')
         var udcontact = document.getElementById('udcon')
         udcontact.style.display = 'none'
         var addbtn = document.getElementById('addBtn')
+        var sortlist = document.getElementById('sort')
+        var srh = document.getElementById('search')
 
         var cards = document.getElementById('cards')
         const addBtn = ((e) => {
@@ -82,14 +90,14 @@
                 img: ''
             }
             contact.name = n.value
-            contact.number = num.value
+            contact.number = numb.value
             contact.email = em.value
             contact.url = url.value
             contacts.push(contact)
             console.log(contacts)
             genUI(contacts)
             n.value = ''
-            num.value = ''
+            numb.value = ''
             em.value = ''
             url.value = ''
         })
@@ -100,13 +108,37 @@
             var udcontacts = {
                 'name': n.value,
                 'email': em.value,
-                'number': num.value,
+                'number': numb.value,
                 'url': url.value
             }
             contacts[currentInx] = udcontacts
             genUI(contacts)
             udcontact.style.display = 'none'
             addbtn.style.display = 'inline-block'
+            n.value = ''
+            numb.value = ''
+            em.value = ''
+            url.value = ''
+        })
+
+        if(contacts.length ==0) {
+            sortlist.style.display = 'none'
+        }
+        if(contacts.length ==0) {
+            srh.style.display = 'none'
+        }
+
+        const sortList = ((e) => {
+            contacts.sort((a, b) => a.name.localeCompare(b.name))
+            genUI(contacts)
+        })
+
+        const filt = ((e) => {
+            var fit = contacts.filter((contact) => {
+                return JSON.stringify(contact).toLowerCase().includes(e.target.value.toLowerCase())
+            })
+            genUI(fit)
+            console.log(fit)
         })
 
         const genUI = ((arr) => {
@@ -140,8 +172,9 @@
                     n.value = item.name
                     console.log(item.number)
                     
-                    num.value = item.number
+                    numb.value = Number(item.number)
                     console.log("num.value::"+num.value)
+                    console.log("num.value::"+item.number)
                     em.value = item.email
                     url.value = item.url
                 })
@@ -157,6 +190,12 @@
                 card.appendChild(btndiv)
                 cards.appendChild(card)
 
+                if(contacts.length >1) {
+                    sortlist.style.display = 'inline-block'
+                }
+                if(contacts.length >1) {
+                    srh.style.display = 'inline-block'
+                }
                 
             })
             //contacts = []

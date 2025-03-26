@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>greateornot</title>
+    <style>
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div >
+        <div class="container">
+            <p id="leftNum">18</p>
+        
+            <div>></div>
+        
+            <p id="rightNum">18</p>
+        </div>
+        <div class="btn">
+            <button onclick="greater()">></button>
+            <button onclick="lessThen()"><</button>
+            <button onclick="equal()">=</button>
+        </div>
+    </div>
+    <p id="result"></p>
+    <script>
+
+         var lr = Math.floor(Math.random() * 10)
+         var rr = Math.floor(Math.random()*10)
+         console.log(lr)
+         console.log(rr)
+
+        var leftNum = document.getElementById('leftNum')
+        var rightNum = document.getElementById('rightNum')
+        var result = document.getElementById('result')
+
+        leftNum.innerHTML = lr
+        rightNum.innerHTML = rr
+
+        const greater = (() => {
+            if(leftNum.innerHTML > rightNum.innerHTML) {
+                result.innerHTML = 'correct'
+            }else{
+                result.innerHTML = 'wrong'
+            }
+        })
+        const lessThen = (() => {
+            if(rightNum.innerHTML > leftNum.innerHTML) {
+                result.innerHTML = 'correct'
+            }else{
+                result.innerHTML = 'wrong'
+            }
+        })
+
+        const equal = (() => {
+            if(rightNum.innerHTML == leftNum.innerHTML) {
+                result.innerHTML = 'correct'
+            }else{
+                result.innerHTML = 'wrong'
+            }
+           
+        })
+    </script>
+</body>
+</html>

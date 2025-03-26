@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filepreview</title>
+</head>
+<body>
+    <input onchange="fileBtn(event)" type="file" id="file" name="file"/>
+    <br/>
+    <div id="imgContainer">
+
+    </div>
+    <script>
+        var imgContainer = document.getElementById('imgContainer')
+        const fileBtn = ((e)=> {
+            console.log(e.target.files[0])
+            
+            var image = URL.createObjectURL(e.target.files[0])
+            console.log(image)
+            imgContainer.innerHTML = ''
+            var img = document.createElement('img')
+            img.src = image
+            img.style.height = '200px'
+            img.style.width = '250px'
+            imgContainer.appendChild(img)
+        })
+    </script>
+</body>
+</html>

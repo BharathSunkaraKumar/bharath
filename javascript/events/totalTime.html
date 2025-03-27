@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>totalTime</title>
+</head>
+<body>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+        <div>
+            <h3 id="dt">3/27/2024</h3>
+        </div>
+        <div>
+            <h3 id="tm">5:23</h3>
+        </div>
+        <div>
+            <button onclick="checkIn()">checkin</button>
+            <button onclick="checkOut()">checkout</button>
+        </div>
+        <div>
+            <p>total time:</p>
+        </div>
+        <div>
+            <h3 id="show"></h3>
+        </div>
+    </div>
+    <script>
+        let show = document.getElementById('show')
+        let dt = document.getElementById('dt')
+        let tm = document.getElementById('tm')
+        let timeStamp = []
+        let previousTime = 0
+        let outTime
+        let inTime
+
+        setInterval(() => {
+            
+            let time = new Date().toLocaleTimeString()
+            let date = new Date().toLocaleDateString()
+            tm.innerHTML = time
+            dt.innerHTML = date
+
+        }, 1000);
+
+
+
+        const checkIn = (() => {
+            
+            inTime = new Date().getSeconds()
+            // timeStamp.push({in: inTime, out: null})
+            // console.log(timeStamp)
+
+        })
+        const checkOut = (() => {
+            
+            // if(timeStamp.length ==0) {
+            //     alert('you need to checkIN first')
+            //     return 
+            // }
+
+            // let lastLog = timeStamp[timeStamp.length-1]
+            // console.log(lastLog)
+
+            // if(lastLog.out !== null) {
+            //     alert('you need to checkout first')
+            //     return
+            // }
+
+            // lastLog.out = new Date()
+            // console.log(timeStamp)
+            outTime = new Date().getSeconds()
+            totalTime()
+
+        })
+        
+
+        const totalTime = (() => {
+            console.log(previousTime)
+            // console.log('previousTime::'+previousTime)
+            // timeStamp.forEach((e) => {
+            //     previousTime += e.out.getSeconds() - e.in.getSeconds()
+                
+            // })
+            let presentTime = outTime - inTime
+            previousTime += presentTime
+            console.log(presentTime)
+            show.innerHTML = previousTime + 'sec'
+
+        })
+    </script>
+</body>
+</html>

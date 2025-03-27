@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>age</title>
+</head>
+<body>
+    <input onchange="showAge()" type="date" id="dob" name="dob"/>
+    <p id="show">AGE: </p>
+    <script>
+        let dob = document.getElementById('dob')
+        let show = document.getElementById('show')
+        let current = new Date()
+        let currentYear = current.getFullYear()
+        let currentDate = current.getDate()
+        let currentMonth = current.getMonth()
+        console.log(currentMonth+1)
+        // console.log(current)
+        // console.log(currentYear)
+        // console.log(currentDate)
+        const showAge = (() => {
+            //console.log(dob.value)
+            let userDob = new Date(dob.value)
+            let userDoy = userDob.getFullYear()
+            let userDobd = userDob.getDate()
+            let userDobM = userDob.getMonth()
+            console.log(userDobM+1)
+
+           // console.log(currentYear-userDoy)
+            let age = currentYear-userDoy
+            if(currentMonth < userDobM) {
+                console.log(age-1)
+                show.innerHTML = age-1
+            }else{
+                show.innerHTML = age
+            }
+        })
+    </script>
+</body>
+</html>

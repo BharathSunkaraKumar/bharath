@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkin and checkout</title>
+</head>
+<body>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+        <div>
+            <div>
+                <button onclick="inTime()">in</button>
+                <button onclick="outTime()">out</button>
+                <button onclick="totalTime()">total</button>
+            </div>
+        </div>
+        <div>
+            <h3>Total time worked: <span id="showTime"></span></h3>
+        </div>
+        <div>
+            <p>Time logs:</p>
+        </div>
+        <ul id="timeLogs" style="list-style: none; text-align: center; ">
+            
+        </ul>
+    </div>
+    <script>
+        let timeLogs = []
+        // let checkedIn = new Date()
+        // let checkedOut = new Date()
+        // let tTime 
+         let ul = document.getElementById('timeLogs')
+        let showTime = document.getElementById('showTime')
+        // const inTime = (() => {
+
+        //     checkedIn = new Date()
+        //     genUI(checkedIn, 'IN')
+        //     console.log(checkedIn)
+
+        // })
+        // const outTime = (() => {
+           
+        //     checkedOut = new Date()
+        //     genUI(checkedOut, "OUT")
+        //     inOutTime.push({ouT: checkedOut})
+
+        // })
+        // const totalTime = (() => {
+        //    tTime = checkedOut.getTime() - checkedIn.getTime()
+        //    console.log(tTime)
+        // //    let minutes = Math.floor((tTime%3600) /60)
+        // //    let Sec = tTime%60
+        //    showTime.innerHTML = `${tTime} ms`
+        // })
+
+        // const genUI = ((timeStamp, typ) => {
+        //     let nli = document.createElement('li')
+        //     nli.innerHTML = `${typ}: ${timeStamp}`
+        //     ul.appendChild(nli)
+        // })
+        
+
+        const inTime = (()  => {
+            let checkInTime = new Date()
+            timeLogs.push({ checkIn: checkInTime, checkOut: null})
+            genUI(checkInTime, 'IN')
+        })
+
+        const outTime = (() => {
+            if(timeLogs.length == 0) {
+                return
+            }
+            let lastLog = timeLogs[timeLogs.length-1]
+            
+            console.log(lastLog)
+            if(lastLog.checkOut !== null) {
+                return
+            }
+            lastLog.checkOut = new Date()
+            console.log(lastLog)
+
+            genUI(lastLog.checkOut, 'OUT')
+        })
+
+        const totalTime = (() => {
+            let total = 0
+            timeLogs.forEach((log) => {
+                if(log.checkOut) {
+                    total += log.checkOut.getTime() - log.checkIn.getTime()
+                }
+            })
+
+            let totalSeconds = Math.floor(total/1000)
+            let hours = Math.floor(totalSeconds/3600)
+            let minutes = Math.floor((total%3600) / 60)
+            let seconds = total%60
+            console.log(`Total time worked: ${hours}h ${minutes}m ${seconds}s`);
+            showTime.innerHTML = `${hours}h ${minutes}m ${seconds}s`
+            
+        })
+        //inTime()
+        // setTimeout(() => {
+        //     outTime();  // Simulate check-out after some time
+        //     totalTime();  // Calculate total worked time
+        // }, 5000); 
+
+        const genUI = ((timeStamp, typ) => {
+            let nli = document.createElement('li')
+            nli.innerHTML = `${typ}: ${timeStamp}`
+            ul.appendChild(nli)
+        })
+    </script>
+</body>
+</html>

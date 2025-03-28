@@ -5,40 +5,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>progress bar</title>
     <style>
-        #container{
-            /* background-color: dodgerblue; */
-            transition: 0.5s;
+        
+         #container{
+            width: 300px;
+            height: 50px;
+            border: 2px solid black;
             position: relative;
             overflow: hidden;
-            z-index: 1;
-        }
-        #container::before{
-            content: '';
+         }
+
+        .inside{
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(to right, #4caf50, #2196f3);
             position: absolute;
             top: 0;
             left: 0;
-            width: 0;
-            height: 100%;
-            background-color: dodgerblue;
-            transition: 0.5s;
-            z-index: -1;
-
         }
-        #container:hover::before{
-            width: 100%;
+        #box{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            position: absolute;
+            top: 50px;
+            left: 0;
         }
     </style>
 </head>
 <body>
     <div style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
-        <div id="container" style="width: 90%; border: 5px solid black; height: 50px; margin-bottom: 5px;">
+        <div  id="container" style="width: 90%; border: 5px solid black; height: 50px; margin-bottom: 5px;">
+            <div class="inside">
 
+            </div>
         </div>
         <div>
-            <button>stop</button>
-            <button>pause</button>
-            <button>play</button>
+            <button onclick="stop()">stop</button>
+            <button onclick="pause()">pause</button>
+            <button onclick="play()">play</button>
         </div>
     </div>
+
+    <div id="box">
+
+    </div>
+    <script>
+        let container = document.getElementById('container')
+        let inside = document.querySelector('.inside')
+        console.log(inside)
+
+        let width = 0;
+        let isPlay = false;
+        let animationFrame
+
+        const animateFill = (() => {
+            if(width >= 100) {
+                cancelAnimationFrame(animationFrame)
+                return
+            }
+            width += 0.5;
+            inside.style.width = width + "%";
+            if(isPlay) {
+                animationFrame = requestAnimationFrame(animateFill)
+            }
+        })
+
+        const play = (() => {
+            if(!isPlay) {
+                isPlay = true;
+                animateFill()
+            }
+        })
+
+        const pause = (() => {
+            isPlay = false;
+            cancelAnimationFrame(animationFrame)
+        })
+
+        const stop = (() => {
+            isPlay = false;
+            cancelAnimationFrame(animationFrame);
+            width = 0;
+            inside.style.width = '0%'
+        })
+        
+
+        // requestanimationframe
+
+        let box = document.getElementById('box')
+        let position = 0;
+        let animationframe;
+
+        function moveBox() {
+            if(position >=500) {
+                cancelAnimationFrame(animationframe)
+                return
+            }
+            position += 2;
+            box.style.left = position + 'px';
+            animationframe = requestAnimationFrame(moveBox)
+        }
+        moveBox()
+    </script>
 </body>
 </html>

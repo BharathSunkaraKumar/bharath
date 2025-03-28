@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stopWatch</title>
+</head>
+<body>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+        <h1 id="clock">
+            <span id="min">0</span>
+            <span id="sec">0</span>
+            <span id="ms">0</span>
+        </h1>
+        <div>
+            <button>stop</button>
+            <button>pause</button>
+        </div>
+    </div>
+    <script>
+        let min = document.getElementById('min')
+        let sec = document.getElementById('sec')
+        let ms = document.getElementById('ms')
+
+        let seconds = 0
+        let milliSec = 0
+        setInterval(() => {
+            seconds++
+            sec.innerHTML = seconds
+        }, 1000);
+        setInterval(() => {
+            milliSec++
+            ms.innerHTML = seconds
+        }, 80);
+    </script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>whatsAppStatus</title>
+    <style>
+        *{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        img{
+            width: 250px;
+            height: 350px;
+            border-radius: 8px;
+        }
+        .profile{
+            display: flex;
+            justify-content: space-around;
+        }
+        .box{
+            display: flex;
+            justify-content: center;
+        }
+        .status{
+            margin: 10px;
+            height: 5px;
+            width: 20px;
+            border: 3px solid red;
+        }
+        .status-Border {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .processbar {
+            flex: 1;
+            height: 5px;
+            background: #ccc;
+            margin: 0 5px;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+        }
+        .progressfill {
+            width: 0;
+            height: 100%;
+            background: #25d366; /* WhatsApp green */
+            transition: width 3s linear;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="container">
+            <div class="profile">
+                <div>
+                    <img style="width: 30px; height: 30px; position: relative; top: 10px; right: 10px;" src="https://static.thenounproject.com/png/1410611-200.png"/>
+                </div>
+                <div>
+                    <img style="width: 20px; height: 20px; position: relative; top: 15px;" src="https://w7.pngwing.com/pngs/178/595/png-transparent-user-profile-computer-icons-login-user-avatars-thumbnail.png"/>
+                </div>
+                <div>
+                    <p>bharath kumar</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img id="image" src=""/>
+                </div>
+            </div>
+            <div class="status-Border" id="statusBorder">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+        let images = [
+            'https://images.unsplash.com/photo-1742969590900-67c6d077946d?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMHx8fGVufDB8fHx8fA%3D%3D',
+            'https://images.unsplash.com/photo-1742268351444-7e153a9fb747?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0fHx8ZW58MHx8fHx8',
+            'https://images.unsplash.com/photo-1742925602110-aca7ce746a14?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNXx8fGVufDB8fHx8fA%3D%3D',
+            'https://images.unsplash.com/photo-1741850820591-f6954a90c7ba?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1MXx8fGVufDB8fHx8fA%3D%3D',
+            'https://images.unsplash.com/photo-1742201934199-750a39f4c277?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8',
+            'https://plus.unsplash.com/premium_photo-1742945845688-d2e666a3b92a?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMXx8fGVufDB8fHx8fA%3D%3D'
+        ]
+
+        let statusBorder = document.getElementById('statusBorder')
+        let image = document.getElementById('image')
+        let currentIndex = 0;
+        let interValTime = 3000
+
+        const createBar = (() => {
+            images.forEach((image) => {
+                let bar = document.createElement('div')
+                bar.classList.add('processbar')
+                bar.innerHTML = `<div class='progressfill'></div>`
+                statusBorder.appendChild(bar)
+            })
+        })
+        console.log(statusBorder)
+
+        const showImage = ((index) => {
+            image.src = images[index]
+
+            document.querySelectorAll('.progressfill').forEach((bar) => {
+                bar.style.transition = 'none'
+                bar.style.width = '0%'
+            })
+
+            let currentBar = document.querySelectorAll('.progressfill')[index]
+            console.log(currentBar)
+            currentBar.style.transition = ' width 3s linear'
+            currentBar.style.width = '100%'
+            
+        })
+
+        const resetBar = (() => {
+            document.querySelectorAll('.progressfill').forEach((bar) => {
+                bar.style.transition = 'none'
+                bar.style.width = '0%'
+            })
+        })
+
+        createBar()
+        showImage(currentIndex)
+        const reset = setInterval(() => {
+            currentIndex++
+            if(currentIndex < images.length) {
+                showImage(currentIndex)
+            }else{
+                resetBar()
+                currentIndex = 0
+            }
+            setTimeout(() => {
+                showImage(currentIndex)
+            }, 500);
+        }, interValTime);
+    </script>
+</body>
+</html>

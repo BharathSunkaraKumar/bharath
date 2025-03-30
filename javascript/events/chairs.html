@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chairs</title>
+    <style>
+        img{
+            width: 50px;
+            height: 50px;
+            opacity: 1;
+        }
+        
+    </style>
+</head>
+<body>
+    <div style="display: flex; flex-direction:column; align-items: center;">
+        <div style="color: tomato;">
+            <h3>occupied: <span id="occ"></span></h3>
+        </div>
+        <div style="color: mediumseagreen;">
+            <h3>Available: <span id="avi"></span></h3>
+        </div>
+        <div id="show">
+            <img class="item" src='https://static.vecteezy.com/system/resources/previews/053/133/359/non_2x/stylish-black-office-chair-with-chrome-accents-isolated-on-a-clean-transparent-background-for-modern-workspace-settings-black-office-chair-isolated-on-transparent-background-free-png.png'/>
+            <img class="item" src='https://static.vecteezy.com/system/resources/previews/053/133/359/non_2x/stylish-black-office-chair-with-chrome-accents-isolated-on-a-clean-transparent-background-for-modern-workspace-settings-black-office-chair-isolated-on-transparent-background-free-png.png'/>
+            <img class="item" src='https://static.vecteezy.com/system/resources/previews/053/133/359/non_2x/stylish-black-office-chair-with-chrome-accents-isolated-on-a-clean-transparent-background-for-modern-workspace-settings-black-office-chair-isolated-on-transparent-background-free-png.png'/>
+            <img class="item" src='https://static.vecteezy.com/system/resources/previews/053/133/359/non_2x/stylish-black-office-chair-with-chrome-accents-isolated-on-a-clean-transparent-background-for-modern-workspace-settings-black-office-chair-isolated-on-transparent-background-free-png.png'/>
+            <img class="item" src='https://static.vecteezy.com/system/resources/previews/053/133/359/non_2x/stylish-black-office-chair-with-chrome-accents-isolated-on-a-clean-transparent-background-for-modern-workspace-settings-black-office-chair-isolated-on-transparent-background-free-png.png'/>
+        </div>
+    </div>
+    <script>
+        let show = document.getElementById('show')
+        let occupied = document.getElementById('occ')
+        let available = document.getElementById('avi')
+        
+
+        
+        
+        let items = document.querySelectorAll('img')
+        
+        available.textContent = items.length
+        occupied.textContent = 0
+        
+        
+        items.forEach((item, i, arr) => {
+
+            item.addEventListener('click', () => {
+                
+                item.style.opacity = (item.style.opacity == '0.5') ? '1' : '0.5'
+                
+                if(occupied.textContent < items.length && item.style.opacity == 0.5){
+                    occupied.textContent++
+                    available.textContent--
+                } else{
+                    if(occupied.textContent < items.length && item.style.opacity == 1){
+                        occupied.textContent--
+                        available.textContent++
+                    }
+                }
+
+            })       
+        })
+        
+    </script>
+</body>
+</html>

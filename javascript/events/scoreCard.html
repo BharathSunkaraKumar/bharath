@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scoreCard</title>
+</head>
+<body>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+        <div style="display: flex; align-items: center; justify-content: center; border: 3px solid black; height: 100px; width: 400px; margin: 5px;">
+            <div style=>
+                <span id="score">0</span>/<span id="wickets">0</span>
+            </div>
+        </div>
+        <div>
+            <button onclick="zero()">Zero</button>
+            <button onclick="one()">one</button>
+            <button onclick="two()">two</button>
+            <button onclick="three()">three</button>
+            <button onclick="four()">four</button>
+            <button onclick="six()">six</button>
+            <button onclick="wicket()">wicket</button>
+        </div>
+    </div>
+    <script>
+        let score = document.getElementById('score')
+        let wickets = document.getElementById('wickets')
+        let incrementScore = 0
+        let incrementWickets = 0
+        const zero = (() => {
+            console.log(score.textContent)
+
+        })
+        const one = (() => {
+            if(wickets.innerHTML < 10) {
+                incrementScore += 1
+                score.innerHTML = incrementScore
+            }
+        })
+        const two = (() => {
+            if(wickets.innerHTML < 10) {
+                incrementScore += 2
+                score.innerHTML = incrementScore
+            }
+        })
+        const three = (() => {
+            if(wickets.innerHTML < 10) {
+                incrementScore += 3
+                score.innerHTML = incrementScore
+            }
+        })
+        const four = (() => {
+            if(wickets.innerHTML < 10) {
+                incrementScore += 4
+                score.innerHTML = incrementScore
+            }
+        })
+        const six = (() => {
+            if(wickets.innerHTML < 10) {
+                incrementScore += 6
+                score.innerHTML = incrementScore
+            }
+        })
+        const wicket = (() => {
+            incrementWickets++
+            if(wickets.innerHTML < 10) {
+                wickets.innerHTML = incrementWickets
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <script type="text/babel">
+        //let jsxh1 = React.createElement('h1', null, 'Welcome to JSX')
+        //let jsxh1 = <h1>Welcome to JSX</h1>
+        // let jsxh1 = <h1>{"bharath"+" kumar"}</h1>
+        // let jsxh1 = <h1>{true && "bharath"}</h1>
+        // ReactDOM.render(jsxh1, document.getElementById('d1'))
+
+        // let arn = [9,1,0,0,6,2,6,7,4,2]
+        // let jsxn = <h2>{arn}</h2>
+        // ReactDOM.render(jsxn, document.getElementById('d2'))
+
+        // let jsxS = <h1>{['s','b','k']}</h1>
+        // ReactDOM.render(jsxS, document.getElementById('d2'))
+
+        //let jsxSr14 = <h1>{Math.sqrt(14)}</h1>
+        // let jsxInt = <h1>{parseInt(135.56)}</h1>
+        // let jsxUpper = <h1>{'bharath'.split('').reverse().join('')}</h1>
+        // let jsxadd = <h1>{a > b ? a : b}</h1>
+        // let jsxEnOd = <h1>{a % 2 == 0 ? `${a} is even` : `${a} is odd`}</h1>
+        // let jsxPN = <h1>{a >= 0  ? `${a} is positive number` : `${a} is negative number`}</h1>
+        // let a = 99;
+        // let b = 65;
+        // let c = 60;
+        // let jsxPN = <h1>{a > b ? (a > c ? a : c) : (b > c ? b : c)}</h1>
+        let n = 2
+        let jsxEle = <div>{n % 2 == 0 ? (<h1>{'even'}</h1>) : (<i>{'odd'}</i>)}</div>
+        //let jsxEle = <div>{n % 2 == 0 ? (
+        //ReactDOM.render(jsxEle, document.getElementById('d2'))
+        //let n = +prompt('enter a number: ')
+    </script>
+</body>
+</html>

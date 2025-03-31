@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ul{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        #ul li{
+            padding: 10px;
+            border: 1px solid black;
+            margin: 10px;
+            width: 200px;
+            text-align: center;
+            list-style: none;
+            border-radius: 5px;
+        }
+        #ul li:hover{
+            color: white;
+            background-color: rgb(208, 155, 91);
+            box-shadow: 0px 0px 10px 3px rgb(131, 123, 121);
+            transform: 10sec initial;
+        }
+    </style>
+</head>
+<body>
+    <ul id="ul">
+
+    </ul>
+    <script>
+        let ul = document.getElementById('ul')
+        let countries = []
+        fetch('https://restcountries.com/v3.1/all').then((res)=>{
+            res.json().then((data)=>{
+                //console.log(data)
+                countries = data
+                //console.log(countries)
+                genUI()
+            })
+        })
+        const genUI = (() => {
+            console.log(countries)
+            countries.forEach((countrie) => {
+                let li = document.createElement('li')
+                let name = document.createElement('h3')
+                name.innerHTML = countrie.name.common
+                //let name = document.createElement('h2')
+                let nimg = document.createElement('img')
+                nimg.src = countrie.flags.png
+                nimg.style.width = '100px'
+                let capital = document.createElement('h3')
+                capital.innerHTML = countrie.capital  ? countrie.capital[0] : "no capital city" 
+                let population = document.createElement('h4')
+                population.innerHTML = countrie.population
+                //let name = document.createElement('h3')
+                //nli.innerHTML = countrie.name.common
+                li.appendChild(name)
+                li.appendChild(nimg)
+                li.appendChild(capital)
+                li.appendChild(population)
+                ul.appendChild(li)
+            })
+        })
+    </script>
+</body>
+</html>

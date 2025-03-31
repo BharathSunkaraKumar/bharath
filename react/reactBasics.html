@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <style>
+        .d3{
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is html h1 element</h1>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <div id="d4"></div>
+    <script>
+        let nh1 = document.createElement('h1')
+        nh1.innerHTML = 'This is dom h1 element'
+        document.getElementById('d1').appendChild(nh1)
+
+        let style = {
+                color: 'dodgerblue',
+                backgroundColor: 'black',
+                padding: '10px'
+            }
+
+        let rh1 = React.createElement('h1', {
+            style,
+            onClick: ((e)=>{
+                console.log(style.padding)
+                e.target.style.padding = '20px'
+            }),
+            class: 'd3',
+        }, 'This is react h1 element')
+        ReactDOM.render(rh1,document.getElementById('d3'))
+
+        let ar = ['salt', 'kohli', 'haselwood']
+
+        let arr = ar.map((e) => {
+                        return React.createElement('li', null, e)
+                  })
+
+        let rList = React.createElement('ul', null, arr)
+        ReactDOM.render(rList, document.getElementById('d4'))
+    </script>
+</body>
+</html>

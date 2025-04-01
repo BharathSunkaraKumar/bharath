@@ -26,11 +26,17 @@
             'https://plus.unsplash.com/premium_photo-1742318713509-d325930b6749?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxM3x8fGVufDB8fHx8fA%3D%3D',
 
         ]
-        let jsxLi = <div>{
-            imgAr.map((e)=> {
-                return <td><img src={e} /></td>
-            })
-        }</div>
+        let jsxLi = <div>
+            <table>
+                <tr>
+                    {
+                        imgAr.map((e) => {
+                            return <td><img src={e} /></td>
+                        })
+                    }
+                </tr>
+            </table>
+        </div>
         ReactDOM.render(jsxLi ,document.getElementById("d3"))
 
     </script>

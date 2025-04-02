@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <!-- <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> -->
+
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        /* #d3{
+            display: flex;
+            flex-direction: ;
+        } */
+    </style>
+  </head>
+  <body>
+    
+   
+    <div id="d3"></div>
+    <!-- <button onclick="abc(event)">jsbtn</button> -->
+    <script type="text/babel">
+        // <button  onClick={(e)=>{
+           
+        // }}>click mul</button>
+        // <img src='' width='50px'/>
+        let male = 'https://i.pinimg.com/736x/2a/4e/8d/2a4e8dab6791ed643d5180bc72167f6d.jpg'
+        let female = 'https://cdn.pixabay.com/photo/2014/04/02/14/10/female-306407_640.png'
+        function jsxEve() {
+            let jsxButton = <div id='box'>
+                <label>Male</label>
+                <input onClick={(e)=>{result(e)}} id='txt1' value='male' type='radio' name='location'/>
+                <label>Female</label>
+                <input onClick={(e)=>{result(e)}} id='txt2' value='female' type='radio' name='location'/>
+                
+                <h1 id='h1'></h1>
+                <img src='' id='img' alt=''/>
+                </div>
+                ReactDOM.render(jsxButton ,document.getElementById("d3"))
+            }
+            jsxEve()
+            const result = ((e) => {
+                //document.getElementById('h1').innerHTML=e.target.value
+                if(e.target.value == 'male') {
+                    document.getElementById('img').src = male
+                }else{
+                    document.getElementById('img').src = female
+                }
+                console.log(e.target.value)
+                //jsxEve()
+            })
+    </script>
+  </body>
+</html>

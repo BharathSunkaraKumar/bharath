@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <!-- <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> -->
+
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        /* #d3{
+            display: flex;
+            flex-direction: ;
+        } */
+    </style>
+  </head>
+  <body>
+    
+   
+    <div id="d3"></div>
+    <!-- <button onclick="abc(event)">jsbtn</button> -->
+    <script type="text/babel">
+        let ar = []
+        const slt = ((e) => {
+            // <select onChange={(e)=>{slt(e)}}>
+            //     <option value='india'>india</option>
+            //     <option value='usa'>united state of america</option>
+            //     <option value='london'>london</option>
+            // </select>
+            // console.log(e.target.value)
+            // document.getElementById('h1').innerHTML = e.target.value
+            if(e.target.checked === false) {
+                let i = ar.indexOf(e.target.value)
+                console.log(i)
+                ar.splice(i, 1)
+                document.getElementById('h1').innerHTML = ar
+            }else{
+                ar.push(e.target.value)
+                document.getElementById('h1').innerHTML = ar
+            }
+        })
+        let jsxSelect = <div>
+                            <input onClick={(e)=>{slt(e)}} type='checkbox' value='react'/>
+                            <label>:react</label>
+                            <br/>
+                            <input onClick={(e)=>{slt(e)}} type='checkbox' value='javascript'/>
+                            <label>:javascript</label>
+                            <br/>
+                            <input onClick={(e)=>{slt(e)}} type='checkbox' value='css'/>
+                            <label>:css</label>
+                            <br/>
+                            <input onClick={(e)=>{slt(e)}} type='checkbox' value='html'/>
+                            <label>:html</label>
+                            <h1 id='h1'></h1>
+                        </div>
+        ReactDOM.render(jsxSelect, document.getElementById('d3'))
+    </script>
+  </body>
+</html>

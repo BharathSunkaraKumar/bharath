@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <!-- <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> -->
+
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        /* #d3{
+            display: flex;
+            flex-direction: ;
+        } */
+    </style>
+  </head>
+  <body>
+    
+   
+    <div id="d3"></div>
+    <!-- <button onclick="abc(event)">jsbtn</button> -->
+    <script type="text/babel">
+        // const abc = ((e) => {
+        //     console.log(e)
+        // })
+        // let jsxButton = <button onClick={()=>{alert('hi sbk')}}>click me</button>
+
+        // <div class='cldivmainDiv'  onClick={(ev)=>{console.log(ev.target.className)}} style={{width: '300px', height: '200px', border: '2px solid'}}>this is div box</div>
+        let jsxButton = <div>
+            <input onKeyUp={(e)=>{}} id='txt1' type='text'/>
+            <input onKeyUp={(e)=>{}} id='txt2' type='text'/>
+            <button  onClick={(e)=>{
+                let x = +document.getElementById('txt1').value
+                let y = +document.getElementById('txt2').value
+                document.getElementById('h1').innerHTML = x*y
+                // document.getElementById('txt').value = ''
+                // document.getElementById('h1').innerHTML = ''
+                //console.log(document.getElementById('h1').innerHTML = document.getElementById('txt').value.toUpperCase() )
+            }}>click mul</button>
+            <button  onClick={(e)=>{
+                let x = +document.getElementById('txt1').value
+                let y = +document.getElementById('txt2').value
+                document.getElementById('h1').innerHTML = x/y
+            }}>click div</button>
+            <h1 id='h1'></h1>
+                        </div>
+        ReactDOM.render(jsxButton ,document.getElementById("d3"))
+    </script>
+  </body>
+</html>

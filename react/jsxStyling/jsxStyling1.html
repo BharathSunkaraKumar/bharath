@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <!-- <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> -->
+
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        /* #d3{
+            display: flex;
+            flex-direction: ;
+        } */
+    </style>
+  </head>
+  <body>
+    
+   
+    <div id="d3"></div>
+
+    <script type="text/babel">
+        //let jsxh1 = <h1 style={{color:'red', backgroundColor: 'green'}}>Hello React</h1>
+
+        let ar = [12,2,45,29]
+        let ars = ['bharath', 'zendaya','kohli','jahnavi']
+        let jsxflex = <div>
+                        {
+                            ar.map((e) => {
+                                return (
+                                    e % 2 == 0 ? <li style={{color: 'red'}}>{e}</li> : (
+                                        <li style={{color: 'green'}}>{e}</li>
+                                    )
+                                )
+                            })
+                        }
+                      </div>
+        ReactDOM.render(jsxflex ,document.getElementById("d3"))
+    </script>
+  </body>
+</html>

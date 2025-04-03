@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <!-- <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> -->
+
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        /* #d3{
+            display: flex;
+            flex-direction: ;
+        } */
+    </style>
+  </head>
+  <body>
+    
+   
+    <div id="d3"></div>
+    <!-- <button onclick="abc(event)">jsbtn</button> -->
+    <script type="text/babel">
+        const Xyz = (() => {
+            let [abc, setAbc] = React.useState('')
+        
+            const show = ((value) => {
+                //document.getElementById('h1').innerHTML = '1'
+                console.log(value)
+                setAbc(value)
+            })
+
+            return (
+                <div>
+                        {
+                            <div>
+                                <button onClick={()=>show(1)}>Button1</button> 
+                                <button onClick={()=>show(100)}>Button2</button> 
+                                <button onClick={()=>show(200)}>Button3</button> 
+                                <button onClick={()=>show(999)}>Button4</button> 
+                                <h1 id='h1'>{abc}</h1>
+                            </div>
+                        }
+                      </div>
+            )
+        })
+        
+        
+        ReactDOM.render(<Xyz/>, document.getElementById('d3'))
+    </script>
+  </body>
+</html>

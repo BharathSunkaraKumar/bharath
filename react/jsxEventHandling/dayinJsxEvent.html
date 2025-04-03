@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <!-- <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> -->
+
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        /* #d3{
+            display: flex;
+            flex-direction: ;
+        } */
+    </style>
+  </head>
+  <body>
+    
+   
+    <div id="d3"></div>
+    <!-- <button onclick="abc(event)">jsbtn</button> -->
+    <script type="text/babel">
+        // const showDate = ((e) => {
+        //     let db = document.getElementById('dt').value
+        //     console.log(db)
+        //     document.getElementById('h1').innerHTML = db
+        // })
+        //  <input onChange={(e)=>{showDate(e)}} type='date' id='dt'/>
+        let ar = []
+        const passAr = ((e) => {
+            let value = document.getElementById('txt').value
+            ar.push(value)
+            document.getElementById('h1').innerHTML += value
+            console.log(ar)
+        })
+        let jsxDay = <div>
+
+                        <input  type='text' id='txt'/>
+                        <button onClick={(e)=>{passAr(e)}}>push value</button>
+                        <h1 id='h1'></h1>
+                         
+                     </div>
+        ReactDOM.render(jsxDay, document.getElementById('d3'))
+    </script>
+  </body>
+</html>

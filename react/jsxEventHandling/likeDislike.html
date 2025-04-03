@@ -1,0 +1,115 @@
+<html>
+  <head>
+    <!-- <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> -->
+
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        /* #d3{
+            display: flex;
+            flex-direction: ;
+        } */
+    </style>
+  </head>
+  <body>
+    
+   
+    <div id="d3"></div>
+   
+    <script type="text/babel">
+        
+        const RatingApp = (() => {
+
+            let [first, setFirst] = React.useState(0)
+            let [second, setSec] = React.useState(0)
+            let [result, setResult] = React.useState('')
+            let [like, setLike] = React.useState(0)
+            let [dislike, setDislike] = React.useState(0)
+            let [increment, setIncrement] = React.useState(0)
+            let [inputs, setInput] = React.useState('')
+            let [ar, setAr] = React.useState([
+            {
+                name: 'sbk',
+                age: 25,
+            },
+            {
+                name: 'jahnavi',
+                age: 27,
+            },
+            {
+                name: 'kohli',
+                age: 37,
+            },
+            ])
+            const incLike = (() => {
+                setLike(like+1)
+            })
+            const incDislike = (() => {
+                setDislike(dislike+1)
+            })
+            const incrementBTn = (() => {
+                setIncrement(increment+1)
+            })
+            const decrement = (() => {
+                setIncrement(increment-1)
+            })
+            const reset = (() => {
+                setIncrement(0)
+                setDislike(0)
+                setLike(0)
+            })
+            const see = ((n, i) => {
+                //alert('hi')
+                document.getElementById('h1').innerHTML = `${n}`
+                document.getElementById('h2').innerHTML = `${i}`
+            })
+
+            const handleinput = ((e) => {
+                setInput(e.target.value.toUpperCase())
+            })
+            const substract = (() => {
+                setResult(first-second)
+            })
+            return(
+                <div>
+                    <p>likes: {like}</p>
+                    <p>dislikes: {dislike}</p>
+                    <h1>inc/dec: {increment}</h1>
+                    <div>
+                        <button onClick={incLike}>like</button>
+                        <button onClick={incDislike}>dislike</button>
+                        <button onClick={incrementBTn}>increment</button>
+                        <button onClick={decrement}>decrement</button>
+                        <button onClick={reset}>reset</button>
+                    </div>
+                    <ul>
+                        {
+                            ar.map((e, i) => {
+                                return (
+                                    // {e.name} <button >see</button>
+                                    <li onClick={()=>{see(e.name, i)}}>
+                                        {e.name}
+                                       </li>
+                                )
+                            })
+                        }
+                        <h1 id='h1'></h1>
+                        <h2 id='h2'></h2>
+                    </ul>
+                    <input type='text' onBlur={handleinput} />
+                    <h1>{inputs}</h1>
+                    <div>
+                        <input type='text' onChange={(e)=>setFirst(e.target.value)}  />
+                        <input type='text' onChange={(e)=>setSec(e.target.value)} />
+                        <button onClick={substract}>substract</button>
+                        <h1 id='sub'>{result}</h1>
+                    </div>
+                </div>
+            )
+        })
+        ReactDOM.render(<RatingApp/>, document.getElementById('d3'))
+    </script>
+  </body>
+</html>

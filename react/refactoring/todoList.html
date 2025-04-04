@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <html>
+  <head>
+    <!-- <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> -->
+
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        /* #d3{
+            display: flex;
+            position: absolute;
+        }  */
+    </style>
+  </head>
+  <body>
+    
+   
+    <div id="d3"></div>
+   
+    <script type="text/babel">
+
+        
+        
+        const App = (() => {
+            let [list, setList] = React.useState([])
+            let [todos, setTodos] = React.useState(
+                {
+                text: '',
+                id: new Date().getTime().toString()
+                },
+            )
+
+            const handleText = ((e) => {
+                setTodos({
+                    ...todos,
+                    text: e.target.value
+                })
+            })
+            const handleAdd = (() => {
+
+                setTodos({
+                    text: ''
+                })
+                setList([...list, todos])
+                
+            })
+            return(
+                <div style={{border: '2px solid',margin:'10px',padding: '10px'}}>
+                    <h1>Todo List</h1>
+                    <input type='text' value={todos.text} onChange={handleText} />
+                    <button onClick={handleAdd}>Add Todo</button>
+                    <ul>
+                        {list.length == 0 && <h3>There is no Todos</h3>}
+                        {
+                            list.map((todo) => {
+                                console.log(todo.id)
+                                return (
+                                    <li style={{backgroundColor: 'dodgerblue', padding:'5px', margin: '5px'}}>
+                                        <spam style={{color: 'white'}}>{todo.text}</spam>
+                                        <button style={{position: 'absolute', right: '50px'}}>Done</button>
+                                        <button style={{position: 'absolute', right: '100px'}}>Undo</button>
+                                    </li>
+                                )
+                            })
+                        }
+                    </ul>
+                </div>
+            )
+        })
+
+        
+        
+        ReactDOM.render(<App/>, document.getElementById('d3'))
+    </script>
+  </body>
+</html>
+
+
+
+<!-- 
+
+{
+                            todos.map((todo) => {
+                                console.log(todo.id)
+                                return (
+                                    <li style={{backgroundColor: 'dodgerblue', padding:'5px', margin: '5px'}}>
+                                        <spam style={{color: 'white'}}>{todo.name}</spam>
+                                        <button style={{position: 'absolute', right: '50px'}}>Done</button>
+                                        <button style={{position: 'absolute', right: '100px'}}>Undo</button>
+                                    </li>
+                                )
+                            })
+                        }
+
+-->

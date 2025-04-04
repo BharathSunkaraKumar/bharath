@@ -1,0 +1,113 @@
+<html>
+  <head>
+    <!-- <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> -->
+
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        /* #d3{
+            display: flex;
+            flex-direction: ;
+        } */
+    </style>
+  </head>
+  <body>
+    
+   
+    <div id="d3"></div>
+   
+    <script type="text/babel">
+
+        
+        
+        const App = (() => {
+
+            let [teams, setTeams] = React.useState([
+            {
+                teamname:'Mumbai Indians',
+                players:[
+                    'Rohit',
+                    'surya',
+                    'kishan',
+                    'bhumra',
+                    'david'
+                ]
+                },
+                {
+                teamname:'Royal Challengers Bengaluru',
+                players:[
+                    'Faf',
+                    'Virat',
+                    'DK',
+                    'Maxi',
+                    'Siraj'
+                ]
+                },
+                {
+                teamname:'Sunrisers Hyderabad',
+                players:[
+                    'Kane Williamson',
+                    'Manish',
+                    'Bhuvi',
+                    'Warner',
+                    'Karan'
+                ]
+                },
+                {
+                teamname:'Chennai Super Kings',
+                players:[
+                    'Dhoni',
+                    'Raina',
+                    'Jadeja',
+                    'Rayudu',
+                    'Ben Stokes'
+                ]
+            }
+            ])
+          
+            return(
+                <div style={{border: '2px solid',margin:'10px',padding: '10px'}}>
+                    <h1>IPL 2024 Teams</h1>
+                    {
+                        teams.map((team) => {
+                            return <Team teamname={team.teamname} players={team.players}/>
+                        })
+                    }
+                </div>
+            )
+        })
+
+        const Team = ((props) => {
+                    let {teamname, players} = props
+            return  <div style={{border: '2px solid',margin:'10px',padding: '10px'}}>
+                        <h1>{teamname}</h1>
+                        <ul>
+                            {
+                                players.map((player) => {
+                                    return <li>{player}</li>
+                                })
+                            }
+                        </ul>
+                    </div>
+        })
+
+        
+        ReactDOM.render(<App/>, document.getElementById('d3'))
+    </script>
+  </body>
+</html>
+
+
+<!-- // return <div style={{border: '2px solid',margin:'10px',padding: '10px'}}>
+//                                         <h1>{team.teamname}</h1>
+//                                         <ul>
+//                                             {
+//                                                 team.players.map((player) => {
+//                                                     return <li>{player}</li>
+//                                                 })
+//                                             }
+//                                         </ul>
+//                                    </div>
+//                         }) -->

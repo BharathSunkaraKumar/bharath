@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header{
+            width: 100vw;
+            min-height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('./beach.avif');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .header h1{
+            font-size: 5rem;
+            color: white;
+            
+        }
+        .header h1:hover{
+            text-shadow: 0px 0px 15px  rgb(102, 169, 235);
+            cursor: pointer;
+        }
+        .banner{
+            width: 100vw;
+            min-height: 100vh;
+            background: url('./beach.avif');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: .5s ease-in;
+            filter: grayscale(100%);
+        }
+        .banner:hover{
+            filter: grayscale(0%);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="header">
+            <h1>css flex</h1>
+        </div>
+        <div class="banner"></div>
+    </div>
+</body>
+</html>

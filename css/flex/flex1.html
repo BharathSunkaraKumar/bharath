@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css flex</title>
+    <style>
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: #f3f3f3;
+        }
+        .container{
+            margin: 10px;
+            /* height: 60vh; */
+            border: 3px solid tomato;
+            display: flex;
+            flex-wrap: wrap; 
+            /* justify-content: space-evenly; */
+            /* align-items: stretch;
+            align-items: flex-end;
+            align-items: flex-start;
+            align-items: baseline; */
+            /* align-content: center; */
+            /* align-items: center;  */
+            
+            
+            
+        }
+        .box{
+            padding: 30px;
+            text-align: center;
+            color: #f3f3f3;
+            
+        }
+        .box-1{
+            background-color: dodgerblue;
+            order: 1;
+            /* font-size: 30px; */
+        }
+        .box-2{
+            background-color: rgb(18, 219, 75);
+        }
+        .box-3{
+            background-color: rgb(121, 38, 209);
+            order: -1;
+        }
+        .box-4{
+            background-color: rgb(232, 9, 72);
+        }
+        .box-5{
+            background-color: rgb(227, 159, 10);
+        }
+        .common{
+            background-color: mediumseagreen;
+        }
+        .box{
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box-1">1</div>
+        <div class="box box-2">2</div>
+        <div class="box box-3">3</div>
+        <div class="box box-4">4</div>
+        <div class="box box-5">5</div>
+        <!-- <div class="box common">common</div>
+        <div class="box common">common</div>
+        <div class="box common">common</div>
+        <div class="box common">common</div> -->
+    </div>
+</body>
+</html>

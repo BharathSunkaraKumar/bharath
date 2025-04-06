@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* div{
+            width: 150px;
+            height: 150px;
+            display: inline-block;
+        }
+        div:hover{
+            background: black;
+        }
+        .one{
+            background: tomato;
+            
+        }
+        .two{
+            background: dodgerblue;
+            
+        }
+        .three{
+            background: mediumseagreen;
+            transition-property: background,border-radius;
+            transform: translate(15px);
+            transition-duration: 3s, 1s; 
+            transition: background 1.3s 1.3s, border-radius 3s;
+            transition: all 1.3s;
+        } 
+        .three:hover{
+            background: black;
+            border-radius: 50%; 
+            transform: scale(1.1); 
+        }  */
+
+        div{
+            height: 150px;
+            background: dodgerblue;
+            width: 100px;
+            margin: 15px;
+            border-radius: 7px;
+            color: white;
+            text-align: center;
+            transition: all 1s ease;
+        }
+        div:hover{
+            transform: translateX(157px);
+        }
+        .ease{
+            transition: all 1s ease;
+            transition-timing-function: ease;
+        }
+        .linear{
+            /* transition: all 1s linear; */
+            transition-timing-function: linear;
+        }
+        .ease-in{
+            /* transition: all 1s linear; */
+            transition-timing-function: ease-in;
+        }
+        .ease-out{
+            /* transition: all 1s linear; */
+            transition-timing-function: ease-out;
+        }
+        .ease-in-out{
+            /* transition: all 1s linear; */
+            transition-timing-function: ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div> -->
+    <div class="default">default</div>
+    <div class="ease">ease</div>
+    <div class="linear">linear</div>
+    <div class="ease-in">ease-in</div>
+    <div class="ease-out">ease-out</div>
+    <div class="ease-in-out">ease-in-out</div>
+    
+</body>
+</html>

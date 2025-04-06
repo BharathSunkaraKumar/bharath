@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 150px;
+            height: 150px;
+            display: inline-block;
+        }
+        .one{
+            background: tomato;
+            /* transform: translateX(30px); */
+            /* transform:scaleX(0.2) */
+            /* transform: rotate(45deg); */
+            transform: skew(45deg);
+        }
+        .two{
+            background: dodgerblue;
+            /* transform: translateY(60px); */
+            /* transform: scaleY(0.5); */
+            /* transform: rotateX(80deg); */
+            transform: skewy(45deg);
+        }
+        .three{
+            background: mediumseagreen;
+            /* transform: translate(30px, 30px); */
+            /* transform: scale(0.5); */
+            /* transform: rotateY(85deg); */
+            transform: skew(45deg, 50deg);
+        }
+        /* .three:hover{
+            transform: scale(0.4);
+        } */
+    </style>
+</head>
+<body>
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+</body>
+</html>

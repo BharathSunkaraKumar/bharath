@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media queries</title>
+    <style>
+        body{
+            height: 100vh;
+            background: linear-gradient(140deg ,rgb(135, 12, 135), rgb(242, 17, 10)
+            , rgb(227, 49, 49), rgb(219, 176, 35)
+            );
+        }
+        .banner{
+            background: rgb(0, 0, 0);
+        }
+        h1{
+            color: white;
+            text-decoration: underline;
+            padding: 10px;
+            text-transform: capitalize;
+        }
+        @media screen and (min-width:576px) {
+            body{
+                background: dodgerblue;
+                
+            }
+            .banner{
+                background: mediumseagreen;
+                
+            }
+            h1{
+                color: white;
+                text-decoration: none;
+                text-align: center;
+            }
+        }
+        @media screen and (min-width: 750px) {
+            body{
+                background: mediumseagreen;
+            }
+            .banner{
+                background: dodgerblue;
+            }
+            h1{
+                color: black;
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <h1>hello i am learning media queries</h1>
+    </div>
+</body>
+</html>

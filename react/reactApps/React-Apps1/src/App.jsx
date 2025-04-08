@@ -1,7 +1,8 @@
 import { useState } from 'react'
 
 import './App.css'
-import Component1 from './contex/Component1'
+import User from './useReducer/User'
+// import Component1 from './contex/Component1'
 // import Darkmode from './darkMode/Darkmode'
 // import Todo from './todoApp/Todo'
 // import Cocktail from './cocktail/Cocktail'
@@ -16,7 +17,8 @@ function App() {
         {/* <Cocktail/> */}
         {/* <Review/> */}
         {/* <Darkmode/> */}
-        <Component1/>
+        {/* <Component1/> */}
+        <User/>
       </div>
     </>
   )

@@ -1,5 +1,5 @@
 import { useReducer, useState } from "react"
-import './TodoList.css'
+// import './TodoList.css'
 
 const reducer = (state, action) => {
     if(action.type === 'ADD_TODO') {

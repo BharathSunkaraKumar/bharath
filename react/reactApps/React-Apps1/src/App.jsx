@@ -20,7 +20,7 @@ function App() {
         {/* <Darkmode/> */}
         {/* <Component1/> */}
         {/* <User/> */}
-        <TodoList/>
+        {/* <TodoList/> */}
       </div>
     </>
   )

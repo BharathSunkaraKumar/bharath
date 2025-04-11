@@ -3,6 +3,7 @@ import { useState } from 'react'
 import './App.css'
 import User from './useReducer/User'
 import TodoList from './useReducer/TodoList'
+import StudentForm from './formik/StudentForm'
 // import Component1 from './contex/Component1'
 // import Darkmode from './darkMode/Darkmode'
 // import Todo from './todoApp/Todo'
@@ -21,6 +22,7 @@ function App() {
         {/* <Component1/> */}
         {/* <User/> */}
         {/* <TodoList/> */}
+        <StudentForm/>
       </div>
     </>
   )

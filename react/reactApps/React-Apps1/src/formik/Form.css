@@ -1,0 +1,25 @@
+/* .inp{
+    position: absolute;
+    left: 10px;
+    top: 95px;
+    font-size: 12px;
+    background-color: white;
+    padding: 0px 5px;
+     transition: transform 0.3s ease,
+                 color 0.3s ease; 
+    
+}
+input{
+    padding: 10px;
+    border-radius: 5px;
+}
+input:focus+ .inp {
+    transform: translateY(-16px);
+    color: dodgerblue;
+}
+
+.frm input:focus {
+    outline: none;
+    border-color: dodgerblue;
+
+} */

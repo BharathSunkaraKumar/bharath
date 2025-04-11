@@ -13,19 +13,19 @@ import CountryDetails from './routing/CountryDetails.jsx'
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Home/>,
-    children: [
-      {
-        path: '/countries',
-        element: <Countries/>,
-        children: [
-          {
-            path: 'countries/countryDetails/:cname',
-            element: <CountryDetails/>
-          }
-        ]
-      },
-    ]
+    element: <App/>,
+    // children: [
+    //   {
+    //     path: '/countries',
+    //     element: <Countries/>,
+    //     children: [
+    //       {
+    //         path: 'countries/countryDetails/:cname',
+    //         element: <CountryDetails/>
+    //       }
+    //     ]
+    //   },
+    // ]
   }
 ])
 

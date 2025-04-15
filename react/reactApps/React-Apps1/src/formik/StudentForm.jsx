@@ -11,7 +11,7 @@ function StudentForm() {
             lastname: '',
             gender: '',
             age: '',   
-            username: ''  
+            username: '',
         },
         validationSchema:Yup.object({
             // firstname: Yup.string().required('First Name required').min(2, 'minimum 2 letters'),
@@ -45,6 +45,7 @@ function StudentForm() {
                 })
             })
         }),
+        
         onSubmit:(values)=>{
             // console.log(values)
             setStudents([...students, values])
@@ -55,6 +56,7 @@ function StudentForm() {
         <h1>StudentForm</h1>
         {/* {console.log(Studentform)} */}
         <form onSubmit={Studentform.handleSubmit} className='frm'>
+            
             <input type='text' name='username' onBlur={Studentform.handleBlur} onChange={Studentform.handleChange} placeholder='username'/>
             <div>
                 <small style={{color: 'tomato'}}>{Studentform.touched.username && Studentform.errors.username}</small>
@@ -78,10 +80,10 @@ function StudentForm() {
                 <small style={{color: 'tomato'}}>{Studentform.touched.age && Studentform.errors.age}</small>
             </div>
             <br/>
-            <input type='text' name='password' onBlur={Studentform.handleBlur}  onChange={Studentform.handleChange} placeholder='password'/>
             <div>
                 <small style={{color: 'tomato'}}>{Studentform.touched.password && Studentform.errors.password}</small>
             </div>
+            <input type='text' name='password' onBlur={Studentform.handleBlur}  onChange={Studentform.handleChange} placeholder='password'/>
             <br/>
             <button>Add student</button>
         </form>

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './Review.css'
+// import './Review.css'
 import reviews from './Date'
 const Review = () => {
     let nextBtn = '>'

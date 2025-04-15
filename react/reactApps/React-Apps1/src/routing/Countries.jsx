@@ -1,5 +1,5 @@
 import React, { useEffect, useReducer } from 'react'
-import './Countries.css'
+// import './Countries.css'
 import { Link, Outlet } from 'react-router'
 const reducer = (state, action) => {
     if(action.type == 'UPDATE_COUNTRIES') {

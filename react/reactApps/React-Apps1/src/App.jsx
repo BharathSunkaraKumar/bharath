@@ -1,11 +1,12 @@
 
 import './App.css'
-import StudentForm from './formik/StudentForm'
+import Form from './formik/Form'
+// import StudentForm from './formik/StudentForm'
 function App() {
   return (
     <>
       <div>
-        <StudentForm/>
+        <Form/>
       </div>
     </>
   )

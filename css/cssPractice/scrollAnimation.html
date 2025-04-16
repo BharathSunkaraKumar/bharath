@@ -7,6 +7,9 @@
     <style>
         *{
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         .left-container{
            /* border: 1px solid; */
@@ -17,7 +20,7 @@
         }
         .stack-area{
             width: 100%;
-            height: 100vh;
+            height: 300vh;
             background: white;
             display: flex;
             
@@ -29,11 +32,23 @@
             flex-basis: 50%;
             height: 100vh;
             align-items: center;
+            /* position: sticky;
+            top: 0; */
+        }
+        .left{
+            position: sticky;
+            top: 0;
+        }
+        .right{
+            position: sticky;
+            top: 0;
         }
         
         .stack-area .right{
             flex-basis: 50%;
             height: 100vh;
+            /* position: sticky;
+            top: 0; */
         }
         .stack-area .title-1,.title-2{
             font-size: 55px;
@@ -59,20 +74,17 @@
             font-size: 12px;
             padding: 10px;
         }
-        .right .card{
+        .card{
             width: 350px;
             height: 350px;
             border-radius: 25px;
-            
+            position: relative;
         }
         .card{
-            /* color: black; */
-            /* font-size: 45px;
-            padding: 10px; */
-            /* width: 175px; */
             position: absolute;
             top: calc(50% - 175px);
-            /* left: calc(50% - 175px); */
+            left: calc(50% + 175px);
+            transition: 0.5s ease in out;
         }
         .card h1{
             font-size: 29px;
@@ -91,7 +103,7 @@
         .card-3{
             background: rgb(102, 239, 34);
         }
-        
+       
         </style>
 </head>
 <body>
@@ -115,19 +127,57 @@
             </div>
         </div>
         <div class="right">
-            <div class="card card-1">
-                <h1 class="card-title">this is card-1</h1>
-            </div>
-            <div class="card card-2">
-                <h1 class="card-title">this is card-2</h1>
-            </div>
-            <div class="card card-3">
-                <h1 class="card-title">this is card-3</h1>
-            </div>
-            <div class="card card-4">
-                <h1 class="card-title">this is card-4</h1>
+            <div class="cards">
+                <div class="card card-1">
+                    <h1 class="card-title">this is card-1</h1>
+                </div>
+                <div class="card card-2">
+                    <h1 class="card-title">this is card-2</h1>
+                </div>
+                <div class="card card-3">
+                    <h1 class="card-title">this is card-3</h1>
+                </div>
+                <div class="card card-4">
+                    <h1 class="card-title">this is card-4</h1>
+                </div>
             </div>
         </div>
     </div>
+    <script>
+        let cards = document.querySelectorAll('.card');
+        let stackArea = document.querySelector('.stack-area');
+        console.log(cards)
+
+        window.addEventListener('scroll', () => {
+            let distance = window.innerHeight/2;
+            let topVal = stackArea.getBoundingClientRect().top;
+            let index = -1 * (topVal / distance + 1);
+            index = Math.floor(index)
+            for(i=0; i<cards.length; i++) {
+                if(i <= index) {
+                    cards[i].classList.add('away')
+                }else{
+                    cards[i].classList.remove('away')
+                }
+            }
+            rotateCards()
+        })
+
+        const rotateCards = () => {
+            let angel = 0;
+            cards.forEach((card, index) => {
+                if(card.classList.contains('away')){
+                    card.style.transform = `translateY(-120vh) rotate(-48deg)`;
+                }else{
+
+                    console.log(card)
+                    card.style.transform = `rotate(${angel}deg)`
+                    angel = angel - 10
+                    card.style.zIndex = cards.length - index
+                }
+            })
+        }
+        
+    </script>
 </body>
 </html>

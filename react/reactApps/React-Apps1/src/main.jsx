@@ -6,14 +6,49 @@ import{
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom"
-import Home from './routing/Home.jsx'
-import Countries from './routing/Countries.jsx'
-import CountryDetails from './routing/CountryDetails.jsx'
+import { store } from './app/store'
+import { Provider } from 'react-redux'
+import Countries from './features/countries/Countries.jsx'
+import TodoList from './features/todolist/TodoList.jsx'
+import Counter from './features/counter/Counter.jsx'
+import Products from './features/products/Products.jsx'
+import CountryDetails from './features/countries/CountryDetails.jsx'
+import AddProduct from './features/products/AddProduct.jsx'
+
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App/>,
+    children: [
+      {
+        path: '/countries',
+        element: <Countries/>,
+        children: [
+          {
+            path: 'countries/countryDetails/:cname',
+          element: <CountryDetails/>
+          }
+        ]
+      },
+      {
+        path: '/todolist',
+        element: <TodoList/>
+      },
+      {
+        path: '/counter',
+        element: <Counter/>
+      },
+      {
+        path: '/products',
+        element: <Products/>
+      },
+      {
+        path: '/addproducts',
+        element: <AddProduct/>
+      },
+      
+    ]
     // children: [
     //   {
     //     path: '/countries',
@@ -31,7 +66,9 @@ const router = createBrowserRouter([
 
 
 createRoot(document.getElementById('root')).render(
-  <RouterProvider router={router}/>
+  <Provider store={store}>
+        <RouterProvider router={router}/>
+    </Provider>,
 )
 
 {/* <App />

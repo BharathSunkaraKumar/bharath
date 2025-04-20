@@ -9,6 +9,9 @@ export const productsApi = createApi({
     getAllproducts: builder.query({
       query: () => `/`,
     }),
+    getproductDetailById: builder.query({
+      query: (pid) => `/${pid}`,
+    }),
     deleteproduct: builder.mutation({
       query : (id) => {
         return {
@@ -25,10 +28,20 @@ export const productsApi = createApi({
           body: newProduct
         }
       }
+    }),
+    editProduct: builder.mutation({
+      query: (Product) => {
+        console.log("Product::"+Product)
+        return {
+          url: `/${Product.id}`,
+          method: "PUT",
+          body: Product,
+        }
+      }
     })
   }),
 })
 
 // Export hooks for usage in functional components, which are
 // auto-generated based on the defined endpoints
-export const { useAddProductMutation, useLazyGetAllproductsQuery,useGetAllproductsQuery, useDeleteproductMutation } = productsApi
+export const { useEditProductMutation, useGetproductDetailByIdQuery, useAddProductMutation, useLazyGetAllproductsQuery,useGetAllproductsQuery, useDeleteproductMutation } = productsApi

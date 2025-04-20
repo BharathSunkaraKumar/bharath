@@ -9,15 +9,31 @@ import { Outlet } from 'react-router'
 function App() {
   return (
     <>
-      <div>
-        <Link to='/'>Home</Link>
-        <Link to='/todolist'>TodoList</Link>
-        <Link to='/countries'>countries</Link>
-        <Link to='/products'>produts</Link>
-        <Link to='/addproducts'>add produt</Link>
-        <Link to='/counter'>counter</Link>
-        <Outlet/>
+      <div className='items'>
+        <div className='item'>
+          <Link to='/todolist'>TodoList</Link>
+        </div>
+        {/* <div className='item'>
+          <Link to='/'>Home</Link>
+        </div> */}
+        <div className='item'>
+          <Link to='/countries'>countries</Link>
+        </div>
+        <div className='item'
+        >
+          <Link to='/products'>products</Link>
+        </div>
+        <div className='item'>
+          <Link to='/addproducts'>add product</Link>
+        </div>
+        <div className='item'>
+          <Link to='/editproduct'>edit product</Link> 
+        </div>
+        <div className='item'>
+          <Link to='/counter'>counter</Link>
+        </div>
       </div>
+        <Outlet/>
     </>
   )
 }

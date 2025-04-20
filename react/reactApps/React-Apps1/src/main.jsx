@@ -14,6 +14,7 @@ import Counter from './features/counter/Counter.jsx'
 import Products from './features/products/Products.jsx'
 import CountryDetails from './features/countries/CountryDetails.jsx'
 import AddProduct from './features/products/AddProduct.jsx'
+import EditProduct from './features/products/EditProduct.jsx'
 
 
 const router = createBrowserRouter([
@@ -46,6 +47,14 @@ const router = createBrowserRouter([
       {
         path: '/addproducts',
         element: <AddProduct/>
+      },
+      {
+        path: '/editproduct/:pid',
+        element: <EditProduct/>
+      },
+      {
+        path: '/',
+        element: <Products/>
       },
       
     ]

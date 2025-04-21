@@ -6,7 +6,9 @@ import { useNavigate } from 'react-router'
 import { useEffect } from 'react'
 
 function Products() {
-   const {isLoading, data} = useGetAllproductsQuery()
+   const {isLoading, data, refetch} = useGetAllproductsQuery()
+   let x = useGetAllproductsQuery()
+//    console.log(x)
    const [fn] = useDeleteproductMutation()
    const [rfn] = useLazyGetAllproductsQuery()
    const nav = useNavigate()
@@ -25,6 +27,11 @@ const handleDelet = (id) => {
 const handleEdit = (id) => {
     nav(`/editproduct/${id}`)
 }
+
+useEffect(()=>{
+    refetch()
+},[data])
+
   return (
     <div className='box'>
        

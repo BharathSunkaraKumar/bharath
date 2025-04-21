@@ -37,7 +37,8 @@ export const productsApi = createApi({
           method: "PUT",
           body: Product,
         }
-      }
+      },
+      invalidatesTags: (result, error, {id}) => [{type: 'product', id}]
     })
   }),
 })

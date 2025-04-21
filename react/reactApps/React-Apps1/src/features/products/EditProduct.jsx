@@ -1,26 +1,25 @@
 import React, { useEffect } from 'react'
-import { useParams } from 'react-router'
+import { useNavigate, useParams } from 'react-router'
 import { useEditProductMutation, useGetproductDetailByIdQuery } from '../../services/products'
 import { useFormik } from 'formik'
 
+
 function EditProduct() {
   const {pid} = useParams()
-  console.log(pid)
-  const {isLoading, data} = useGetproductDetailByIdQuery(pid)
+  const navigate = useNavigate()
+  const {isLoading, data, refetch} = useGetproductDetailByIdQuery(pid)
   const [efn] = useEditProductMutation()
 
   const productForm = useFormik({
       initialValues: {},
-      onSubmit: (values) => {
-          console.log(values)
-          efn(values).then(()=>{
-            alert('update')
-          })
+      onSubmit: async (values) => {
+          await efn(values)
+          await refetch()
+          navigate('/products')
         }
     })
     
     useEffect(()=>{
-        console.log(data)
         productForm.setValues(data)
     },[data])
   

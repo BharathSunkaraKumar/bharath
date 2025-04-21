@@ -4,6 +4,7 @@ import todoReducer from '../features/todolist/todoSlice'
 import { countriesApi } from '../services/countries'
 import { setupListeners } from '@reduxjs/toolkit/query'
 import { productsApi } from '../services/products'
+import { blogApi } from '../services/blog'
 
 export const store = configureStore({
   reducer: {
@@ -11,9 +12,10 @@ export const store = configureStore({
     t: todoReducer,
     [countriesApi.reducerPath]: countriesApi.reducer,
     [productsApi.reducerPath]: productsApi.reducer,
+    [blogApi.reducerPath]: blogApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(countriesApi.middleware, productsApi.middleware),
+    getDefaultMiddleware().concat(countriesApi.middleware, productsApi.middleware, blogApi.middleware),
 })
 
 setupListeners(store.dispatch) 

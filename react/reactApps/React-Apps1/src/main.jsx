@@ -15,12 +15,15 @@ import Products from './features/products/Products.jsx'
 import CountryDetails from './features/countries/CountryDetails.jsx'
 import AddProduct from './features/products/AddProduct.jsx'
 import EditProduct from './features/products/EditProduct.jsx'
+import Blog from './features/blog/Blog.jsx'
+// import Error from './routing/Error.jsx'
 
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App/>,
+    // errorElement: <Error/>,
     children: [
       {
         path: '/countries',
@@ -51,6 +54,10 @@ const router = createBrowserRouter([
       {
         path: '/editproduct/:pid',
         element: <EditProduct/>
+      },
+      {
+        path: '/blog',
+        element: <Blog/>
       },
       {
         path: '/',

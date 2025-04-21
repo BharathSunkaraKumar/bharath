@@ -27,7 +27,7 @@ function App() {
           <Link to='/addproducts'>add product</Link>
         </div>
         <div className='item'>
-          <Link to='/editproduct'>edit product</Link> 
+          <Link to='/blog'>blog</Link> 
         </div>
         <div className='item'>
           <Link to='/counter'>counter</Link>

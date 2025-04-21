@@ -16,50 +16,80 @@
   "profile": {
     "name": "typicode"
   },
-   
   "blogs": [
     {
-      "id": 1,
+      "id": "1",
       "title": "react",
       "slug": "how-to-learn-react-2025",
       "content": "Full content of the blog post goes here...",
       "excerpt": "Learn the most effective way to master React in 2025 with modern tools.",
       "author": "John Doe",
       "date": "2025-04-20T10:00:00Z",
-      "tags": ["React", "JavaScript", "Frontend"],
+      "tags": [
+        "React",
+        "JavaScript",
+        "Frontend"
+      ],
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCelkmWfnQkGmyWNujbuC9mF04Ww5rGRN1vA&s"
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "javascript",
       "slug": "how-to-learn-javascript-2025",
       "content": "Full content of the blog post goes here...",
       "excerpt": "Learn the most effective way to master React in 2025 with modern tools.",
       "author": "John Doe",
       "date": "2025-04-20T10:00:00Z",
-      "tags": ["React", "JavaScript", "Frontend"],
+      "tags": [
+        "React",
+        "JavaScript",
+        "Frontend"
+      ],
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpuYdLEzBvwemix8pwsncUkLLOQqnByncadg&s"
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "tailwind",
       "slug": "how-to-learn-tailwind-2025",
       "content": "Full content of the blog post goes here...",
       "excerpt": "Learn the most effective way to master React in 2025 with modern tools.",
       "author": "John Doe",
       "date": "2025-04-20T10:00:00Z",
-      "tags": ["React", "JavaScript", "Frontend"],
+      "tags": [
+        "React",
+        "JavaScript",
+        "Frontend"
+      ],
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIfSF7t47GjzkrqohuuZkz-vwhq3HZnl5o6g&s"
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "next js",
       "slug": "how-to-learn-next-js-2025",
       "content": "Full content of the blog post goes here...",
       "excerpt": "Learn the most effective way to master React in 2025 with modern tools.",
       "author": "John Doe",
       "date": "2025-04-20T10:00:00Z",
-      "tags": ["React", "JavaScript", "Frontend"],
+      "tags": [
+        "React",
+        "JavaScript",
+        "Frontend"
+      ],
+      "image": "https://www.drupal.org/files/project-images/nextjs-icon-dark-background.png"
+    },
+    {
+      "id": "5",
+      "title": "next js",
+      "slug": "how-to-learn-next-js-2025",
+      "content": "Full content of the blog post goes here...",
+      "excerpt": "Learn the most effective way to master React in 2025 with modern tools.",
+      "author": "John Doe",
+      "date": "2025-04-20T10:00:00Z",
+      "tags": [
+        "React",
+        "JavaScript",
+        "Frontend"
+      ],
       "image": "https://www.drupal.org/files/project-images/nextjs-icon-dark-background.png"
     }
   ],
@@ -242,18 +272,6 @@
       "rating": {
         "rate": 4.5,
         "count": 146
-      }
-    },
-    {
-      "id": "9002",
-      "title": "iphone 16 pro max",
-      "price": "65000",
-      "description": "best budget flashship mobile",
-      "category": "smart phone",
-      "image": "https://ss7.vzw.com/is/image/VerizonWireless/apple-iphone-16-pro-max-desert-titanium-b?wid=465&hei=465&fmt=webp",
-      "rating": {
-        "rate": 0,
-        "count": 0
       }
     },
     {

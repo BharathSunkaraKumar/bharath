@@ -16,6 +16,7 @@ import CountryDetails from './features/countries/CountryDetails.jsx'
 import AddProduct from './features/products/AddProduct.jsx'
 import EditProduct from './features/products/EditProduct.jsx'
 import Blog from './features/blog/Blog.jsx'
+import BlogDetails from './features/blog/BlogDetails.jsx'
 // import Error from './routing/Error.jsx'
 
 
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
       {
         path: '/blog',
         element: <Blog/>
+      },
+      {
+        path: '/blogdetails/:bid',
+        element: <BlogDetails/>
       },
       {
         path: '/',

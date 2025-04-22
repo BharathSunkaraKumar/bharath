@@ -42,6 +42,27 @@ body{
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
+    align-items: center;
+}
+.search-bar button{
+    background: dodgerblue;
+    height: 38px;
+    border: none;
+    padding-left: 8px;
+    padding-right: 8px;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    box-shadow: 0 7px #999;
+}
+.search-bar button:hover{
+    background-color: rgb(25, 131, 238);
+}
+.search-bar button:active{
+    background: rgb(58, 85, 206);
+    transform: translateY(4px);
+    box-shadow: 0 3px #666;
 }
 .blog-items {
     display: flex;
@@ -77,6 +98,18 @@ body{
     cursor: pointer;
     margin-bottom: 10px;
 }
+.blog-items .edit{
+    background: rgb(1, 30, 40);
+    width: 80px;
+    padding: 10px;
+    margin-left: 20px;
+    border-radius: 20px;
+    transition: all 0.3s linear;
+}
+.blog-items button:active{
+
+    transform: scale(0.9);
+}
 .blog-items button:hover{
     color: rgb(84, 104, 195);;   
 }
@@ -108,9 +141,9 @@ body{
         letter-spacing: 1px;
     }
 }
-@media screen and (min-width: 650px)  {
+@media screen and (min-width:900px)  {
     .blog-items{
-        width: 250px;
+        width: 350px;
     }
     .three-column-layout{
         grid-template-columns: 1fr 1fr;
@@ -121,9 +154,9 @@ body{
         letter-spacing: 1px;
     }
 }
-@media screen and (min-width: 990px)  {
+@media screen and (min-width: 1200px)  {
     .blog-items{
-        width: 250px;
+        width: 350px;
     }
     .three-column-layout{
         grid-template-columns: 1fr 1fr 1fr;
@@ -148,4 +181,21 @@ body{
 .blog-items .del:hover{
     color: white;
     background-color: tomato;
+}
+.blog-post input{
+    height: 30px;
+    padding: 15px;
+    margin: 5px;
+}
+.blog-post button{
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background: rgb(211, 206, 206);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.blog-post button:hover{
+    background: rgb(12, 170, 227);
 }

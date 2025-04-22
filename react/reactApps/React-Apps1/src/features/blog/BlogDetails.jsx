@@ -1,9 +1,11 @@
 import React from 'react'
-import { useParams } from 'react-router'
+import './blog.css'
+import { useNavigate, useParams } from 'react-router'
 import { useGetBlogDetailsQuery } from '../../services/blog'
 
 function BlogDetails() {
    const {bid} = useParams()
+   const navigate = useNavigate()
    const {data, isLoading} =  useGetBlogDetailsQuery(bid)
 //    const {title, slug, content, excerpt, author, tags, image} = data
   return (
@@ -24,6 +26,7 @@ function BlogDetails() {
                     </div>
                 </>
             }
+        <button onClick={()=>{navigate('/blog')}} style={{border: 'none', padding: '5px', background:'none',cursor: 'pointer'}}>← Back to home</button>
         </div>
     </div>
   )

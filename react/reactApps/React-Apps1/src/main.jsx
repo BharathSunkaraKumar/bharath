@@ -17,6 +17,8 @@ import AddProduct from './features/products/AddProduct.jsx'
 import EditProduct from './features/products/EditProduct.jsx'
 import Blog from './features/blog/Blog.jsx'
 import BlogDetails from './features/blog/BlogDetails.jsx'
+import AddBlog from './features/blog/AddBlog.jsx'
+import Editblog from './features/blog/Editblog.jsx'
 // import Error from './routing/Error.jsx'
 
 
@@ -63,6 +65,14 @@ const router = createBrowserRouter([
       {
         path: '/blogdetails/:bid',
         element: <BlogDetails/>
+      },
+      {
+        path: '/addblog',
+        element: <AddBlog/>
+      },
+      {
+        path: '/editblog/:bid',
+        element: <Editblog/>
       },
       {
         path: '/',

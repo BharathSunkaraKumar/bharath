@@ -19,7 +19,7 @@
   "blogs": [
     {
       "id": "1",
-      "title": "react",
+      "title": "react v 19.2",
       "slug": "how-to-learn-react-2025",
       "content": "Full content of the blog post goes here...",
       "excerpt": "Learn the most effective way to master React in 2025 with modern tools.",
@@ -34,11 +34,11 @@
     },
     {
       "id": "2",
-      "title": "javascript",
+      "title": "javascript ",
       "slug": "how-to-learn-javascript-2025",
       "content": "Full content of the blog post goes here...",
       "excerpt": "Learn the most effective way to master React in 2025 with modern tools.",
-      "author": "John Doe",
+      "author": "bharath",
       "date": "2025-04-20T10:00:00Z",
       "tags": [
         "React",
@@ -78,19 +78,13 @@
       "image": "https://www.drupal.org/files/project-images/nextjs-icon-dark-background.png"
     },
     {
-      "id": "5",
-      "title": "next js",
-      "slug": "how-to-learn-next-js-2025",
-      "content": "Full content of the blog post goes here...",
+      "id": "f7a9",
+      "title": "dsa",
+      "slug": "how-to-learn-javascript-2025",
+      "content": "dsa is for programmers for solving big problems",
       "excerpt": "Learn the most effective way to master React in 2025 with modern tools.",
-      "author": "John Doe",
-      "date": "2025-04-20T10:00:00Z",
-      "tags": [
-        "React",
-        "JavaScript",
-        "Frontend"
-      ],
-      "image": "https://www.drupal.org/files/project-images/nextjs-icon-dark-background.png"
+      "author": " bharath",
+      "image": "https://miro.medium.com/v2/resize:fit:1400/0*Rhu1FRkUGZFAeGIy"
     }
   ],
   "products": [

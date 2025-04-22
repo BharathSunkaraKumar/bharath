@@ -4,29 +4,61 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 // Define a service using a base URL and expected endpoints
 export const blogApi = createApi({
   reducerPath: 'blogApi',
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3000/blogs' }),
+  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3000' }),
   endpoints: (builder) => ({
     getBlogItems: builder.query({
-        query: () => `/`,
-        // providesTags: ['blog']
+        query: (seachTerm = '') => {
+
+          return seachTerm ?  `/blogs?title=${seachTerm}` :  `/blogs`   },
+
+          // providesTags: (result, error, seachTerm) => 
+          //   result
+          // ? [...result.map(({id}) => ({tpye: 'Blogs', id})),
+          //   {type: 'Blogs', id: `LIST-${seachTerm}`},
+
+          // ]
+          // : [{ type: 'Blogs', id: `List-${seachTerm}` }],
     }),
-    getBlogItem: builder.query({
-        query: (seachTerm) => `?title=${seachTerm}`
-    }),
+
     getBlogDetails: builder.query({
-        query: (id) => `/${id}`
+        query: (id) => `blogs/${id}`
     }),
+
+    editblog: builder.mutation({
+      query: (blog) => {
+        return {
+          url: `blogs/${blog.id}`,
+          method: "PUT",
+          body: blog
+        }
+      }
+    }),
+
+    addBlogPost: builder.mutation({
+      query: (newBlog) => {
+        return {
+          url: '/blogs',
+          method: "POST",
+          body: newBlog
+        }
+      }
+    }),
+
     deleteBlog: builder.mutation({
       query: (id) => {
         console.log(id)
         return {
-          url: `/${id}`,
+          url: `blogs/${id}`,
           method: "DELETE"
         }
       }
     }),
-    // invalidatesTags: ['/'],
+    // invalidatesTags: (result, error, id) => [
+    //   { type: 'Blogs', id }, // Invalidate deleted item
+    //   { type: 'Blogs', id: 'LIST-searchTerm' }, // Invalidate all LISTs (you can also pass current searchTerm)
+    // ],
+    
   }),
 })
 
-export const { useLazyGetBlogItemsQuery, useLazyGetBlogItemQuery, useDeleteBlogMutation, useGetBlogDetailsQuery, useGetBlogItemQuery, useGetBlogItemsQuery } = blogApi
+export const {useLazyGetBlogItemsQuery, useDeleteBlogMutation, useGetBlogDetailsQuery, useGetBlogItemsQuery, useAddBlogPostMutation, useEditblogMutation} = blogApi

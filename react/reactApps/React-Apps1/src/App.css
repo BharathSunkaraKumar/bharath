@@ -23,13 +23,11 @@ a:active{
   .items{
     display: flex;
     /* flex-direction: column; */
-    
     background: black;
     color: white;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 10px;
-    height: 90px;
+    height: 80px;
     align-items: center;
   }
   .item a{

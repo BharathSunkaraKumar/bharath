@@ -1,4 +1,5 @@
 
+import { useSelector } from 'react-redux'
 import './App.css'
 import Counter from './features/counter/Counter'
 import Countries from './features/countries/Countries'
@@ -6,7 +7,9 @@ import TodoList from './features/todolist/TodoList'
 import Form from './formik/Form'
 import { Link } from 'react-router'
 import { Outlet } from 'react-router'
+
 function App() {
+  const cartItems = useSelector(state => state.cart.cartItems)
   return (
     <>
       <div className='items'>
@@ -30,8 +33,11 @@ function App() {
           <Link to='/blog'>blog</Link> 
         </div>
         <div className='item'>
-          <Link to='/counter'>counter</Link>
+          <Link to='/cart'>cart--{cartItems.length}</Link>
         </div>
+        {/* <div className='item'>
+          <Link to='/counter'>counter</Link>
+        </div> */}
       </div>
         <Outlet/>
     </>

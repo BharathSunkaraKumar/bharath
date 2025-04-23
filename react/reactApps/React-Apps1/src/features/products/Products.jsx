@@ -4,9 +4,12 @@ import './products.css'
 import { useDeleteproductMutation, useGetAllproductsQuery, useLazyGetAllproductsQuery } from '../../services/products'
 import { useNavigate } from 'react-router'
 import { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
+import { addToCart } from './cartSlice'
 
 function Products() {
    const {isLoading, data, refetch} = useGetAllproductsQuery()
+   const dispatch = useDispatch()
    let x = useGetAllproductsQuery()
 //    console.log(x)
    const [fn] = useDeleteproductMutation()
@@ -32,6 +35,9 @@ useEffect(()=>{
     refetch()
 },[data])
 
+const handleCart = (product) => {
+    dispatch(addToCart(product))
+}
   return (
     <div className='box'>
        
@@ -48,6 +54,9 @@ useEffect(()=>{
                                     <div className='btns'>
                                         <button className='delete' onClick={()=>handleDelet(id)}>Delete product</button>
                                         <button onClick={()=>handleEdit(id)}>Edit product</button>
+                                    </div>
+                                    <div>
+                                        <button onClick={()=>handleCart(e)} style={{background: 'yellow', color:'black'}}>add to cart</button>
                                     </div>
                             </li>
                         })

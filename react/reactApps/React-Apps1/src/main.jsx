@@ -20,6 +20,7 @@ import BlogDetails from './features/blog/BlogDetails.jsx'
 import AddBlog from './features/blog/AddBlog.jsx'
 import Editblog from './features/blog/Editblog.jsx'
 import Cart from './features/products/Cart.jsx'
+import TaskManager from './features/taskManager/TaskManager.jsx'
 // import Error from './routing/Error.jsx'
 
 
@@ -81,7 +82,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/',
-        element: <Products/>
+        element: <TaskManager/>
       },
       
     ]

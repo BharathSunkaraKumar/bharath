@@ -1,0 +1,21 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  font-family: "Inter Display", "Inter Display Placeholder", sans-serif;
+ 
+}
+body{
+  background: #101010;
+  color: white;
+}
+.wrapper{
+  width: 100%;
+  max-width: 1070px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}

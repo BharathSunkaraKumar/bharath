@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .dynamic-navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%); /* Center navbar */
+  background-color: black;
+  border: 2px solid gray;
+  border-radius: 50px;
+  padding: 10px 20px;
+  width: 120px; /* Small initial */
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+/* Logo part */
+.logos {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.logos img {
+  height: 40px;
+  width: 40px;
+  pointer-events: auto;
+}
+
+/* Nav links */
+.nav-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Nav links visible when hovered */
+.dynamic-navbar.hovered .nav-links {
+  opacity: 1;
+  pointer-events: auto;
+}
+.circle-container {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      width: 100px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    body {
+      height: 3000px; /* So we have scroll */
+      background: #121212;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* SVG Circle */
+    svg {
+      transform: rotate(-90deg); /* Start the stroke from top */
+    }
+
+    .circle {
+      fill: transparent;
+      stroke: gray;
+      stroke-width: 6;
+      stroke-dasharray: 440; /* Circumference of the circle (2 * pi * r) */
+      stroke-dashoffset: 440; /* Start with full offset (no stroke visible) */
+      transition: stroke 0.3s ease; /* smooth transition */
+    }
+    </style>
+</head>
+<body>
+    <nav class="dynamic-navbar" id="dynamicNavbar">
+        <div class="logo-left">
+          <img src="logo1.png" alt="Left Logo" />
+        </div>
+      
+        <ul class="nav-links">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#play">Play</a></li>
+        </ul>
+      
+        <div class="logo-right">
+          <img src="logo2.png" alt="Right Logo" />
+        </div>
+      </nav>
+      <div class="circle-container">
+        <svg width="100" height="100" viewBox="0 0 100 100">
+          <circle class="circle" cx="50" cy="50" r="70"></circle>
+        </svg>
+      </div>
+      <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed tenetur tempore in quia modi voluptates ea, fugiat dicta perspiciatis nisi magni vitae quas voluptatibus, est voluptatem praesentium molestias, adipisci ut dolor. Nemo, provident eius praesentium consequuntur, ea distinctio nulla ipsa labore facere repellat ipsum soluta repudiandae earum iusto expedita enim tenetur ratione illo quam. Vero harum perferendis nesciunt minima necessitatibus placeat deserunt unde dolorem consectetur molestias, consequuntur cupiditate quas alias quis vitae tempore porro et fugiat quisquam commodi nisi velit cum. Eius dolores labore omnis dolorem ratione, porro eos obcaecati tempore. Expedita soluta magnam sequi dignissimos? Sint reprehenderit consequatur eveniet quos voluptates quam similique repellat dolorem recusandae architecto veniam, amet aliquid quo perferendis ex a maxime sed dolorum distinctio magni id nulla! Sunt eos similique officia excepturi! Laudantium eos provident in rem possimus dolorum architecto molestiae nisi deleniti, doloribus porro ea, eligendi modi veritatis ut! Excepturi perspiciatis ab, ipsam assumenda quam quae itaque quo impedit fugiat similique adipisci corporis aliquam alias aperiam harum provident eaque. Modi pariatur qui ratione voluptatum tempore minima debitis. Blanditiis debitis dolorem, fugiat vero natus tempore quibusdam in eius perspiciatis nulla, harum repudiandae officia enim beatae, reprehenderit et odio delectus laboriosam? Eius sunt eveniet commodi nobis, magni quisquam, architecto, possimus dignissimos nemo molestias eaque optio? Excepturi, tenetur, doloremque aperiam veritatis amet neque tempora a facilis eum, asperiores fuga obcaecati adipisci quaerat! Harum distinctio mollitia magni error possimus perferendis cum, ratione nisi similique placeat ipsum obcaecati minima, sed autem consequatur, officia voluptatem aliquam. Delectus cupiditate commodi eum facere nihil aut, nesciunt eveniet molestiae laboriosam! Consectetur, pariatur. Minus reiciendis vitae suscipit vel id vero omnis quas dolor. Sapiente praesentium dolore distinctio esse mollitia repellendus illo officia ducimus magni tempore, non excepturi error voluptate aliquam? Harum sit ullam sapiente! Dolor, inventore ad cupiditate eum nihil impedit aliquid veniam atque quaerat quam placeat ex dolores aperiam tenetur possimus eveniet ipsam accusantium tempora totam laboriosam nesciunt voluptatum mollitia, pariatur minima. Eius doloribus eligendi nostrum corrupti soluta? Incidunt a quas tempore facilis sapiente. Rerum aspernatur similique fugit natus. Eligendi ipsa, placeat adipisci corporis quam molestiae pariatur perspiciatis exercitationem blanditiis! Eveniet consequuntur explicabo quibusdam commodi veniam assumenda laborum, impedit asperiores pariatur necessitatibus ducimus, ipsum, ab nulla adipisci ad perspiciatis. Suscipit odit voluptate odio consectetur mollitia. Nisi eum adipisci earum error autem, nulla dolore eveniet blanditiis recusandae et quis dignissimos sint. Harum perferendis rerum, placeat rem odit dolor facere nihil velit nemo consectetur facilis, ratione eius! Aliquam quidem nihil sequi, eum aspernatur animi necessitatibus dolor, amet dolores sed accusamus, quibusdam sapiente rem magnam nostrum. Atque, dolorem officiis neque reiciendis dolorum hic pariatur ad ex animi rerum aliquam quisquam at maxime ipsam sit optio suscipit eveniet. Fuga, blanditiis eligendi velit impedit aliquid praesentium quia autem! Quae, quos! Ab aut nam perferendis qui voluptas dicta esse! Illum repudiandae numquam quod. Recusandae laboriosam fuga harum porro maiores cupiditate quos, molestiae dolorem. Sequi dolorem odit, assumenda doloremque animi eos, provident voluptatem quaerat quibusdam accusamus dolor! Suscipit nihil cumque, autem inventore voluptate hic officia doloribus doloremque dolor eveniet, vel voluptatum, laboriosam ducimus! Iusto et obcaecati amet eligendi totam! Saepe iusto, necessitatibus fugit quis officiis cum magnam libero voluptatum, facere obcaecati neque nostrum sapiente recusandae id non quaerat veritatis eius quae porro nemo excepturi accusamus nam minus. Voluptas, quod repudiandae in at praesentium sit aliquam repellat sequi eveniet numquam esse mollitia fuga dolores, blanditiis perferendis consequatur aspernatur necessitatibus deserunt minus minima expedita qui. Sunt sapiente deserunt eius nam ut enim cupiditate minima tempora a voluptatum? Labore quo accusantium sint. Voluptas repudiandae, dolore vel reprehenderit libero dolor, sit iusto cupiditate exercitationem quos tempora modi blanditiis nobis eos incidunt ut. Debitis consequatur assumenda saepe porro aperiam tenetur, accusamus, sed quod minima dolore odio cupiditate, autem esse dicta rem ullam. Ut suscipit quas, praesentium totam deserunt maiores, fugit iste vel debitis aliquam dicta rem provident fuga culpa repudiandae asperiores saepe itaque autem vero mollitia rerum. Ab a reprehenderit ut numquam sed doloremque praesentium blanditiis deserunt similique optio labore provident in alias, facere minima eius nesciunt eaque, doloribus sunt fuga, asperiores earum placeat eligendi aperiam? Consectetur architecto quam, voluptas, dolore commodi ullam quaerat impedit distinctio provident iusto unde non rerum odio accusamus voluptatem iure, harum deserunt. Impedit veniam, quae reprehenderit repudiandae voluptate quam fuga numquam similique iusto neque dicta eum recusandae, repellat sequi iure assumenda quos velit? Nobis deserunt doloremque consectetur voluptas alias natus? Impedit, libero. Blanditiis repellat, dolorum id sint dignissimos error et? Laudantium velit fugit recusandae iusto vitae molestias animi. Culpa accusantium expedita, ex quasi ipsa dolorum labore reprehenderit voluptatibus! Atque incidunt maxime dolorum quia quidem. Non, nostrum hic, animi qui autem ipsam sunt ad optio ratione ipsum ipsa cumque debitis possimus ab provident adipisci magnam beatae officiis, sapiente cupiditate officia nesciunt accusamus pariatur. Nihil amet saepe repudiandae reprehenderit esse illum. Corrupti velit nisi facere beatae commodi quisquam et cum quas suscipit! Unde fugit voluptatem asperiores quam dolores minus molestias, vitae repellendus perspiciatis explicabo laboriosam. Nobis consequuntur repellendus maxime placeat in dolores doloremque, molestiae reprehenderit commodi. Eligendi debitis blanditiis aliquid quidem maxime similique delectus nam, esse in animi tempore unde impedit atque mollitia ut porro? Dignissimos autem reiciendis id quae suscipit placeat dolorum velit ipsam laudantium, maxime reprehenderit, eum optio inventore doloremque. Doloribus quibusdam sed enim distinctio dignissimos sapiente consequuntur, voluptatibus illum provident accusamus suscipit. Architecto neque delectus velit tempora inventore voluptatibus mollitia impedit aperiam eveniet natus dolorum numquam quam vero minima odio, earum soluta dignissimos recusandae culpa aspernatur illo blanditiis qui vitae saepe. Maxime numquam nostrum sapiente odio ipsum nihil ab minima assumenda maiores alias dolore quidem, doloribus at nam adipisci beatae deserunt voluptatem inventore, culpa dolorum ducimus? Exercitationem dolor tempora, sunt quo libero, praesentium dolorem provident, voluptate vel accusantium eum repellat nobis officiis eius veritatis sint reiciendis eveniet reprehenderit. Ea optio enim animi velit! Perspiciatis ut fugiat, ab et nisi esse distinctio sapiente nihil repellat facere in voluptatum cum odit ipsam ex. Minus nihil commodi ratione libero ipsa laudantium cumque porro harum atque soluta. Repudiandae inventore illum dolor maiores dolore vero voluptatum similique, accusantium labore porro quo reprehenderit? Commodi, ad!</p>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<script>
+  const navbar = document.getElementById('dynamicNavbar');
+
+// Hover In: Expand (rubber spring)
+navbar.addEventListener('mouseenter', () => {
+  navbar.classList.add('hovered');
+  gsap.to(navbar, {
+    width: 500, // or 550, up to you
+    duration: 1,
+    ease: "elastic.out(1, 0.5)" // Rubber band open
+  });
+});
+
+// Hover Out: Shrink back (same rubber style)
+navbar.addEventListener('mouseleave', () => {
+  navbar.classList.remove('hovered');
+  gsap.to(navbar, {
+    width: 120, // back to small
+    duration: 1,
+    ease: "elastic.out(1, 0.5)" // Rubber band close
+  });
+});
+
+const circle = document.querySelector('.circle');
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = scrollTop / docHeight;
+
+    // Calculate dashoffset to make the stroke appear clockwise
+    const offset = 440 - (440 * scrollPercent); // 440 is the circle circumference
+
+    // Animate the stroke color and appearance
+    circle.style.strokeDashoffset = offset;
+
+    // Change the stroke color from gray to white as the user scrolls
+    const colorValue = Math.round(255 * scrollPercent);
+    circle.style.stroke = `rgb(${colorValue}, ${colorValue}, ${colorValue})`;
+  });
+</script>
+</body>
+</html>

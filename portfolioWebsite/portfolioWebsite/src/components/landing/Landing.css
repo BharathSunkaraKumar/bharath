@@ -1,0 +1,109 @@
+
+.landing-container{
+    height: 100vh;
+    margin-bottom: 50px;
+}
+.landing-container .linding-items .titile{
+    background: -webkit-linear-gradient(#eee, #333);
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+   
+    
+    font-size: 20px;
+    text-align: center;
+}
+.landing-container .linding-items .tag{
+    color: gray;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.titles{
+    margin-top: 100px;
+    line-height:0;
+    /* border: 1px solid; */
+    padding: 40px;
+}
+.linding-box{
+    height: 500px;
+    width: 100%;
+    margin-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(41, 40, 40));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: gray;
+}
+.linding-box .profile-img{
+    /* width: 50%; */
+
+}
+.linding-box .profile-img img{
+    height: 350px;
+    width: 295px;
+    object-fit: cover;
+    background-position: center;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+}
+.linding-box .profile-img img:hover{
+    box-shadow: 0px 0px 50px 0px rgb(188, 202, 218);
+}
+.linding-box .profile-info{
+    margin-left: 40px;
+}
+.linding-box .profile-info h1{
+    color: rgb(173, 168, 168);
+    padding: 10px;
+    margin: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.linding-box .profile-info p{
+    padding: 10px;
+    margin: 10px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    font-size: 14px;
+    color: #918d8d;
+}
+
+@media screen and (max-width: 740px) {
+    .linding-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+    .linding-box .profile-img{
+        margin-top: 40px;
+    }
+    .linding-box .profile-info h1{
+        color: rgb(173, 168, 168);
+        padding: 5px;
+        margin: 5px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        font-size: 22px;
+    }
+    .linding-box .profile-info p{
+        padding: 5px;
+        margin: 5px;
+        font-weight: lighter;
+        letter-spacing: 1px;
+        font-size: 12x;
+        color: #918d8d;
+    }
+    .landing-container .linding-items .titile{
+        font-size: 16px;
+    }
+    .landing-container .linding-items .tag{
+        font-size: 12px;
+    }
+}

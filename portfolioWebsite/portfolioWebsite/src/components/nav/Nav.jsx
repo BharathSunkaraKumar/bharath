@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import './nav.css'
-import LandingPage from './LandingPage';
+import LandingPage from '../landing/LandingPage.jsx';
+import touch from './touch.svg'
+import AdsClickIcon from '@mui/icons-material/AdsClick';
+
 function Nav() {
   const [animationClass, setAnimationClass] = useState('');
   const [time, setTime] = useState(new Date());
@@ -59,7 +62,9 @@ function Nav() {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}>
                 <div className="logo-left">
-                  <img src='logo.png' alt='left-logo'/>
+                  <AdsClickIcon fontSize='large'></AdsClickIcon>
+                  {/* <img src={touch} alt='let-logo'/> */}
+                  {/* <img src='touch.webp' alt='left-logo'/> */}
                 </div>
                 <ul className="nav-links">
                   <li><a href='./'>work</a></li>

@@ -2,11 +2,11 @@
     /* background-color: rgba(16, 16, 16, 0.9); */
     /* filter: blur(2px); */
     -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
     height: 58px;
     background: rgba(16, 16, 16, 0.9);
     /* background: rgba(24, 69, 193, 0.9); */
-
+    z-index: 1000;
     position: sticky;
     top: 0;
     border-bottom-left-radius: 20px;
@@ -37,6 +37,7 @@
     justify-content: space-around;
 }
 .dynamic-nav-bar{
+  
     border: 1px solid rgb(77, 75, 75);
     position: absolute;
     top: 10px;
@@ -92,6 +93,36 @@
       width: 120px; 
     }
   }
+  @media screen and (max-width: 740px){
+    @keyframes bounce {
+      0% {
+        width: 450px;
+      }
+      50% {
+        width: 460px; /* Slight increase */
+      }
+      75% {
+        width: 440px; /* Slight decrease */
+      }
+      100% {
+        width: 450px; /* Final position */
+      }
+    }
+    @keyframes bounce-close {
+      0% {
+          width: 130px;
+      }
+      80%{
+        width: 120px;
+      }
+      90% {
+        width: 120px; 
+      }
+      100% {
+        width: 120px; 
+      }
+    }
+  }
   
   /* Nav links centered */
   .nav-links {
@@ -111,15 +142,20 @@
   }
   .logo-left img,
   .logo-right img {
-    border: 1px solid wheat;
     width: 30px;
     height: 30px;
     position: relative;
     top: 17px;
     border-radius: 50%;
     object-fit: cover;
-    background: white;
+    
     display: inline-block;
+}
+
+.logo-left{
+  position: relative;
+  top: 4px;
+  color: rgb(87, 85, 85);
 }
 .nav-links {
   position: absolute;

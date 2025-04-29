@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import './nav.css'
-import LandingPage from '../landing/LandingPage.jsx';
-import touch from './touch.svg'
+import logo from './logo.png'
 import AdsClickIcon from '@mui/icons-material/AdsClick';
+import { Link, Outlet } from 'react-router-dom';
+import LandingPage from '../landing/LandingPage';
 
 function Nav() {
   const [animationClass, setAnimationClass] = useState('');
@@ -53,7 +54,8 @@ function Nav() {
         <div className="nav-items">
           <div className="nav-item">
             <div className="main-logo">
-              <p>SBK</p>
+              
+              <img src={logo}/>
             </div>
           </div>
           <div className="nav-item">
@@ -68,8 +70,8 @@ function Nav() {
                 </div>
                 <ul className="nav-links">
                   <li><a href='./'>work</a></li>
-                  <li><a href='./'>about</a></li>
-                  <li><a href='./'>play</a></li>
+                  <li><Link to='/about'>about</Link></li>
+                  <li><a href='/projects'>projects</a></li>
                 </ul>
                 <div className="logo-right">
                   <div className="scroll-ring-container">
@@ -111,9 +113,8 @@ function Nav() {
       </div>
         
         <div className="scroll">
-        
+          <Outlet/>
         </div>
-         <LandingPage/>
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import './Landing.css'
-import profile from './profile.jpeg'
+import profile from './profile2.jpeg'
 import Projects from '../projects/Projects.jsx'
 function LandingPage() {
   return (

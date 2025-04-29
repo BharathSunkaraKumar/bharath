@@ -30,6 +30,8 @@
     line-height:0;
     /* border: 1px solid; */
     padding: 40px;
+    animation: slideInBottom 0.8s ease-out forwards;
+    opacity: 0
 }
 .linding-box{
     height: 500px;
@@ -44,10 +46,8 @@
     align-items: center;
     overflow: hidden;
     color: gray;
-}
-.linding-box .profile-img{
-    /* width: 50%; */
-
+    animation: slideInBottom 0.8s ease-out forwards;
+    opacity: 0
 }
 .linding-box .profile-img img{
     height: 350px;
@@ -77,6 +77,16 @@
     font-size: 14px;
     color: #918d8d;
 }
+@keyframes slideInBottom {
+    from {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 
 @media screen and (max-width: 740px) {
     .linding-box{

@@ -34,6 +34,9 @@ function Projects() {
   return (
     <>
       <section className='project-cards'>
+        <div className="projects-heading">
+          <p>Featured Projects</p>
+        </div>
         {
             date.map((e) => {
               return <div className='project-card' key={e.id}>

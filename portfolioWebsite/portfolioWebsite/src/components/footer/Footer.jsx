@@ -1,5 +1,6 @@
 import React from 'react'
 import './Footer.css'
+import { Link } from 'react-router-dom'
 function Footer() {
   return (
     <div className='footer-container'>
@@ -7,24 +8,28 @@ function Footer() {
         <h1>👋 Thanks for stopping by! Here is more of me if you are interested :)</h1>
       </div>
       <table>
-        <thead>
-          <th>pages</th>
-          <th>projects</th>
-          <th>let' connect</th>
-        </thead>
+          <thead>
+            <tr>
+              <th>pages</th>
+            
+              <th>projects</th>
+            
+              <th>let' connect</th>
+            </tr>
+          </thead>
         <tbody>
           <tr>
-            <td><a href='/'>work</a></td>
+            <td><Link to='/'>Home</Link></td>
             <td>project1</td>
             <td>linkedin</td>
           </tr>
           <tr>
-            <td><a href='/'>about me</a></td>
+            <td><Link to='/about'>about</Link></td>
             <td>project2</td>
             <td>X</td>
           </tr>
           <tr>
-            <td><a href='/'>play</a></td>
+            <td><a href='/projects'>Projects</a></td>
             <td>project2</td>
             <td>email</td>
           </tr>

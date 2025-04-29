@@ -192,7 +192,15 @@
     cursor: pointer;
     color: dodgerblue;
     font-weight: bold;
+    position: relative;
+    right: 60px;
+    bottom: 5.3px;
   }
+  .main-logo img{
+    width: 200px;
+    height: 200px;
+  }
+  
   .scroll-ring-container {
     
     position: absolute;

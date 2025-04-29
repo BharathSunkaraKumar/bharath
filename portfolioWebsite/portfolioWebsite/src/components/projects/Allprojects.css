@@ -1,0 +1,17 @@
+.allProjects .title h1{
+    text-align: center;
+    font-size: 55px;
+}
+.allProjects .title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.allProjects .title .bar{
+    height: 4px;
+    width: 80px;
+    border-radius: 10px;
+    background: dodgerblue;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}

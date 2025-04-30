@@ -8,11 +8,11 @@
     align-items: center;
     justify-content: space-evenly;
     padding: 40px;
-    margin: 40px;
-    
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 .about-right .about-img{
-    height: 380px;
+    height: 400px;
     width: 350px;
 }
 .about-right .about-img img{
@@ -26,6 +26,8 @@
     margin-right: 40px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-content: space-around;
     animation: sideleft 0.8s ease-out forwards;
     opacity: 0;
 }
@@ -64,9 +66,10 @@
 }
 .about-left-disc p{
     width: 400px;
-    font-size: 14px;
+    font-size: 10px;
     color: #FFFFFFcc;
     letter-spacing: 1px;
+    line-height: 1.5;
 }
 
 @media screen and (max-width: 1000px) {

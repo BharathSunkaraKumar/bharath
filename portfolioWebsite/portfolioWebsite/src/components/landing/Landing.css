@@ -1,16 +1,14 @@
 
 .landing-container{
-    height: 100vh;
-    margin-bottom: 50px;
+    height: 100%;
+    margin-bottom: 0px;
 }
 .landing-container .linding-items .titile{
     background: -webkit-linear-gradient(#eee, #333);
     letter-spacing: 1px;
     text-transform: capitalize;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-   
-    
+    -webkit-text-fill-color: transparent; 
     font-size: 20px;
     text-align: center;
 }

@@ -6,12 +6,101 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 30px;
 }
 .allProjects .title .bar{
     height: 4px;
     width: 80px;
     border-radius: 10px;
     background: dodgerblue;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     margin-top: 5px;
+
+}
+
+/* card */
+.projects-container{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+}
+.card{
+    background: rgb(30, 30, 30);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px;
+    transition: all 0.3s linear;
+    box-shadow: 0px 3px 10px 0px rgba(54, 54, 54, 0.381);
+}
+.card:hover{
+    box-shadow: 0px 2.5px 10px 2px rgba(30, 143, 255, 0.563);
+    transform: translateY(-5px);
+}
+.card .card-image{
+    width: 100%;
+    height: 100%;
+}
+.card .card-image img{
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    width: 100%;
+    object-fit: contain;
+}
+.card .card-title h4{
+    text-transform: capitalize;
+    font-size: 22px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: dodgerblue;
+}
+.card .card-tech{
+    margin: 10px;
+}
+.card .card-tech span{
+    margin-right: 10px;
+    background-color: rgb(78, 77, 77);
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 3px;
+    text-transform: capitalize;
+}
+.links-ul{
+    width: 100%;
+    margin-top: 5px;
+}
+.links-ul ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    margin-top: 5px;
+}
+.links-ul li{
+    cursor: pointer;
+    font-size: 16px;
+}
+.links-ul li:hover{
+    color: dodgerblue;
+}
+.li-link{
+    display: flex;
+    justify-content: space-around;
+}
+@media screen and (min-width: 690px) {
+    .projects-container{
+        display: grid;
+    grid-template-columns: 1fr 1fr;
+    }
+
+}
+@media screen and (min-width: 1080px) {
+    .projects-container{
+        display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    }
 }

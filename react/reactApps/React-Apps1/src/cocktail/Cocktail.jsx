@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-// import './cocktail.css'
+import './cocktail.css'
 
 const Cocktail = () => {
     let [cocktails, setCocktails] = useState([])

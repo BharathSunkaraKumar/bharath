@@ -4,7 +4,6 @@
     align-items: center;
     background-color: rgb(234, 240, 235);
     justify-content: space-around;
-    
     height: 250px;
     position: sticky;
     top: 0;
@@ -19,12 +18,20 @@ li{
     list-style: none;
 }
 .box{
-    
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.boxContainer img{
+    overflow: hidden;
+    width: 100%;
+    object-fit: contain;
 }
 .boxContainer{
     /* border: 1px solid; */
     /* padding: 5px; */
-    margin: 10px;
+    
+    width: 100%;
     text-align: center;
     box-shadow: 5px 5px 5px 0px rgb(167, 175, 184);
     transition: .3s ease-in;

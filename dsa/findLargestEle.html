@@ -8,14 +8,29 @@
 <body>
     <script>
         //find the largest element in the array
-        let ar = [5,9,2,1,7,6,9,10,8,15,3,4]
-        let largest = 0
-        for(var i=0; i<=ar.length-1; i++) {
-            if(ar[i]>largest){
-                largest = ar[i]
+        // let ar = [5,9,2,1,7,6,9,10,8,15,3,4]
+        // let largest = 0
+        // for(var i=0; i<=ar.length-1; i++) {
+        //     if(ar[i]>largest){
+        //         largest = ar[i]
+        //     }
+        // }
+        // console.log(largest)
+        function divisibleBy(numbers, divisor){
+            let result = []
+            for(let i=0; i<numbers.length; i++) {
+                for(let k=0; k<divisor.length; k++) {
+                    if(numbers[i] % divisor[k] ===0) {
+                    result.push(numbers[i])
+                    break
+                }
             }
+            }
+        return result
         }
-        console.log(largest)
+        let x = divisibleBy([1,2,3,4,5], [2,3,4])
+        console.log(x)
+              
     </script>
 </body>
 </html>

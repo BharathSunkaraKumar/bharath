@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Two Pointer Technique</h1>
+    <script>
+        //Find a pair with a given sum in a sorted array
+        // const hasPairWithSum =(arr, target) => {
+        //    let left = 0;
+        //    let right = arr.length - 1;
+        //    while(left < right) {
+               
+        //        let sum = arr[left] + arr[right]
+        //     //    console.log(sum)
+
+        //         if(sum == target) {
+        //             return [arr[left], arr[right]];
+        //         }else if(sum < target) {
+        //             left++
+        //         }else{
+        //             right--
+        //         }
+
+        //    }
+        //    return null;
+        // }
+        // console.log(hasPairWithSum([1, 2, 4, 6, 10], 8))
+
+        //reverse an array in place
+        // const reverseArray = (arr) => {
+        //     let left = 0; // 0 
+        //     let right = arr.length - 1; // 4
+        //     while(left < right) {
+        //         [arr[left], arr[right]] = [arr[right] , arr[left]];
+        //         left++;
+        //         right--;
+        //     }
+        //     return arr
+        // }
+        // console.log(reverseArray([1,2,3,4,5]))
+        // const moveZeros = (arr) => {
+        //     let lastNonZero = 0;
+        //     // console.log(arr.length)
+        //     for(let i=0; i<arr.length; i++) { // 0<5 t 1<5t 2<5 3<5 4<5
+        //         if(arr[i] !== 0) { // 0 !=0 f  1!=0 t 0!=0 f  3!=0 f 12!=0 t
+        //             [arr[i], arr[lastNonZero]] = [arr[lastNonZero], arr[i]]  // 
+        //             lastNonZero++ // 1 2
+        //         }
+        //     }
+        //     return arr
+        //     //[1,3,12,0,0]
+        // }
+        // console.log(moveZeros([0,1,0,3,12]))
+        // let arr = ['a','b','p']
+        // let arr = 'bharath'
+        // for(var i=0; i<arr.length; i++) {
+        //     console.log(arr.charCodeAt(i))
+        // }
+        // arr.splice(0,1,5)
+        // let s = arr.slice(0,1)
+        // console.log(s)
+        
+        const removeDuplicate = (arr) => {
+           if(arr.length === 0) return [];
+           let i = 0;
+           for(var j=i; j<arr.length; j++) {
+            if(arr[i] != arr[j]) {
+                i++
+                arr[i] = arr[j]
+            }
+           }
+           return arr.slice(0, i+1)
+        }
+        console.log(removeDuplicate([1, 1, 2, 2, 3,3, 4]));
+
+        let a = [1, 2, 3, 2, 3]
+        let b = a.slice(0, 2+1)
+        console.log(b)
+    </script>
+</body>
+</html>

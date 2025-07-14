@@ -64,22 +64,35 @@
         // let s = arr.slice(0,1)
         // console.log(s)
         
-        const removeDuplicate = (arr) => {
-           if(arr.length === 0) return [];
-           let i = 0;
-           for(var j=i; j<arr.length; j++) {
-            if(arr[i] != arr[j]) {
-                i++
-                arr[i] = arr[j]
-            }
-           }
-           return arr.slice(0, i+1)
-        }
-        console.log(removeDuplicate([1, 1, 2, 2, 3,3, 4]));
+        // const removeDuplicate = (arr) => {
+        //    if(arr.length === 0) return [];
+        //    let i = 0;
+        //    for(var j=i; j<arr.length; j++) {
+        //     if(arr[i] != arr[j]) {
+        //         i++
+        //         arr[i] = arr[j]
+        //     }
+        //    }
+        //    return arr.slice(0, i+1)
+        // }
+        // console.log(removeDuplicate([1, 1, 2, 2, 3,3, 4]));
 
-        let a = [1, 2, 3, 2, 3]
-        let b = a.slice(0, 2+1)
-        console.log(b)
+        // let a = [1, 2, 3, 2, 3]
+        // let b = a.slice(0, 2+1)
+        // console.log(b)
+
+        const nums = [1, 2, 2, 3, ];
+        
+        const numscount = nums.reduce((acc, item) => {
+            acc[item] = (acc[item] || 0) + 1;
+            return acc
+        }, {})
+        console.log(numscount)
+
+        const count = nums.filter(each => each === 3).length
+        console.log(count)
+        
+        
     </script>
 </body>
 </html>

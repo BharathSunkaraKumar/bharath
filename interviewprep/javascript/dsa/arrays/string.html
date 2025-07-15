@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>strings</h1>
+    <script>
+        const stringManipulations = (str) => {
+            //reverse string
+            
+            //method1
+
+            // return str.split('').reverse().join('')
+            // let newStr = str.split('')
+            // let left = 0, right = newStr.length-1
+            // while(left<right) {
+            //     [newStr[left], newStr[right]] = [newStr[right], newStr[left]];
+            //     left++
+            //     right--
+            // }
+            // return newStr.join('')
+
+            //Palindrome
+            
+            // let left = 0, right = str.length-1
+            // while(left<right) {
+            //     if(str[left] != str[right]) {
+            //         return false
+            //     }
+            //     left++;
+            //     right--;
+            // }
+            // return true
+
+
+            //Characters/Vowels/Consonants
+
+            // let count = {};
+
+            // for(let char of str) {
+            //     count[char] = (count[char] || 0) + 1
+            // }
+            // return count
+
+            
+            //Remove Duplicates
+
+            // return [...new Set(str)].join('')
+
+            //String Compression
+
+           
+            //String Rotation
+            
+        }
+        console.log(stringManipulations('bharath'))
+    </script>
+</body>
+</html>

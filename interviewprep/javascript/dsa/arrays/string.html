@@ -8,7 +8,7 @@
 <body>
     <h1>strings</h1>
     <script>
-        const stringManipulations = (str) => {
+        const stringManipulations = (str, str2) => {
             //reverse string
             
             //method1
@@ -54,9 +54,13 @@
 
            
             //String Rotation
+
+            if(str.length !== str2.length) return false
+
+            return (str + str2).includes(str2)
             
         }
-        console.log(stringManipulations('bharath'))
+        console.log(stringManipulations('bharath', 'spdemeg'))
     </script>
 </body>
 </html>

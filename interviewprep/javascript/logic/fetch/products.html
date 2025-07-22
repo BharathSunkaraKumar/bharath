@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 100px;
+        }
+        
+        li{
+            list-style: none;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>fetching products</h1>
+    <!-- <button onclick="">fetch</button> -->
+    <ul id="ul">
+
+    </ul>
+    <script>
+        let api = 'https://fakestoreapi.com/products'
+        const ul = document.getElementById('ul')
+        const fetchUrl = async(url) => {
+            try {
+                const response = await fetch(url);
+                const data = await response.json()
+                generateUi(data)
+            } catch (error) {
+                return error
+            }
+        }
+        fetchUrl(api)
+        //onclick="deleteProduct(${id})"
+        const generateUi = (items) => {
+            console.log('items', items)
+            items.forEach((item) => {
+                const {title, description, image, price, category} = item
+                let li = document.createElement('li')
+                li.innerHTML = `
+                <img src="${image}" alt="${title}">
+                <h3>${title}</h3>
+                <p><strong>Price:</strong> $${price}</p>
+                <p><strong>Category:</strong> ${category}</p>
+                <p>${description.slice(0, 100)}...</p>
+                `
+                
+                ul.appendChild(li)
+            })
+        }
+    </script>
+</body>
+</html>

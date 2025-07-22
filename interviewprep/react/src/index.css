@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* :root {
+    --bg-color: #ffff;
+    --text-color: #0000;
+    --button: #007bff;
+    --button-text: #fffff;
+}
+[dark-theme='dark'] {
+    --bg-color: #0000;
+    --text-color: #ffff;
+    --button: rgba(12, 220, 244, 0.667);
+    --button-text: #0000;
+} */

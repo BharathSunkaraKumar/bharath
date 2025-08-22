@@ -39,3 +39,29 @@ const user: User = {
     id: 1,
     name: "bharath"
 }
+
+type Admin = {
+    name: string,
+    id: number
+}
+
+const admin: Admin = {
+    name: "admin",
+    id: 1
+}
+
+const apple: {color: string, price: number} = {
+    color: "red",
+    price: 120
+}
+
+apple.color = "green"
+console.log(apple.color)
+console.log('hi')
+
+//array
+
+let cities: string[] | number = ['tirupati', 'hyderabad', 'bangalore'] // shrothand notation
+cities[0]= "mangalam"
+let countries: Array<string | number | any> = ['india', 'uk', 45687, ["sbk"], {id: 456, name: "bharath"}] //generic type notation
+console.log(countries)

@@ -24,19 +24,3 @@ var user = {
     id: 1,
     name: "bharath"
 };
-var admin = {
-    name: "admin",
-    id: 1
-};
-var apple = {
-    color: "red",
-    price: 120
-};
-apple.color = "green";
-console.log(apple.color);
-console.log('hi');
-//array
-var cities = ['tirupati', 'hyderabad', 'bangalore']; // shrothand notation
-cities[0] = "mangalam";
-var countries = ['india', 'uk', 45687, ["sbk"], { id: 456, name: "bharath" }]; //generic type notation
-console.log(countries);

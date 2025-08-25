@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>patterns</h1>
+    <script>
+        var t = 0
+        // for(var i=1; i<=10; i++) {
+        //     if(i>=6) {
+        //         t++
+        //     }
+        //     for(var k=1; k<=5-i+2*t; k++) {
+        //         document.write('&nbsp;&nbsp;&nbsp;&nbsp;')
+        //     }
+        //     for(var j=1; j<=i-2*t; j++) {
+        //         document.write('*'+'&nbsp;&nbsp;')
+        //     }
+            
+        //     document.write('<br/>')
+        // }
+        // for(var i=1; i<=20; i++) {
+        //     if(i>=10) {
+        //         t++
+        //     }
+        //     if(i%2==0) {
+        //         continue
+        //     }
+        //     for(var k=1; k<=10-i+2*t; k++) {
+        //         document.write('&nbsp;&nbsp;')
+        //     }
+        //     for(var j=1; j<=i-2*t; j++) {
+        //         document.write('*'+'&nbsp;&nbsp;')
+        //     }
+            
+        //     document.write('<br/>')
+        // }
+        // for(var i=1; i<=10; i++) {
+        //     if(i>=6) {
+        //         t++
+        //     }
+        //     for(var k=1; k<=5-i+2*t; k++) {
+        //         document.write('&nbsp;&nbsp;')
+        //     }
+        //     for(var j=1; j<=i-2*t; j++) {
+        //         document.write('*'+'&nbsp;&nbsp;')
+        //     }
+            
+        //     document.write('<br/>')
+        // }
+        for(var i=1; i<=10; i++) {
+            if(i>=6) {
+                t++
+            }
+            for(var k=1; k<=5-i+2*t; k++) {
+                document.write('&nbsp;&nbsp;')
+            }
+            for(var j=1; j<=i-2*t; j++) {
+                if(j==1 | j == (i-2*t)) {
+                    document.write('*'+'&nbsp;&nbsp;')
+                }else{
+                    document.write('&nbsp;&nbsp;&nbsp;&nbsp;')
+                }
+            }
+            
+            document.write('<br/>')
+        }
+    </script>
+</body>
+</html>

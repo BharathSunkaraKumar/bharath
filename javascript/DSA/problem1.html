@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dsa problem 1</title>
+</head>
+<body>
+    <h1>DSA</h1>
+    <script>
+        let students = ['bharath', 'virat', 'rohit', 'walter white', 'jesse pinkman']
+        // const findStudents = (allstudents, studentName) => {
+        //     let findStudent = allstudents.find((student) => {
+        //         if(student == studentName) {
+        //             console.log(student)
+        //         }
+        //     })
+        // }
+        // findStudents(students, 'walter white')
+
+        // let reverseString = (str) => str.split('').reverse().join('') === str
+        // console.log(reverseString('cllc'))
+
+        // let reverseInt = (n) => {
+        //     let rever = n.toString().split('').reverse().join('')
+        //     return parseInt(rever)*Math.sign(n)
+        // }
+        // console.log(reverseInt(-143))
+
+        //captalise first character
+
+        // const captalise = (str) => {
+        //     return str.toLowerCase().split(' ').map(e=>e[0].toUpperCase()+e.slice(1)).join(" ")
+        // }
+        // console.log(captalise('this is bharath'))
+
+        //fizz buzz
+        // const fizzBuzz = (n) => {
+        //     for(var i=1; i<=n; i++) {
+        //         if(i % 3 ==0 && i % 5 ==0) {
+        //             console.log(i, 'fizzBuzz')
+        //         }else if(i % 3 == 0) {
+        //             console.log(i, 'fizz')
+        //         }else if(i % 5 == 0) {
+        //             console.log(i, 'buzz')
+        //         }else{
+        //             console.log(i)
+        //         }
+        //     }
+        // }
+        // fizzBuzz(10)
+
+        //chunk array
+        // const chunk = (arr, size) => {
+        //     const chunked = []
+        //     let i = 0;
+        //     while(i < arr.length) {
+        //         console.log(i)
+        //         const chunk = arr.slice(i, i+size)
+        //         console.log('....', chunk)
+        //         chunked.push(chunk)
+        //         i+=size
+        //     }
+        //     return chunked
+        // }
+        // console.log(chunk([1,2,3,4,5,6,7,8], 3))
+
+        //two sum
+        const numbs = [2,7,11,15]
+        const target = 18
+        const twoSum = (arr, k) => {
+            for(var i=0; i<=numbs.length-1; i++) {
+                for(var j=i+1; j<=numbs.length-1; j++) {
+                    if(numbs[i]+numbs[j] === target) {
+                        console.log([numbs[i], numbs[j]])
+                    }
+                }
+            }
+
+        }
+        // console.log(twoSum(numbs, target))
+        twoSum(numbs, target)
+    </script>
+</body>
+</html>

@@ -68,6 +68,38 @@ const Analytics = () => {
             <img className='h-72 w-full object-cover overflow-hidden' src='https://images.unsplash.com/photo-1592495989226-03f88104f8cc?q=80&w=1212&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt='chart'/>
           </div>
         </div>
+        <div className='mb-8'>
+          <h2 className='text-xl font-semibold text-gray-700 mb-4'>Recent Activites</h2>
+          <ul className='space-y-4'>
+            <li className='flex items-center justify-between bg-white rounded-lg shadow-md p-4'>
+              <div>
+                <h3 className='text-lg font-semibold text-gray-700 '>User Registration</h3>
+                <p className='text-sm text-gray-600'>New ser singed up on 2026-02-16</p>
+              </div>
+              <div>
+                <p className='text-sm text-gray-600'>10 USers</p>
+              </div>
+            </li>
+            <li className='flex items-center justify-between bg-white rounded-lg shadow-md p-4'>
+              <div>
+                <h3 className='text-lg font-semibold text-gray-700 '>Sales Increase</h3>
+                <p className='text-sm text-gray-600'>Sales grew by 12% on 2025-02-14</p>
+              </div>
+              <div>
+                <p className='text-sm text-gray-600'>+$15,000</p>
+              </div>
+            </li>
+            <li className='flex items-center justify-between bg-white rounded-lg shadow-md p-4'>
+              <div>
+                <h3 className='text-lg font-semibold text-gray-700 '>Website traffic surge</h3>
+                <p className='text-sm text-gray-600'>Traffic increased by 8% on 2025-02-13</p>
+              </div>
+              <div>
+                <p className='text-sm text-gray-600'>+200 visists</p>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   )

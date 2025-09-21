@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 10px 10px;
+            margin: 10px auto;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body{
+            background: #833AB4;
+background: linear-gradient(90deg, rgb(87, 80, 143) 0%, rgb(5, 4, 93) 100%);
+        }
+        .title{
+            text-align: center;
+            color: white;
+        }
+        #emoji{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid white;
+            border-radius: 10px;
+        }
+        p{
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: center;
+            font-size: 25px;
+            font-weight: bold;
+            border: 1px solid dodgerblue;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            color: white;
+            background: #3F5EFB;
+            background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">Emojis</h1>
+    <div id="emoji">
+
+    </div>
+    <script>
+        const url = `https://emojihub.yurace.pro/api/all`
+        const d = document.getElementById('emoji')
+        const fetchUrl = async (url) => {
+            const resp = await fetch(url)
+            const data = await resp.json()
+            console.log(data.name)
+            data.forEach(e => {
+                console.log(e.name)
+                // document.write(`<p>${e.htmlCode[0]}</p>`)
+                // document.write("<br/>")
+                // console.log(d)
+                let p = document.createElement('p')
+                let s = document.createElement('span')
+                p.innerHTML = e.htmlCode[0]
+                p.classList.add('emo')
+                s.innerHTML = e.name
+                // console.log(p)
+                p.appendChild(s)
+                d.appendChild(p)
+            });
+        }
+        fetchUrl(url)
+    </script>
+</body>
+</html>

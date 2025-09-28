@@ -8,13 +8,15 @@ import Form from './formik/Form'
 import { Link } from 'react-router'
 import { Outlet } from 'react-router'
 import Cocktail from './cocktail/Cocktail'
+import Navbar from './components/Navbar'
 
 function App() {
   const cartItems = useSelector(state => state.cart.cartItems)
   return (
     <>
       <div>
-        <Cocktail/>
+        {/* <Cocktail/> */}
+        <Navbar/>
       </div>
       {/* <div className='items'>
         <div className='item'>

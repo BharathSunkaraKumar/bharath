@@ -1,11 +1,25 @@
+::root{
+    --bg-color: white;
+    --text-color: black
+}
+.dark-mode {
+    --bg-color: #121212;
+    --text-color: white
+}
+
 .nav{
-    background-color: black;
-    color: white;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: 0.3s ease;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     position: relative;
+}
+.dark {
+    background-color: #121212;
+    color: white;
 }
 .nav-link{
     display: flex;
@@ -40,6 +54,13 @@
 .menu{
     cursor: pointer;
 }
+.menu button {
+    background-color: var(--bg-color);
+    border: none;
+    color: var(--text-color);
+    font-size: 20px;
+}
+
 /* @media (min-width: 600px) {
   .nav {
     flex-direction: column;

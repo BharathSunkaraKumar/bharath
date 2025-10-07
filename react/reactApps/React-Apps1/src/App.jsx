@@ -9,14 +9,25 @@ import { Link } from 'react-router'
 import { Outlet } from 'react-router'
 import Cocktail from './cocktail/Cocktail'
 import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import { useRef } from 'react'
 
 function App() {
   const cartItems = useSelector(state => state.cart.cartItems)
+  const contactRef = useRef(null)
+
+  const scrollContact = () => {
+    contactRef.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    })
+  }
   return (
     <>
       <div>
         {/* <Cocktail/> */}
-        <Navbar/>
+        <Navbar scrollContact={scrollContact}/>
+        <Hero contactRef={contactRef}/>
       </div>
       {/* <div className='items'>
         <div className='item'>

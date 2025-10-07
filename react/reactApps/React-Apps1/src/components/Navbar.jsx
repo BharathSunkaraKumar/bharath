@@ -1,11 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './Navbar.css'
 
-const Navbar = () => {
+const Navbar = ({scrollContact}) => {
     const[show, setShow] = useState(false)
     const menuRef = useRef()
     const btnRef = useRef()
     const [dark, setDark] = useState(false)
+    
 
     useEffect(() => {
         const handleClickOutSide = (e) => {
@@ -39,7 +40,7 @@ const Navbar = () => {
     <nav className={`nav ${dark ? 'dark' : ""}`}>
         <div className='logo'>
             <div style={{display: 'flex', gap: "10px", alignItems: "center"}}>
-                <div>
+                <div >
                 Nav Bar
             </div>
             <div style={{color: 'lightblue', fontSize: '20px'}}>
@@ -53,7 +54,7 @@ const Navbar = () => {
             <li>Home</li>
             <li>About</li>
             <li>Services</li>
-            <li>Contact</li>
+            <li onClick={scrollContact}>Contact</li>
         </ul>
         
         <div className='menu'>
@@ -66,7 +67,7 @@ const Navbar = () => {
                         <li>Home</li>
                         <li>About</li>
                         <li>Services</li>
-                        <li>Contact</li>
+                        <li onClick={scrollContact}>Contact</li>
                     </ul>
                 )
             }

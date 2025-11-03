@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview questions</title>
+</head>
+<body>
+    <h1>Js Interview Questions</h1>
+    <script>
+        // var a = 10
+        // let a = 
+        // const a
+        // console.log(a)
+        // js is a dynamically typed language, it means all type checks are done at run time.
+
+        //what are the different datatypes in js
+
+        //primitive data type and non-primitive data type
+
+        //primitive data type are 
+        // string 
+        // number 
+        // boolean 
+        // null
+        // undefined
+        // Symbol
+        // BigInt
+
+        //non primitive data type are:
+        // array
+        // Object
+        // data
+
+        //what is hoisting in js
+        //in js variables and functions can be used before declaring it. The javascript compiler moves all the declartions of varibales and functionson top. So there will not be any error. This is called hoisting.
+
+        // console.log(first)
+        // let first = 10
+
+        //what is temporal dead zone
+        //it is a specific time period in the execution of javascript code where the variables declared with let and const exists but cannot be accessed until the value is assigned.
+
+        //what are the differences let, var, and const
+
+        //variables declared with var are function scoped (avilable through out the function where its declared) or global scoped
+
+        //varibales declared with let and const are block scoped
+
+        //var and let can be reassiged
+        //const cannot be ressigned
+
+        //es6 features
+        //arrow, let and const, destructuring assigment, defult parameters, template literals, spread and rest operations, promises, classes, modules
+
+        //arrowfunctions cannot be access before initialization
+        //arrow function does not have acces to arguments object
+
+        //spread operator
+        //spred operator is used for spread or extrand the elemets of an iterable like array or sting
+
+        let x = [1,2]
+        let y = [3,4]
+        console.log([...x, ...y])
+        console.log([x, y])
+
+        const createExample = (arg1, arg2) => {
+            console.log(arg1, arg2)
+        }
+        createExample(...x)
+
+        //rest operator is used to condense multiple elements into single array or object
+        const createExample2 = (...x) => {
+            console.log(x)
+        }
+        createExample2(1,2,3,5,4,8,)
+
+        //primitive datatypes are passed by value, and non-primitive dt are passed by reference.
+    </script>
+</body>
+</html>

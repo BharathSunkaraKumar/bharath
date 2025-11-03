@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scal=1.0">
+        <title>Scroll page</title>
+        <style>
+            *{
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                /* margin: 0 auto; */
+                margin: 0;
+                padding: 0;
+            }
+            .nav{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                min-height: 50px;
+                background-color: rgb(176, 176, 202);
+                margin-left: auto;
+                margin-right: auto;
+                padding-left: 20px;
+                padding-right: 20px;
+                position: sticky;
+                top: 0;
+            }
+            .nav ul{
+                display: flex;
+                list-style: none;
+                justify-content: space-around;
+            }
+            .nav ul li{
+                padding: 2px;
+                margin: 5px;
+                cursor: pointer;
+            }
+            .nav ul li:hover{
+                color: rgb(18, 162, 59);
+                transition: all 0.3s linear;
+            }
+            .heroborder{
+                border: 1px solid;
+                height: 80px;
+                width: 80px;
+            }
+            section{
+                display: flex;
+                align-items: center;
+                margin: 50px 0 10px 0;
+                padding: 10px;
+                justify-content: space-around;
+            }
+            section p{
+                padding: 10px;
+            }
+            .about{
+                padding: 10px;
+                margin-top: 50px;
+                margin-bottom: 10px;
+            }
+            .contact{
+                padding: 10px;
+                margin-top: 50px;
+                margin-bottom: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="nav">
+            <div>
+                <h3>SBK</h3>
+            </div>
+            <div>
+                <ul>
+                    <li>Home</li>
+                    <li onclick="scollToAbout()" >About</li>
+                    <li onclick="scrollToContact()">Contact</li>
+                </ul>
+            </div>
+        </nav>
+        <!-- hero -->
+         <section>
+            <div>
+                <div class="heroborder">
+
+                </div>
+            </div>
+            <div>
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam officiis tempore quos corrupti nobis! Tempore similique unde et. Quo, unde?</p>
+                </div>
+            </div>
+         </section>
+         <!-- about -->
+          <div class="about" id="about">
+            <h3>About</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo impedit suscipit mollitia consequatur qui molestiae non natus eligendi sint praesentium officiis obcaecati asperiores quasi quam aliquid, cumque dolorem accusantium sit sequi corrupti incidunt esse? Expedita deserunt dolores dicta neque dolor ad consequatur maiores ut nulla voluptas in quibusdam nobis sunt rem, unde consectetur pariatur architecto. Ad soluta modi placeat quasi non illum eligendi! Natus ullam sequi repellat vero voluptas, nihil necessitatibus, nulla praesentium animi, itaque impedit recusandae dolorum rem facere. Dolorum nam aliquam quos atque labore minima ducimus libero ipsum quia optio veniam neque, architecto voluptas! Iusto sunt quas aspernatur. Fugiat minus aperiam quo iste temporibus odit aliquid! Ducimus nihil enim officia aspernatur ipsum et ipsa itaque impedit ullam rem possimus molestias autem hic minus, vel atque quis eligendi natus architecto quidem? Quae minus, dolorum recusandae omnis cumque, beatae nobis veniam deleniti excepturi autem nesciunt aliquam fugit commodi aut animi perspiciatis quo a quaerat illo qui? Deserunt sed dolor eaque laudantium exercitationem hic cumque dolore accusamus vitae non porro, totam magnam velit reiciendis et, est explicabo? Vero ducimus, assumenda atque iste dolorem illum odio odit mollitia debitis, sapiente animi. Culpa magnam omnis aut, modi praesentium unde suscipit sed soluta reiciendis deserunt, libero nisi aspernatur vitae optio ducimus asperiores consequatur labore quas, perferendis tempora officia porro voluptatibus ipsam illo? Voluptatibus, cum quas ipsum animi rem earum in ea, iure quis excepturi quidem quasi est iste sunt nemo vitae. Minima necessitatibus perferendis et modi delectus dicta culpa sed consequuntur vel libero, qui quisquam nam aut repellendus deleniti obcaecati mollitia nulla neque, dolores pariatur facere. Assumenda autem, voluptas consequuntur deleniti facilis sequi dolorum earum ullam nihil obcaecati ratione error illo nemo! Illo reiciendis consequuntur sequi quam. Eaque, amet. Aspernatur aperiam velit illum quidem commodi exercitationem, ad, error soluta, minus odit est libero sapiente voluptate nemo. Accusantium quibusdam doloribus iure ipsam vitae aut praesentium in omnis quam autem blanditiis expedita, magnam, asperiores quo. Natus ipsum libero nostrum quisquam possimus consequuntur? Quos voluptatem natus illo doloremque. Voluptatum cumque architecto veniam iure? Dolorem obcaecati, vel consequuntur hic ad ducimus fugiat reiciendis deserunt quos quo veniam quis molestiae amet consectetur earum voluptatum facilis voluptatem, ut tempore cupiditate vero magnam dignissimos. Sunt itaque dolorum eum facere nisi! Beatae minima itaque provident voluptates incidunt autem rem nostrum ut in cum. Non nemo voluptates sequi numquam quos vel magnam rerum itaque, et repudiandae beatae, id, consequuntur corporis illo alias a. Dolorum laborum ipsam fuga doloribus nisi quam expedita et quos eos cum deleniti ipsum ducimus, quas deserunt dignissimos distinctio eum ea temporibus omnis blanditiis vitae possimus obcaecati tempore veniam! Officia animi expedita sint fugit quisquam veritatis laudantium voluptatem necessitatibus voluptates est a ad dolorum cum explicabo incidunt, debitis blanditiis ut. Assumenda, nesciunt hic ullam quis possimus mollitia, eum, totam temporibus delectus sequi magni earum fuga quisquam iusto quas aspernatur pariatur ad veniam sapiente expedita voluptatibus aliquam quaerat labore. Quaerat cupiditate quos minima magnam quod, doloribus repellat iure illum, ipsam quae dicta ipsum a quia dolore esse. Ullam, unde? Obcaecati, laudantium.</p>
+          </div>
+          <!-- contact -->
+           <div class="contact" id="contact" >
+            <h3 >Contact</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus veniam reprehenderit nobis similique deserunt quis ab est itaque cum dicta commodi voluptatem, sunt voluptates, repudiandae corrupti recusandae mollitia minus vel non quidem error a quibusdam sequi. Non consequuntur ullam atque a aliquid iure exercitationem cumque nesciunt. Blanditiis itaque earum quia culpa quos dolore vel similique adipisci. Quos aspernatur quia earum atque corrupti ullam quas magni repudiandae id impedit sit iste recusandae ipsum voluptates amet sed aperiam, sapiente commodi architecto sint adipisci omnis sequi officiis doloribus! Cumque, at optio voluptatibus totam nam obcaecati vitae ipsum, exercitationem hic et sint illum vero, dolorum vel! Quia optio obcaecati corrupti similique sunt officiis enim sint assumenda quos, omnis, ipsa deserunt nam impedit doloremque necessitatibus rerum delectus adipisci voluptatem recusandae. Est dicta exercitationem facere dolor sunt autem delectus dignissimos nobis alias possimus dolorum consequuntur quasi quae molestias veritatis aliquam aut quibusdam ratione libero, error voluptate porro nulla commodi. Quidem, deleniti tenetur maiores voluptates expedita quaerat odio accusamus nobis modi odit veniam debitis excepturi corporis beatae explicabo exercitationem esse harum fugiat enim doloribus vero aperiam eos autem! Accusantium, facilis? Dolorum nesciunt maiores magni eaque ipsa aperiam quasi! Molestias beatae cupiditate recusandae doloribus. Voluptas voluptatibus exercitationem assumenda.</p>
+           </div>
+           <script>
+            function scrollToContact() {
+                const contactSection = document.getElementById('contact');
+                contactSection.scrollIntoView({behavior: "smooth"})
+            }
+            function scollToAbout () {
+                const AboutSction = document.getElementById("about");
+                AboutSction.scrollIntoView({behavior: "smooth"})
+            }
+           </script>
+    </body>
+</html>

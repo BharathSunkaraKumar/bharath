@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pallindrome</title>
+</head>
+<body>
+    <h1>Palindrome</h1>
+    <script>
+        const checkpallindrome = (str) => {
+            let len = str.length
+
+            for(var i=0; i<len/2; i++) {
+                if(str[i] !== str[len-i-1]) {
+                    return "not Pallindrome"
+                }
+            }
+            return "pallindrome"
+        }
+        console.log(checkpallindrome("madam"))
+    </script>
+</body>
+</html>

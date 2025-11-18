@@ -1,0 +1,1 @@
+export const dbName = "intro-to-backend"

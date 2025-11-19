@@ -2,7 +2,7 @@ import React from 'react'
 import Card from './Card'
 import Description from './Description'
 
-const Cards = () => {
+const Cards = ({isHome}) => {
   return (
     <section>
         <Card bg='bg-orange-100'>
@@ -19,7 +19,7 @@ const Cards = () => {
                     <p className='text-gray-700'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum provident vel, nobis optio esse ea amet mollitia odio atque quidem.</p>
                 </div>
             </Card>
-            <Description/>
+            <Description isHome={isHome}/>
     </section>
   )
 }

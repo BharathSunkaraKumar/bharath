@@ -8,7 +8,7 @@ import { IoMdArrowRoundBack } from "react-icons/io";
 const JobPage = () => {
     // const {id} = useParams()
     const job = useLoaderData()
-    console.log(job)
+    // console.log(job)
    
   return (
     <section>

@@ -15,7 +15,7 @@ const Navbar = () => {
             <ul className='flex gap-x-6'>
                 <NavLink to='/' className={({isActive}) => isActive ? 'bg-black px-2 pt-0.5 pb-1.5 rounded-lg text-white' : 'px-2 pt-0.5 pb-1.5 rounded-lg text-white hover:bg-blue-900'}>home</NavLink>
                 <NavLink to='jobs' className={({isActive}) => isActive ? 'bg-black px-2 pt-0.5 pb-1.5 rounded-lg text-white' : 'px-2 pt-0.5 pb-1.5 rounded-lg text-white hover:bg-blue-900'}>Jobs</NavLink>
-                <NavLink to='/about' className={({isActive}) => isActive ? 'bg-black px-2 pt-0.5 pb-1.5 rounded-lg text-white' : 'px-2 pt-0.5 pb-1.5 rounded-lg text-white hover:bg-blue-900'}>about</NavLink>
+                <NavLink to='/addjob' className={({isActive}) => isActive ? 'bg-black px-2 pt-0.5 pb-1.5 rounded-lg text-white' : 'px-2 pt-0.5 pb-1.5 rounded-lg text-white hover:bg-blue-900'}>Add Job</NavLink>
             </ul>
         </div>
     </nav>

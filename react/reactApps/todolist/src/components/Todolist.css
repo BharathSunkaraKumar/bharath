@@ -1,0 +1,43 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.box{
+    padding: 20px;
+    border: 1px solid black;
+    margin: 4px;
+}
+ul{
+    padding: 10px;
+    border: 1px solid;
+    margin: 5px;
+
+}
+ul, li {
+    list-style: none;
+    font-weight: 500;
+    font-size: 18px;
+    border: 1px solid;
+    margin: 3px;
+    padding: 5px;
+}
+.items{
+    display: flex;
+    justify-content: space-between;
+}
+button{
+    background-color: dodgerblue;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: rgb(226, 234, 239);
+}
+button:hover{
+    background-color: rgb(4, 8, 69);
+    transition: all linear 3s;
+    cursor: pointer;
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+</head>
+<body>
+    <h1>Demo</h1>
+    <script>
+        // console.log(a)
+        // var a;
+        // console.log(b)
+        // let b;
+        // console.log(c)
+        // const c;
+        // let z = 0;
+        // let nll = null;
+        // let doublequotes = "";
+        // let udf = undefined;
+        // let nann = NaN;
+        // let falsz = false;
+        // if(doublequotes) {
+        //     console.log("0 is a true")
+        //     console.log(`"" is a true`)
+        //     console.log(`null is a true`)
+        //     console.log(`undifined is a true`)
+        //     console.log(`NAN is a true`)
+
+        // }else{
+        //     console.log("0 is a false")
+        //     console.log(`"" is a false`)
+        //     console.log(`null is a false`)
+        //     console.log(`undifined is a false`)
+        //     console.log(`NAN is a false`)
+        // }
+
+        // //function expression and declaration
+        // //function add() {}      // Declaration
+        // //const add = function() {}; // Expression
+
+        // //closure
+
+        // function createCounter() {
+        //     let count = 0;
+
+        //     return function() {
+        //         count++;
+        //         return count;
+        //     }
+        // }
+
+        // const myCounter = createCounter();
+        // console.log(myCounter())
+        // console.log(myCounter())
+        // console.log(myCounter())
+        // console.log(myCounter())
+        // console.log(myCounter())
+
+        // function outer() {
+        //     let x = 0;
+        //     return inner = () => {
+        //         x++
+        //         return x
+        //     }
+        // }
+
+        // // console.log(outer)
+        // let result = outer();
+        // console.log(result())
+        // console.log(result())
+        // console.log(result())
+
+        // //a clouser is when a function remebers varibales from its outerfuntion even after that outer functions is returned.
+
+        // const a = () => {
+        //     console.log("a")
+        // }
+        // const b = () => {
+        //     console.log("b");
+        //     a()
+        // }
+        // b()
+
+        const a = (x) => {
+            let y = 10;
+            console.log(x-y)
+        }
+
+        const b = (y) => {
+            let x = 5;
+            a(x)
+            return x+y
+        }
+
+        let result = b(10);
+        console.log(result)
+
+        //eventloop is a scheduler which will keep on absorving microtask queue and macrotask queues
+
+       
+        
+        /*
+        javascript is a high-level dynamic, interprited programing language used mainly ot make web pages interactive and contorl html and css.
+        
+        var is funciton scope it is ressigned and hoisted as undefined but let and const are block scope let is reassign but const is not reassigned by hoisted wiith no initialization with tdz.
+
+        Declaration → hoisted
+
+        Expression → not hoisted
+        function add() {}      // Declaration
+        const add = function() {}; // Expression
+
+        a clouser is when a function remebers varibales from its outerfuntion even after that outer functions is returned.
+
+
+        eventloop is a scheduler which will keep on absorving microtask queue and macrotask queues
+
+        react is a js library for building user interfaces using components.
+
+        component?
+        resuable ui block.
+
+        virtual dom
+        virtual dom is a lightweight copy of the real dom
+        react updates only the changed parts improves performance
+
+        jsx?
+        jsx allows writing html inside js
+
+        props
+        props are reaad-only data passed form parant to child
+
+        state?
+        state is mutable data inside a component that triggers ui re-render.
+
+        usestae store data
+        useEffect runs side effects for ex: api caslls, timers
+
+        useEffect?
+        component mounts
+        state/props change 
+        unmounting cleanup
+
+        useRef?
+        store dom refernce 
+        store mutable values without re-render
+
+        controlled and uncontrolled components
+        controlled -> value controlled by react stae
+        uncontorlled -> uses ref to get values
+
+        
+
+
+
+        */
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo list</title>
+</head>
+<body>
+    <h1>Todo list</h1>
+    <input type="text" name="todo" id="todo" ">
+    <button onclick="addTodo()">Add Todo</button>
+    <ul id="todos"></ul>
+    <script>
+        // let todo = document.getElementById("todo").value;
+        let ul = document.getElementById("todos");
+
+        let todos = []
+        const getTodo = (e) => {
+            console.log(e.target.value)
+        }
+        const addTodo = () => {
+            const input = document.getElementById("todo").value
+            todos.push(input);
+
+            // ul.innerHTML = "";
+            
+            
+            let li = document.createElement("li");
+            li.textContent = input + " ";
+            
+            let delBtn = document.createElement("button");
+            delBtn.textContent = "delete";
+            delBtn.onclick = () => li.remove();
+
+            let editBtn = document.createElement("button");
+            editBtn.textContent = "Edit";
+
+            editBtn.onclick = () => {
+                let editInput = document.createElement("input");
+                editInput.type = "text";
+                editInput.value = input;
+
+                let saveBtn = document.createElement("button");
+                saveBtn.textContent = "save";
+
+                saveBtn.onclick = () => {
+                    let newValue = editInput.value;
+                    li.firstChild.textContent = newValue + " ";
+                    saveBtn.remove();
+                    editInput.remove();
+                    editBtn.style.display = "inline";
+
+                }
+
+                editBtn.style.display = "none";
+                li.insertBefore(editInput, delBtn);
+                li.insertBefore(saveBtn, delBtn)
+
+            }
+            
+            li.appendChild(delBtn)
+            li.appendChild(editBtn)
+            ul.appendChild(li);
+
+            
+            document.getElementById("todo").value = ""
+        }
+
+        const generate = () => {
+            
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,362 @@
+Skip to content
+Open sidebar
+
+ChatGPT
+You said:
+java script interview questions
+ChatGPT said:
+Here are JavaScript interview questions categorized from basic → intermediate → advanced — perfect for frontend interviews (including React roles).
+If you want, I can also provide answers or mock interview tests.
+
+✅ JavaScript Interview Questions (Most Asked)
+🔹 Basic Level
+What is JavaScript?
+
+Difference between var, let, and const?
+
+What are hoisting and temporal dead zone (TDZ)?
+
+What is the difference between == and ===?
+
+What is an execution context?
+
+What is the call stack?
+
+What are truthy and falsy values?
+
+What is a function declaration vs function expression?
+
+What is an arrow function and how is it different?
+
+What is NaN? How to check if a value is NaN?
+
+🔹 Intermediate Level (Must Know for React Jobs)
+What are closures? Give an example.
+
+What is the event loop? Explain microtasks & macrotasks.
+
+Explain asynchronous JavaScript: callbacks vs promises vs async/await.
+
+What is this? How does it behave in arrow vs normal functions?
+
+What is prototype and prototypal inheritance?
+
+What are higher-order functions?
+
+Explain debouncing and throttling with use cases.
+
+What is event delegation?
+
+Explain shallow vs deep copy with examples.
+
+What is the spread operator and rest operator?
+
+Difference between map, filter, reduce?
+
+What is the difference between synchronous and asynchronous code?
+
+What is a callback hell? How to avoid it?
+
+What is the fetch API?
+
+What is a generator function?
+
+🔹 Advanced Level (Companies Like SDE, Startups Ask These)
+Explain the full flow of the JavaScript event loop with an example.
+
+What is memoization?
+
+How does the V8 engine work internally?
+
+How does garbage collection work in JS?
+
+What is currying?
+
+What are Web APIs?
+
+How does JS handle concurrency?
+
+Difference between deep freeze & seal in JavaScript.
+
+What happens when you call new on a function?
+
+Explain call, apply, bind with examples.
+
+What is the module pattern in JavaScript?
+
+What are WeakMap and WeakSet, and why do we use them?
+
+Explain the concept of event bubbling and capturing.
+
+Explain the concept of shadow DOM.
+
+What are JavaScript design patterns (Factory, Singleton, Observer, Module)?
+
+⚡ Super Important for Frontend/React Interviews
+Explain how this works in arrow functions.
+
+Why is JavaScript single-threaded?
+
+Explain hoisting with var, let, const.
+
+Difference between promise and async/await.
+
+What is the difference between map and forEach?
+
+What is CORS?
+
+What is a closure? Explain with a real example.
+
+What is JavaScript strict mode?
+
+Difference between localStorage, sessionStorage & cookies.
+
+Explain how browsers render a webpage (critical render path).
+
+🔥 Want the Answers Too?
+I can provide:
+
+✅ All answers one by one
+OR
+✅ Short and crisp version
+OR
+✅ A mock interview (I ask, you answer, I rate)
+OR
+✅ Full notes for JavaScript interview
+
+Tell me which one you prefer!
+
+You said:
+give me answer for this questions
+ChatGPT said:
+Great! I’ll give you clear, short, interview-ready answers for all the JavaScript questions I listed.
+(If you want, I can also give examples for each.)
+
+✅ JavaScript Interview Questions WITH Answers
+⭐ Basic Level Answers
+1. What is JavaScript?
+JavaScript is a high-level, dynamic, interpreted programming language used mainly to make web pages interactive.
+
+2. Difference between var, let, and const
+Keyword	Scope	Reassign	Hoisted	Notes
+var	function scope	yes	yes (initialized as undefined)	Avoid using
+let	block scope	yes	yes (no initialization → TDZ)	Preferred
+const	block scope	no	yes (TDZ)	Value cannot be reassigned
+3. What is hoisting?
+Hoisting means variables and function declarations are moved to the top of their scope before execution.
+
+var is hoisted with undefined.
+
+let & const are hoisted but not initialized → Temporal Dead Zone.
+
+Functions are fully hoisted.
+
+4. Difference between == and ===
+== → compares value only (performs type conversion).
+
+=== → compares value + type (strict equality).
+
+5. What is execution context?
+It is the environment where JavaScript code runs.
+Two types:
+
+Global execution context
+
+Function execution context
+
+Each context has:
+
+Memory creation phase
+
+Execution phase
+
+6. What is the call stack?
+A stack where JavaScript stores the order of function execution.
+It works on LIFO (Last in First Out).
+
+7. Truthy and Falsy values
+Falsy: 0, "", null, undefined, NaN, false
+Everything else is truthy.
+
+8. Function declaration vs function expression
+Declaration → hoisted
+
+Expression → not hoisted
+Example:
+
+function add() {}      // Declaration
+const add = function() {}; // Expression
+9. Arrow function differences
+No this binding
+
+Cannot be used as constructor
+
+No arguments object
+
+Shorter syntax
+
+10. What is NaN?
+NaN = Not a Number
+Used when a mathematical operation fails.
+Check using:
+
+Number.isNaN(value);
+⭐ Intermediate Level Answers
+1. What are closures?
+A closure is when a function remembers variables from its outer scope even after that outer function has returned.
+
+2. What is the event loop?
+The event loop continuously checks the call stack and callback/microtask queues, and pushes tasks from queues to the stack when it is empty.
+
+3. Callback vs Promise vs Async/Await
+Callback: Function passed inside another function.
+
+Promise: Handles async operations with .then()
+
+Async/Await: Cleaner way to handle promises.
+
+4. What is this?
+this refers to the object that is calling the function.
+
+In arrow functions, this is taken from the parent scope (lexical).
+
+5. What is prototype and prototypal inheritance?
+Every JS object has a hidden [[Prototype]] object.
+Objects can access properties/methods from their prototype → prototypal inheritance.
+
+6. Higher-order functions
+Functions that accept another function as argument or return a function.
+Example: map, filter.
+
+7. Debouncing vs Throttling
+Debounce: Execute after user stops calling action (typing).
+
+Throttle: Execute once every X ms (scroll event).
+
+8. Event delegation
+Attaching a single event listener to a parent to handle events from children → improves performance.
+
+9. Shallow vs Deep copy
+Shallow copy: Only copies top level (Object.assign, spread operator).
+
+Deep copy: Copies nested values too (structuredClone(), JSON methods).
+
+10. Spread vs Rest
+// Spread
+let arr2 = [...arr];
+
+// Rest
+function sum(...nums) {}
+11. Difference between map, filter, reduce
+map: transforms array
+
+filter: returns matching items
+
+reduce: returns a single value (sum, object, etc)
+
+12. Sync vs Async code
+Sync: executes line by line (blocking).
+
+Async: does not block; uses callbacks/promises.
+
+13. Callback hell
+A situation of nested callbacks making code unreadable.
+Solution: Promises & async/await.
+
+14. What is fetch API?
+A built-in method for making API calls. Returns a Promise.
+
+15. Generator function
+A function that can pause execution using yield.
+Defined using function*.
+
+⭐ Advanced Level Answers
+1. Full flow of event loop
+JS runs single-threaded on call stack
+
+Web APIs handle async tasks
+
+Microtask queue (Promises) runs before macrotask queue (setTimeout).
+
+2. Memoization
+Caching function results to improve performance.
+
+3. How V8 engine works
+Steps:
+
+Parsing
+
+Compilation (JIT)
+
+Optimization
+
+Execution
+
+4. Garbage collection
+JS uses mark and sweep algorithm → removes unreachable objects.
+
+5. Currying
+Converting a function with multiple arguments into chain of functions.
+Example:
+
+function sum(a)(b)(c)
+6. Web APIs
+Browser-provided APIs: DOM, fetch, timers, localStorage.
+
+7. JS concurrency
+JS is single-threaded but handles async tasks using event loop + callback queues.
+
+8. freeze vs seal
+Object.freeze: no add, delete, modify
+
+Object.seal: cannot add/delete but can modify existing values
+
+9. What happens when you use new?
+Creates a new object, sets prototype, binds this, returns the object.
+
+10. call, apply, bind
+call → call with arguments
+
+apply → call with array
+
+bind → returns new function with bound this
+
+11. Module pattern
+Using IIFE to create private and public variables.
+
+12. WeakMap & WeakSet
+Hold weak references → not prevent garbage collection.
+
+13. Event bubbling & capturing
+Capturing: top → target
+
+Bubbling: target → top
+
+Default: bubbling.
+
+14. Shadow DOM
+Isolated DOM inside web components.
+
+15. Design patterns in JS
+Factory
+
+Module
+
+Singleton
+
+Observer
+
+Prototype
+
+🔥 Want a PDF version with examples & diagrams?
+Or want me to give React-specific interview Q/A also?
+
+Do you like this personality?
+
+
+
+
+
+
+No file chosenNo file chosen
+ChatGPT can make mistakes. Check important info. See Cookie Preferences.

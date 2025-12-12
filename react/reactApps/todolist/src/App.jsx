@@ -1,10 +1,11 @@
-import Form from "./components/form/Form"
+import FormRef from "./components/ref/FormRef"
+import Myref from "./components/ref/Myref"
 
 function App() {
 
   return (
     <>
-      <Form/>
+      <FormRef/>
     </>
   )
 }

@@ -6,7 +6,7 @@ import Jobjs from './pages/Jobjs'
 import PageNotFound from './pages/PageNotFound'
 import JobPage, {jobLoader} from './pages/JobPage'
 import Addjob from './pages/Addjob'
-
+import Accordion from './components/accordion/Accordion'
 
 
 const addjob = async(newjob) => {
@@ -37,9 +37,12 @@ const App = () => {
   )
 
   return (
-    <RouterProvider router={router}>
-
-    </RouterProvider>
+    // <RouterProvider router={router}>
+    
+    // </RouterProvider>
+    <>
+      <Accordion/>
+    </>
   )
 }
 

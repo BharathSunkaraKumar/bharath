@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K_Rotate</title>
+</head>
+<body>
+    <h1>K rotate</h1>
+    <script>
+        let arr = [5,1,4,18,14,54,34];
+        //[,4,18,14,54,34,5,1]
+        let k = 2;
+        let length = arr.length;
+        k = k%length;
+        // console.log(k)
+        console.log(arr)
+        const krotate = (start, end, arr) => {
+            while(start<end) {
+                let temp = arr[end];
+                arr[end] = arr[start];
+                arr[start] = temp;
+                start++;
+                end--;
+            }
+        }
+        krotate(0, k-1, arr);
+        krotate(k, length-1, arr);
+        krotate(0, length-1, arr);
+        console.log(arr)
+    </script>
+</body>
+</html>

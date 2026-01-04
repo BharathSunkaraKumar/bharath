@@ -1,22 +1,26 @@
-const http = require("http");
-const fs = require("fs");
-import {add, subtract} from "./math.js"
+import express from "express";
+import { logger } from "./middleware/logger.js";
+import { auth } from "./middleware/auth.js";
+const app = express();
 
-fs.readFile("file.txt", "utf-8", (err, data) => {
-    console.log(data)
-    // console.log(err)
-})
-console.log("this run first")
 
-const server = http.createServer((req, res) => {
-  res.write("Hello! from node server");
-  // console.log(req.url)
-  res.end();
+
+app.use(logger);
+
+app.get("/", (req, res) => {
+  res.send("hello from express");
 });
+app.get("/about", (req, res) => {
+  res.send("this is about page")
+})
+app.get("/contact", (req, res) => {
+  res.json({message: "Hello API"})
+})
 
-console.log(math.add(10, 10));
-console.log(math.subtract(10, 5))
+app.use("/admin", auth, (req, res) => {
+  res.send("this is admin page")
+})
 
-server.listen(3000, () => {
-  console.log("Server running on port 3000");
+app.listen(3000, () => {
+  console.log("Server running on post 3000");
 });

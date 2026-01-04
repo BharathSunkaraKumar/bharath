@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move zeros</title>
+</head>
+<body>
+    <h1>move zeros</h1>
+    <script>
+        let arr = [1,0,2,0,3,0,0];
+        console.log(arr)
+        let pos = 0;
+        let i = 0;
+        while(i<arr.length) {
+            if(arr[i] != 0) {
+                arr[pos] = arr[i];
+                pos++
+            }
+            i++;
+        }
+        while(pos < arr.length) {
+            arr[pos] = 0;
+            pos++
+        }
+        console.log(arr)
+    </script>
+</body>
+</html>

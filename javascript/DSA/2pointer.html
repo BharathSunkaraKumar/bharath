@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>two pointers</title>
+  </head>
+  <body>
+    <h1>Two pointers</h1>
+    <script>
+      let arr = [1, 3, 5, 7, 9];
+      let target = 4;
+      let start = 0;
+      let end = arr.length - 1;
+    //   console.log("end", end);
+      const twopointers = () => {
+        console.log("start", start);
+        console.log("end", end);
+        while (start < end) {
+          let value = arr[start] + arr[end];
+          console.log("value", value);
+          if (value == target) {
+            return true;
+          } else if (value < target) {
+              start++;
+              console.log("start incremented")
+            } else if (value > target) {
+                end--;
+                console.log("end decremented")
+          }
+        }
+      };
+      console.log(twopointers())
+    </script>
+  </body>
+</html>

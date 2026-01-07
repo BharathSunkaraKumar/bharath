@@ -10,7 +10,10 @@ const userSchema = new mongoose.Schema({
         require: true,
         unique: true,
     },
-    age: Number,
+    password: {
+        type: String,
+        required: true
+    },
 });
 
 const User = mongoose.model("User", userSchema);

@@ -3,7 +3,7 @@ import bcrypt from "bcryptjs";
 
 export const registerUser = async (req, res) => {
   try {
-    console.log("hi from singup page");
+    console.log("singup page");
     const { email, password } = req.body;
     const hashPassword = await bcrypt.hash(password, 10);
     console.log("hash password", hashPassword);

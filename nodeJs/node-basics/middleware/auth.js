@@ -1,5 +1,29 @@
-export const auth = (req, res, next) => {
-    console.log(req.method, req.url);
-    console.log("admin")
+import jwt from "jsonwebtoken";
+import User from "../models/user.model.js";
+
+const protect = async (req, res, next) => {
+  let token;
+  if (
+    req.headers.authorization &&
+    req.headers.authorization.startsWith("Bearer")
+  ) {
+    token = req.headers.authorization.split(" ")[1];
+  }
+  console.log("token", token);
+
+  if (!token) {
+    res.status(401);
+    throw new Error("Not authorized");
+  }
+
+  try {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    req.user = await User.findById(decoded.id).select("-password");
     next();
-}
+  } catch (error) {
+    res.status(401);
+    throw new Error("Token invalid");
+  }
+};
+
+export default protect;

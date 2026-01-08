@@ -1,8 +1,9 @@
 import express from "express";
 import { logger } from "./middleware/logger.js";
-import { auth } from "./middleware/auth.js";
+// import { auth } from "./middleware/auth.js";
 import useRoutes from "./routes/user.routes.js";
 import authRouter from "./routes/auth.routes.js";
+import profile from "./routes/profile.routes.js";
 import connectDB from "./config/db.js";
 import dotenv from "dotenv";
 
@@ -14,6 +15,7 @@ const port = process.env.PORT || 8000;
 connectDB();
 app.use("/auth", authRouter);
 app.use("/users", useRoutes);
+app.use("/profile", profile);
 
 // app.use(logger);
 

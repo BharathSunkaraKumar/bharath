@@ -1,5 +1,6 @@
 import User from "../models/user.model.js";
 import bcryp from "bcryptjs";
+import generateToken from "../utils/generateToken.js";
 
 export const loginUser = async (req, res) => {
   try {
@@ -19,6 +20,7 @@ export const loginUser = async (req, res) => {
     }
 
     res.json({
+      token: generateToken(user._id),
       message: "Login successful",
     });
   } catch (error) {

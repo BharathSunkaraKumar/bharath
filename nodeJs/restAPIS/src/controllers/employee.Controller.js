@@ -2,11 +2,11 @@ import Employee from "../models/Employee.js";
 
 const createEmployee = async (req, res) => {
   try {
-    const { name, email, passowrd } = req.body;
+    const { name, email, city } = req.body;
     const newEmployee = new Employee({
       name,
       email,
-      passowrd,
+      city,
     });
     await newEmployee.save();
     res.status(201).json(newEmployee);
@@ -28,7 +28,7 @@ const getEmployee = async (req, res) => {
   }
 };
 
-//single empolyee
+//single employee
 
 const singleEmployee = async (req, res) => {
   try {
@@ -43,4 +43,46 @@ const singleEmployee = async (req, res) => {
   }
 };
 
-export { createEmployee, getEmployee, singleEmployee };
+//update employee
+
+const updateEmployee = async (req, res) => {
+  try {
+    const { name, email, city } = req.body;
+    const employee = await Employee.findByIdAndUpdate(req.params.id, {
+      name,
+      email,
+      city,
+    });
+
+    if (!employee) {
+      res.status(404).json({ message: "Employee not found" });
+    }
+    res.status(201).json(employee);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: "Server error" });
+  }
+};
+
+//delete employee
+
+const deleteEmpolyee = async (req, res) => {
+  try {
+    const deleteEmp = await Employee.findByIdAndDelete(req.params.id);
+    if (!deleteEmp) {
+      res.status(404).json({ message: "Employee not found" });
+    }
+    res.status(201).send();
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: "Server error" });
+  }
+};
+
+export {
+  createEmployee,
+  getEmployee,
+  singleEmployee,
+  updateEmployee,
+  deleteEmpolyee,
+};
